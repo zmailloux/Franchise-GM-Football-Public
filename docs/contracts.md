@@ -82,7 +82,7 @@ A **4-year, $40M** deal with an **$18M** signing bonus, prorated at **$4.5M** a 
 **Before Year 3:** the guarantees have lapsed, so no base is owed. Only the two remaining bonus slices accelerate. Dead money = **$9M** — cheap enough to walk away.
 :::
 
-A **June-1 designation** {built-off} would soften the worst cuts by splitting the bill across two seasons — this year eating the current bonus slice plus the guarantees, and the rest of the acceleration deferred to next season's books. It never reduces what you owe; it buys you a year. The split is built, but **no save currently gets any designations**, so every release you make lands in full this season. Plan cuts as if the whole bill is due, because it is.
+A **June-1 designation** softens the worst cuts by splitting the bill across two seasons: this year eats the current bonus slice plus the guarantees, and the rest of the acceleration defers to next season's books. It never reduces what you owe — it buys you a year of room now and hands the bill to the next one. You get **two per offseason**, and the release dialog counts down how many you have left. They are an offseason tool: release a player once the season is under way and the whole bill lands this year. The toggle also only offers itself when there is something to defer, so a final-year or bonus-free deal can't waste one.
 
 **Trading him away is the third kind of dead money, and it is the cheapest.** A trade-out accelerates the remaining bonus onto your cap exactly like a cut does, but the base salary and the guarantees travel with the player to his new team instead of staying with you. That is the real reason a bad contract is easier to trade than to release — if you can find a taker. Details on the [Trades](#trades) page.
 
@@ -129,9 +129,11 @@ Drafted players sign standard rookie contracts, and you **can't extend one until
 
 ## Renegotiations and holdouts {live}
 
-Mid-contract drama is switched on. A player who has badly outperformed a deal with a year or two left — or one buried in the pecking order, or ringless on a doormat — can escalate from private grumbling to a public demand. Most of it resolves quietly: he asks you to rework the deal and you **accept**, **promise** to revisit it, or **ignore** him and eat the mood hit.
+Mid-contract drama runs **from Medium up**. A new game starts on **Easy**, which switches the whole morale economy off — no mood anywhere, no demands, no sagas — so none of this section applies to a default save until you raise the difficulty or turn **PLAYER MOODS** on yourself under Settings ▸ Difficulty.
 
-A **trade request** is the next step up, and on the Easy and Medium presets it is where every saga stops — the ladder simply has no rung above it. Only **Hard** lets a player actually **sit out** (a custom setup lets you set that ceiling yourself), and even there it is the rare tail rather than the norm: he stays away, gets fined a slice of his salary every week he does — credited back to your cap — and usually reports in around the trade deadline anyway.
+With it on, a player who has badly outperformed a deal with a year or two left — or one buried in the pecking order, or ringless on a doormat — can escalate from private grumbling to a public demand. Most of it resolves quietly: he asks you to rework the deal and you **accept**, **promise** to revisit it, or **ignore** him and eat the mood hit.
+
+A **trade request** is the next step up, and on **Medium** it is where every saga stops — the ladder simply has no rung above it. Only **Hard** lets a player actually **sit out** (a Custom setup inherits Hard's ceiling), and even there it is the rare tail rather than the norm: he stays away, gets fined a slice of his salary every week he does — credited back to your cap — and usually reports in around the trade deadline anyway.
 
 :::warn Scarce by design
 Public sagas are rationed. Only a couple can start on your roster in a season, with one running at a time — a pressure valve and a storyline, not a talent drain. Loyal, well-paid, winning players are mostly immune, and paying up or winning is always an available cure.

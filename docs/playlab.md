@@ -61,10 +61,11 @@ downstream of the truth, always.
 
 :::note The film never lies about the result
 The Film Room is fully deterministic. A watched play is drawn from the finished
-outcome plus a fixed seed, and every frame of movement is saved alongside the
-result. When you re-watch a play, the game replays those saved frames — it never
-re-simulates. So the same catch happens the same way every time, and the picture
-can never drift out of sync with the box score. What you see is always a faithful
+outcome plus a fixed seed tied to that game and that snap, so re-opening it draws
+the *identical* film again, frame for frame. Nothing is re-simulated — the box
+score is already written, and the drawing is regenerated on demand rather than
+stored. So the same catch happens the same way every time, and the picture can
+never drift out of sync with the box score. What you see is always a faithful
 drawing of what the engine actually decided.
 :::
 
@@ -94,7 +95,7 @@ up in all of it. From those facts the film stages the full picture:
 
 | On the field | What you'll watch |
 |---|---|
-| **Personnel** | The exact eleven the engine graded, in the grouping and package it fielded — so a nickel look really has five defensive backs and a 3-4 really shows both inside backers |
+| **Personnel** | The exact eleven the engine graded, in the grouping and package it fielded — so a 4-3 nickel really shows five defensive backs, a 3-4 nickel really shows four, and a 3-4 really keeps both inside backers on the field |
 | **Pre-snap** | Both units align, the defense can disguise its intent, and a receiver may motion across with his man defender travelling with him |
 | **Routes** | Receivers run real concepts — slants, posts, corners, digs, drags, comebacks — chosen and shaped to fit the completion the engine decided |
 | **Coverage** | Man defenders jam, mirror, react to the break and trail; zone defenders claim their landmarks and hand receivers off between them, with the shell picked from the situation |
@@ -102,13 +103,17 @@ up in all of it. From those facts the film stages the full picture:
 | **Runs** | Named concepts, not generic handoffs: inside zone, duo, split zone, draw, power, counter, iso, trap, wide zone, pin-and-pull, toss and crack toss, each with its own blocking picture |
 | **Pursuit & tackling** | Unblocked defenders and the secondary chase on cut-off angles, converge on the ball carrier, and finish |
 | **Turnovers** | Interceptions and fumble recoveries get their return — including the ones that go the distance |
-| **Special teams** | Kickoffs, punts and field goals resolve and report today; their full-motion choreography — gunners racing down, the return man fielding it — is the piece of the film still being drawn {in-dev} |
+| **Special teams** | Kickoffs, punts and field goals film like everything else: the real kicking and return units take the field, the snap-hold-kick beat plays out, gunners release and the coverage streams its lanes, and the return man fields the ball and brings it back to the spot the engine credited — or kneels it for a touchback |
 
 Every one of those movements is a player steered by his own [ratings](#ratings) —
 speed sets his top gear, burst his acceleration, agility his cuts — so a faster,
 more explosive player visibly plays like one. Timing is held to real football, too:
 the ball comes out and the pocket breaks on the clock the real league runs on, and
 every test film is graded against those windows.
+
+The one gap on that list is special-teams *flavor*: fair catches, muffs, blocked
+kicks and onside recoveries aren't outcomes the engine records yet, so they can't
+be drawn. {in-dev}
 
 Two rules keep the picture honest. Anything the engine actually credited — the
 catch point at the credited air yards, the spot where the tackle happened — is
@@ -141,14 +146,19 @@ working lab, but it is not in the shipping game and there's real work left.
 
 **What already works.** The engine-decides-then-film-draws pipeline runs end to
 end: simulate a real game, watch any play in the play-by-play list as 22 moving
-players, with the movement guaranteed to land on the box score. Every scrimmage snap
-films — dropback passes, play-action, screens, run-pass options, the full run
-concept vocabulary, turnover returns — with special teams the one family still
-getting its full motion. Man and
+players, with the movement guaranteed to land on the box score. Every snap films —
+dropback passes, play-action, screens, run-pass options, the full run concept
+vocabulary, turnover returns, and the kicking game. Man and
 zone coverage are both built, including pattern-matching rules and pre-snap
 motion. A standing guard checks continuously that none of it can move a balance
-number, and a large library of frozen test plays is re-graded on every change so
-a fix in one place can't quietly make another play worse.
+number.
+
+There is also a large library of frozen test plays whose job is to catch a fix in
+one place quietly breaking another. Being honest about it: that library is
+currently *behind* the code. It was frozen against the old drawing machinery, a
+chunk of it now reports known failures, and it isn't blocking changes while the
+rebuild below is in flight — so treat it as a net with holes in it rather than a
+guarantee. Restoring it to a real gate is part of the rebuild.
 
 **What remains.** The path forward was just settled: rather than keep patching the
 lab's aging drawing machinery, the visualization engine is being **rebuilt from the

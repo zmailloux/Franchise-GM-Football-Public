@@ -48,7 +48,7 @@ Raw attributes have realistic floors *and* realistic ceilings. Even the worst st
 
 ## Role composites — the middle layer
 
-The composite catalog is the heart of the system: a handful of readable role scores, each a fixed weighted blend of raw attributes on the same `0`–`99` scale. Pass rush leans mostly on shedding blocks and explosiveness, with strength and agility behind them. Getting open leans on route running first, then burst and straight-line speed. Deep accuracy is almost entirely the deep-throw arm, with a little decision-making. Each blend is fixed, so the score is a predictable read on the raw numbers below it.
+The composite catalog is the heart of the system: a handful of readable role scores, each a fixed weighted blend of raw attributes on the same `0`–`99` scale. Pass rush leans mostly on shedding blocks and explosiveness, with strength and agility behind them. Getting open leans on route running first, then acceleration, agility and straight-line speed. Deep accuracy is almost entirely the deep-throw arm, with a little decision-making. Each blend is fixed, so the score is a predictable read on the raw numbers below it.
 
 The full catalog, and the one football question each score answers:
 
@@ -95,7 +95,7 @@ There are `15` positions, in nine groups. A position's rating leans only on the 
 |---|---|---|
 | Quarterback | QB | Accuracy by depth, playmaking, escaping the rush, ball security |
 | Running back | RB | Power running, yards-after-catch, hands and routes, pass protection, ball security, returns |
-| Pass catchers | WR, TE | Getting open, hands, yards-after-catch, ball security (WR adds returns; TE adds blocking and protection) |
+| Pass catchers | WR, TE | Getting open, hands, yards-after-catch (WR adds ball security and returns; TE adds blocking and protection instead) |
 | Offensive line | OT, OG, C | Pass protection, run blocking |
 | Defensive line | DT, DE | Pass rush, run stopping, tackling |
 | Edge rushers | EDGE | Pass rush, run stopping, tackling |

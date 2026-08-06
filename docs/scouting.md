@@ -27,11 +27,11 @@ Your scouts live in the Front Office, under MY TEAM ▸ OFFICE ▸ **STAFF**, wh
 **STAFF**, **DRAFT POOL**, **DRAFT COHORTS** and **INJURY REPORT**. Two star ratings on your lead scouts
 drive everything on the two draft views:
 
-- **Evaluator** — overall accuracy. How closely your projections track the truth, across every prospect.
+- **Evaluation** — overall accuracy. How closely your projections track the truth, across every prospect.
 - **Star Spotter** — ceiling accuracy. How reliably your department separates a real blue-chipper from a
   merely good player, and catches a hidden gem before the rest of the league does.
 
-A department strong on Evaluator but weak on Star Spotter will place most players about right, yet keep
+A department strong on Evaluation but weak on Star Spotter will place most players about right, yet keep
 mistaking future stars for role players (and role players for future stars). That distinction is the whole
 reason both ratings exist.
 
@@ -61,12 +61,12 @@ A class three years out is blurry. A class one year out is nearly in focus. The 
 prospect is, the wider the error on his projection — but the bar is never hidden from you, just noisier.
 Watch the same class across seasons and you'll see it **firm up year over year** as the noise drains out.
 
-A strong Evaluator flattens that curve: good scouts see further with confidence, so their far-out picture is
+A strong Evaluation rating flattens that curve: good scouts see further with confidence, so their far-out picture is
 already usable while a weaker department is still guessing. Here's how each lever tightens the picture:
 
 | What sharpens the read | Effect |
 |---|---|
-| Higher **Evaluator** | Tighter error on every prospect, every bucket |
+| Higher **Evaluation** | Tighter error on every prospect, every bucket |
 | Higher **Star Spotter** | Reliable top two buckets — fewer buried gems, fewer false blue-chips |
 | A prospect's class getting closer | Error shrinks each season toward draft day |
 | A scout's **position specialty** | Sharper read on that one position group |
