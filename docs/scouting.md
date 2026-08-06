@@ -23,9 +23,9 @@ Every prospect who will ever enter your draft has a **true ceiling** and a **tru
 the moment his class is generated. You never see those numbers. What you see is your scouting department's
 best guess — and how good that guess is depends entirely on who you hire.
 
-Your scouts live in the Front Office, on the **STAFF** screen, which carries five views: **STAFF**,
-**DRAFT POOL**, **DRAFT COHORTS**, **NEW INJURIES**, and **INJURY REPORT**. Two star ratings on your lead
-scouts drive everything on the two draft views:
+Your scouts live in the Front Office, under MY TEAM ▸ OFFICE ▸ **STAFF**, which carries four views:
+**STAFF**, **DRAFT POOL**, **DRAFT COHORTS** and **INJURY REPORT**. Two star ratings on your lead scouts
+drive everything on the two draft views:
 
 - **Evaluator** — overall accuracy. How closely your projections track the truth, across every prospect.
 - **Star Spotter** — ceiling accuracy. How reliably your department separates a real blue-chipper from a
@@ -37,23 +37,16 @@ reason both ratings exist.
 
 ## Reading a class through the fog
 
-The **DRAFT COHORTS** view is your bird's-eye view. It shows a stacked bar for each of the **next three
-draft classes**, with every prospect sorted into a projected-ceiling bucket:
+The **DRAFT COHORTS** view is your bird's-eye view. Its heat map lays the **next three draft classes** down
+the side and projected-potential tiers across the top. Each cell carries the exact count and share of the class,
+so the shape of a class stays easy to scan without hiding the numbers.
 
-| Bucket | Rating range | Reads as |
-|---|---|---|
-| Under 55 | 0–54 | camp body / long shot |
-| 55–65 | 55–64 | depth, special teams |
-| 65–75 | 65–74 | rotational starter |
-| 75–85 | 75–84 | quality starter |
-| Over 85 | 85–99 | blue-chip / franchise talent |
-
-Filter by position and the bars reshape. This is how you spot that "two years out is a loaded receiver year"
+Filter by position and the map reshapes. This is how you spot that "two years out is a loaded receiver year"
 or "there's no franchise quarterback until the class after next" — before anyone else is talking about it.
 
 Here is the part to internalize: **every number on that screen is your scouts' projection, not the truth.**
-Two GMs with different scouting staffs looking at the same league see *different* bars. The bars are rebuilt
-from your department's read each time you check, never from the hidden reality underneath.
+Two GMs with different scouting staffs looking at the same league see *different* heat maps. The cells are
+rebuilt from your department's read each time you check, never from the hidden reality underneath.
 
 :::note What your scouts show you
 Every projection you read is the league's consensus view of a prospect plus your own department's
@@ -105,8 +98,8 @@ find out who was right three seasons later. Neither read is a lie; they're guess
 and the quality is what you hired.
 :::
 
-:::screenshot A prospect's page
-One prospect: fogged projected stars vs. current stars, skill chips, combine card, and the interview tab.
+:::screenshot The draft board, graded now and projected forward
+image: draft-board.jpg
 :::
 
 ## College tape, the combine, and interviews
@@ -156,19 +149,27 @@ The best scouting department in the league still drafts busts and still lets ste
 less often than a weak one. Trust your process over any single projection — the fog is the point.
 :::
 
-## Hidden-information settings you can flip {built-off}
+## The fog-of-war settings
 
-The core draft fog above is always on. Four deeper hidden-information options are built but ship **off** —
-you opt into them from Settings:
+Settings ▸ FOG OF WAR holds five switches, and all of them stay editable for the life of a save.
 
-- **Interview fog** — hides prospect character and intelligence behind the 10-per-season interview budget
-  described above, and makes AI clubs draft partly blind to character too, producing their own reaches.
-- **Own-player rating fog** — hides the exact overall of players already on your roster until snaps reveal it.
-- **Rookie rating hidden until the season** — a freshly-drafted rookie's overall stays hidden on his card
-  until the regular season starts, then reveals at the roll.
-- **Mood on the field** — lets a player's mood tilt his on-field performance.
+**Scout potential fog** is the one that ships **on** {live} — it's the fog this whole page describes, and it
+also makes the AI clubs draft on their own imperfect reads, which is where gems slip. Turn it off and you
+see true potential and the AI drafts on true value; the draft gets legible and considerably easier.
 
-Leave them off for a cleaner, more transparent game; turn them on for a harder, more uncertain one.
+The other four are built but ship **off** {built-off} — opt in for a harder, more uncertain game:
+
+- **Prospect interview fog** — hides prospect character and intelligence behind the 10-per-season interview
+  budget described above, and makes AI clubs draft partly blind to character too, producing their own reaches.
+- **Own player OVR fog** — hides the exact overall of players already on your roster until snaps reveal it.
+- **Hide rookie OVR until the season** — a freshly-drafted rookie's overall reads `??` on his card until the
+  regular season starts, then reveals at the roll.
+- **Mood on field** — lets a player's mood tilt his on-field performance ([more on mood](#roster-management--what-your-players-want)).
+
+Two related dials sit one section up, under GAMEPLAY SETTINGS. **Scout accuracy** (high / medium / low) is
+the global fog dial named in the table above — your difficulty seeds it, sharp on Easy and blurry on Hard,
+and you can move it any time. **Drafted player ratings** decides whether the draft recap shows every pick's
+true overall, yours and the AI's alike; it starts hidden on Hard and visible on the easier modes.
 
 Once you've made your picks, see [The Draft](#draft) for how draft day and class shape work, and
 [Player Growth & Aging](#development) for how a raw prospect grows into — or falls short of — the ceiling you scouted.

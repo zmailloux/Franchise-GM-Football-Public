@@ -20,7 +20,7 @@ sources:
 
 ## How the draft is built
 
-The draft is the cheapest way to add real talent to your roster, and once your league has been running a few seasons it is the *only* source of genuinely young players. The first year or two of prospects come from a hand-authored seed class; after that, every rookie pool is generated from scratch, season after season, forever.
+The draft is the cheapest way to add real talent to your roster, and once your league has been running a few seasons it is the *only* source of genuinely young players. The first few classes ship with the game's seed data; after those run out — and to top up any year that comes up thin — every rookie pool is generated from scratch, season after season, forever. The game keeps the next few classes minted ahead of you at all times, which is what the scouting board reads.
 
 The structure mirrors the real thing: **seven rounds**, **224 picks**, running worst-team-first within each round, so the clubs that struggled last season choose ahead of the clubs that thrived. You hold one pick per round to start, but that inventory is fluid — you can trade picks away for players, pick up extra picks the same way, and swap picks on draft day itself (more below).
 
@@ -68,6 +68,16 @@ On top of the global shift, **each position group has its own year-to-year swing
 Great classes and weak classes even out over the long haul. Each year's roll is partly detrended against its neighbors, so a boom is *borrowed* from the years around it rather than created from nothing. Over a decades-long franchise the incoming talent stays realistic — the league never inflates or collapses because a few loaded drafts stacked up. You feel the year-to-year texture without the league slowly breaking.
 :::
 
+## Mock drafts during the season
+
+:::screenshot A mock first round, mid-season
+image: mock-draft.jpg
+:::
+
+You don't have to wait for April to see where the board is heading. Three times a year the **League Office publishes a mock draft** of next season's class — after week 7, after week 14, and once the season ends. Each is a frozen three-round, 96-pick projection: the slot order from the standings as they stand, the picks routed through whatever trades have already moved them, and every club taking the player its needs and the public read point it at.
+
+Each edition arrives as a **message on your phone** and opens straight onto the board; they also live under LEAGUE ▸ DRAFT as `MOCK #1`, `#2` and `#3`, and any row drills into that prospect's page. The earliest mock is the loosest guess and each one tightens, so the value is in the drift: a name climbing across all three is a name you'll be bidding against, and the third one is close to the real thing without ever being a script.
+
 ## Draft day
 
 :::screenshot On the clock
@@ -80,7 +90,7 @@ The PICKED log is worth reading as you go. Every completed pick carries the draf
 
 On the clock you can trade instead of pick. Rivals float **trade-back offers** — you send your slot, they send a package of later or future picks and pick immediately. You'll see plenty of interest in the early rounds and it tapers off as the draft wears on, until nobody bothers in the seventh.
 
-Packages are small and priced at near-equal capital, tilted slightly toward the team moving down. You can **shop the pick** to pull a fresh set of offers, and you can **counter** any offer: demand extra picks, drop ones you don't want, or throw in a pick of your own, then watch the rival re-run its verdict live. The value math behind all of it is the same currency used everywhere else — see [Trades](#trades) for how pick value is calculated.
+Packages are small and priced at near-equal capital, tilted slightly toward the team moving down. In the first three rounds at least one offer on the table will also include a **real veteran** at one of your listed needs, so moving down can be a way to fill a hole today rather than only stockpiling picks. You can **shop the pick** to pull a fresh set of offers, and you can **counter** any offer: demand extra picks, drop ones you don't want, or throw in a pick of your own, then watch the rival re-run its verdict live. The value math behind all of it is the same currency used everywhere else — see [Trades](#trades) for how pick value is calculated.
 
 You are never forced to draft blind on need alone: the board also highlights a single **recommended** prospect while you're on the clock, blending your team's need with your scouts' read on the player. It's advice, not an order — and because it reads through *your* scouts, a weak scouting department gives you weaker advice.
 

@@ -29,17 +29,21 @@ There is no rollover. Whatever cap space you finish a season with is **gone** wh
 
 What counts against the cap is every player's current-year cap hit — base salary plus the prorated slice of any signing bonus — plus any dead money you're still carrying. The full anatomy of a deal lives on the [Contracts](#contracts) page; this page is about the market that sets those numbers.
 
-You must be cap-compliant, but not at every moment of the offseason — you can dip over while wheeling and dealing. The hard gate is **before Week 1**: the roster-and-cap compliance check trims you to the roster limit and under the cap, and keeps firing all season. Miss it and the game makes the cuts for you. See [How a Season Works](#season-flow) for where this sits on the calendar.
+You must be cap-compliant, but not at every moment of the offseason — you can dip over while wheeling and dealing. The hard gate is **before Week 1**, and it keeps firing every week after: you have to be inside the roster limit and under the cap to play the game. It is not a fine and not a silent purge — the calendar simply refuses to advance until you fix it, and the screen that stops you will draft the cuts for you and price each one before you commit. See [How a Season Works](#season-flow) for where this sits on the calendar.
 
-Teams are also pushed *up* toward a spending floor, so nobody sits on idle room forever — and the better the team, the higher its floor. Title favorites are expected to spend nearly to the cap; the middle of the league a little less; **rebuilding clubs are allowed to be genuinely cheap**. Spending is audited over rolling multi-season windows rather than year by year, so a club can have a lean season without being force-fed contracts, but can't hoard forever. The rebuild carve-out is the point: bad teams get to be cheap, get younger, and come back.
+**Rival clubs are pushed *up* toward a spending floor**, so nobody sits on idle room forever — and the better the team, the higher its floor. Title favorites are expected to spend nearly to the cap, the middle of the league a little less, and **rebuilding clubs are allowed to be genuinely cheap**. That carve-out is the point: bad teams get to be cheap, get younger, and come back.
 
-:::screenshot The free-agency hub
-One wave in progress: the market list with asks and interest, your pending offers, and cap room live at the top.
+:::note Nobody force-feeds you contracts
+That floor binds the 31 AI clubs, never your own. The league also tracks cash spending over rolling multi-season windows, but for you that ledger is scenery — it shapes how hungry rivals are in an auction and carries no penalty of its own. Run as lean as you can stand.
+:::
+
+:::screenshot The open market
+image: free-agents.jpg
 :::
 
 ## The three offseason waves
 
-Free agency runs **before the draft**, in three waves. But nobody hits the market until the **re-sign window** opens first: every team looks at its own expiring players and decides to extend them, tag one, or let them walk. Only the players a team won't pay — or won't pay *enough* — reach the pool. (The franchise tag is the override that yanks an elite player back off the market for a forced one-year stay; one per team per year.)
+Free agency runs **before the draft**, in three waves. But nobody hits the market until the **re-sign window** opens first: every team looks at its own expiring players and decides to extend them, tag one, or let them walk. Only the players a team won't pay — or won't pay *enough* — reach the pool. The **[franchise tag](#contracts--extensions-the-tag-and-the-option)** is the override that yanks an elite player back off the market for a forced one-year stay, and rival GMs use it too — one per club per year. Cap casualties are the third door into the pool: a club that has to get under the cap cuts good players, and they arrive in the same market.
 
 Then the pool opens in tiers. Each wave advances the calendar a few days; you and every AI GM act once per wave, offers resolve, and the market re-prices before the next one.
 
@@ -49,7 +53,7 @@ Then the pool opens in tiers. Each wave advances the calendar a few days; you an
 | 2 — The Market | Fair value, deliberate | Wave-1 leftovers plus the next tier | Market rate | 3 years |
 | 3 — Bargains | Buyer's market | Everyone remaining | Under market | 1 year |
 
-The waves cool for two independent reasons. The wave itself applies a premium early and a discount late — and separately, a player who goes unsigned gets cheaper every wave, sliding his ask and conceding toward his true market rank. Unsigned players stay active in later waves, so patient GMs regularly land a Wave-1-quality name at a Wave-3 price. Teams pace themselves too: a club spends the bulk of its room in Wave 1, keeps some powder dry for Wave 2, and holds a little back for the bargain bin — with a hard limit on how many offers it can make per wave.
+The waves cool for two independent reasons. The wave itself applies a premium early and a discount late — and separately, a player who goes unsigned closes part of the gap between his ask and his true market rank every time a wave passes him by. Unsigned players stay active in later waves, so patient GMs regularly land a Wave-1-quality name at a Wave-3 price. Teams pace themselves too: a club spends the bulk of its room in Wave 1, keeps some powder dry for Wave 2, and holds a little back for the bargain bin, and each club is limited in how many offers it can table per wave — though one sitting on an embarrassment of unspent money is allowed extra swings.
 
 That "length ceiling" is a ceiling, not a template. The actual offer is the shorter of the wave ceiling and what the player himself wants, so a 33-year-old signs short even in the frenzy. Below-average starters are capped at a short "prove-it" deal in any wave.
 
@@ -68,7 +72,7 @@ Rival GMs are fenced in on price: an AI team can only go so far above what the p
 
 ## How free agents choose
 
-A player reaches the open market by one of two doors.
+Past the cap casualties above, a player reaches the open market by one of two doors.
 
 **The team's call** — a club lets its own player walk when the money doesn't make sense: it can't fit the extension under its projected cap, it already has a cheaper young heir at the spot, he's overpriced for a low-value role, or a rebuilding club is deliberately shedding its older players. Contenders, by contrast, pay a premium to keep their own.
 
@@ -78,20 +82,31 @@ A player reaches the open market by one of two doors.
 - **Rings.** A ringless star past his mid-twenties, stuck on a non-contender, wants out — and will take a discount to join a winner. The urge cools hard once he actually wins.
 - **Role.** An ambitious high-end player who isn't getting the ball wants to be the alpha somewhere he will.
 - **Mood.** Roster churn, bad coaching or a lost season sours him — raising his ask and weakening his pull to stay.
+- **Betting on himself.** A young player still climbing turns down security on purpose, plays out a short prove-it deal, and comes back for the real contract.
+
+**Money isn't the whole offer — when the offer is yours.** He weighs the *deal* you built, not just its total: guaranteed money, how much of it is signing bonus, and the length. Beating a rival by a million on a hundred-million-dollar contract is a rounding error to him, and a better-built deal at the same price will win it. He also looks at your depth chart: a genuinely good player who can see he'd be sitting behind someone better wants convincing, and the way you convince him is guarantees. Rival clubs bid against each other on price alone, so a well-built deal is an edge only *you* can use.
+
+On the easiest [contract difficulty](#contracts--guarantees-and-what-they-cost-you) that edge is gone — the auction becomes pure money, and in exchange free agents say yes a little more readily and a winning bid that falls just short of a player's floor still gets signed. The depth-chart read survives at every difficulty: a good player never wants to be a backup, whatever the settings say.
 
 **Loyalty is the counterweight.** A loyal player gives his current team a real discount plus a strong pull to stay — which is why re-signing your own guys early is almost always cheaper than replacing them.
 
 ## In-season free agency
 
-Once the season kicks off, the market shrinks to **one-year deals only** — depth and injury replacements, never headline signings. Signings fire only when a real **need** opens: a season-ending injury to a starter your bench can't cover, or a fresh cut, with cap room to spare.
+Once the season kicks off, the market shrinks to **one-year deals only** — depth and injury replacements, never headline signings. What opens a signing is a genuine hole: a position that no longer has enough available starters because a man is hurt, suspended or cut. (The exception is the first few weeks, when a club still short of a full roster is allowed to fill it out without any hole at all.)
 
-The street is also deliberately worse than your own building. The in-season pool is quality-capped, while [practice squads](#roster-management) carry the league's best willing fringe — so when an injury opens a hole, the intended first answer is a call-up from your own squad, and free agency is the fallback, not the plan.
+The street is deliberately thinner than your own building. The in-season pool is quality-trimmed, while [practice squads](#roster-management) carry the league's best willing fringe — so when an injury opens a hole, the intended first answer is a call-up from your own squad, and free agency is the fallback, not the plan.
 
-Deals are **prorated** to the weeks left — sign a player in Week 10 and you pay only the back half of the season, with little or no future dead cap. A player who sat unsigned all offseason keeps getting cheaper through the regular season, drifting toward a floor, so a stranded name eventually becomes affordable. That floor is also a **hard rule**: no signing path may put a quality player below it, and a team that can't clear it simply doesn't get him. That's the governing law of the whole economy — a high-`OVR` player is only ever cheap through a rookie deal or a post-trade contract where someone else already ate the guarantees, never a straight free-agent minimum.
+:::tip The veterans left on the board
+The trim is not total. A small standing group of **aging veterans — early thirties, genuinely startable** — is deliberately left unsigned into the season, a couple per position at most. That's why it's worth checking the market in October instead of assuming everyone good is gone.
+:::
+
+Deals are **prorated** to the weeks left — sign a player in Week 10 and you pay only the back half of the season, with little or no future dead cap. A player who sat unsigned all offseason keeps getting cheaper through the regular season, drifting toward a floor, so a stranded name eventually becomes affordable.
+
+A firmer floor sits under all of it: when a club fills out its roster, a genuinely good player may not be signed at scrub money, and a team that can't clear the real price simply doesn't get him. That is the governing law of the whole economy — a high-`OVR` player is only ever cheap through a rookie deal or a post-trade contract where someone else already ate the guarantees. And nobody, at any point, signs for less than the [league minimum](#contracts--anatomy-of-a-deal).
 
 ## What the market pays
 
-Prices are fit to real-NFL money, and set by **position group** rather than raw position — edge rushers price together, guards and centers price separately, and a hybrid lineman blends between groups depending on whether he's really a pass rusher or a run stopper. Each group has its own curve and its own hard ceiling on what any single contract in it can be worth.
+Prices are fit to real-NFL money, and set by **position group** rather than raw position — guards and centers price separately, for instance. Two consequences catch people out. A stand-up **`EDGE`** rusher is paid on the pass-rush market while a base **`DE`** is paid as an interior body, so two men who look like ends cost very different money. And an interior lineman who is genuinely a penetrating rusher blends part-way toward the edge market — the only place a player straddles two groups. Each group has its own curve and its own hard ceiling on what any single contract in it can be worth.
 
 Those ceilings are the whole positional-value argument, and they run in this order:
 
@@ -99,13 +114,17 @@ Those ceilings are the whole positional-value argument, and they run in this ord
 |---|---|
 | A league apart | Quarterback |
 | Premium | Edge rusher · Wide receiver |
-| Expensive | Interior defensive line · Offensive tackle · Cornerback |
-| Mid-market | Center · Guard · Safety |
-| Cheap for a starter | Off-ball linebacker · Running back · Tight end |
+| Expensive | Cornerback · Interior defensive line · Off-ball linebacker |
+| Mid-market | Offensive tackle · Safety · Running back |
+| Cheap for a starter | Guard · Center · Tight end |
 | Rounding error | Kicker · Punter |
 
-The best quarterback in the league is worth several running backs, and the gap between the tiers is far bigger than the gap between two players inside one tier. Within a group the curve is steep at the top and flat at the bottom — which is why a genuine star sets the market in Wave 1 while replaceable starters flood the bargain bin. How rating maps onto money is on the [Player Stats & Ratings](#ratings) page.
+The gap between the tiers is far bigger than the gap between two players inside one tier — the best quarterback in the league is worth multiples of the best running back. How rating maps onto money is on the [Player Stats & Ratings](#ratings) page.
+
+:::tip Read the tier as a ceiling, not a going rate
+That order ranks what the *best* player in each group can be paid, and the curve underneath it varies just as much. Linebacker money is concentrated hard at the very top, so an elite one is expensive and an ordinary one is not; tackle money is flatter across the starter band, so a merely good tackle costs real money where a merely good linebacker does not. Every group is steep at the top and flat at the bottom — which is why stars set the market in Wave 1 while replaceable starters flood the bargain bin.
+:::
 
 ## Holdouts and contract drama {live}
 
-The pressure layer is **on**: a player whose situation has curdled can escalate from private grumbling to a public demand that you rework his contract, and from there to a trade request — with a genuine sit-out as the rare tail, only at the higher difficulty settings. The market matters here because an unhappy player's ask is one of the forces that prices him. The escalation ladder and what each answer does live on [Morale, Health & Your Roster](#roster-management--what-your-players-want); the negotiating mechanics are on [Contracts](#contracts--renegotiations-and-holdouts).
+The pressure layer is **on**: a player whose situation has curdled can escalate from private grumbling to a public demand that you rework his contract, and from there to a trade request — which is where the ladder ends on the Easy and Medium presets. Only Hard lets a player actually sit out, and a custom setup lets you set that ceiling yourself. The market matters here because an unhappy player's ask is one of the forces that prices him. The escalation ladder and what each answer does live on [Morale, Health & Your Roster](#roster-management--what-your-players-want); the negotiating mechanics are on [Contracts](#contracts--renegotiations-and-holdouts).
