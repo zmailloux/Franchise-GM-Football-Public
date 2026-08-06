@@ -18,7 +18,7 @@ sources:
 
 ## Reading a stat table
 
-Every stat table in the game carries an ⓘ beside its header, and it opens the key for **exactly the columns in front of you** — the quarterback key on a quarterback, the punting key on a punter, the leaderboard key for whichever board you are looking at. This page is the same key, written out once so you can read it away from the game.
+Two places in the game carry a key of their own: a **player's card** and the league **player** leaderboards each have an ⓘ beside the table header, and it opens the key for **exactly the columns in front of you** — the quarterback key on a quarterback, the punting key on a punter, the leaderboard key for whichever board you are looking at. Everywhere else the columns stand unlabelled: the team stats tab, the league team board, a live or finished box score, and a retired player's career table have no key attached. This page is the whole key, written out once so it covers all of them.
 
 The one habit worth forming: a header code means different things at different positions. `YDS` is passing yards on a quarterback's card, rushing yards on a running back's, receiving yards on a receiver's, and gross punt yards on a punter's. `TD`, `AVG`, `LNG` and `INT` are the same story. Read every column in the company of the position that produced it — which is why the tables below are grouped by position family rather than alphabetically.
 
@@ -118,7 +118,7 @@ Linemen are graded on the two jobs they actually do, and each job carries its ow
 
 ## Defense
 
-Every defensive player carries the same tackle-and-turnover line, so you can compare a safety and an interior lineman on the same row shape.
+Every defensive player carries the same tackle-and-turnover line, so a safety and an interior lineman can be compared on it directly. It is not the whole row, though: everyone the defense asks to cover carries a coverage block in front of it as well — see [the coverage ledger](#stat-glossary--the-coverage-ledger) below.
 
 | Column | What it means |
 |---|---|
@@ -134,7 +134,7 @@ Every defensive player carries the same tackle-and-turnover line, so you can com
 
 ## The coverage ledger
 
-Anyone the defense can put in coverage — corners, safeties, linebackers and edge rushers — carries a second block on top of the line above, charting what happened on throws into his coverage. Interior linemen and base ends do not: nobody asks a nose tackle to cover anybody, so those columns simply aren't on his card.
+Anyone the defense can put in coverage — corners, safeties, linebackers and edge rushers — carries a second block charting what happened on throws into his coverage. On his player card it **leads** the row, sitting ahead of the tackle line, because for a corner it is the job. Interior linemen and base ends carry none of it: nobody asks a nose tackle to cover anybody, so those columns simply aren't on his card.
 
 | Column | What it means |
 |---|---|
@@ -218,3 +218,5 @@ Two of those boards rank on a **rate** rather than a total, because the counting
 
 - The `OL` board sorts by fewest pressures allowed per pass-block snap. A raw sack-allowed count just punishes whoever plays the most, so only full-time linemen are ranked at all — a man needs at least 80% of the busiest lineman's pass-block snaps. Everyone else is listed underneath them.
 - The `DB` board sorts by yards allowed per target, with the rest of the [coverage ledger](#stat-glossary--the-coverage-ledger) behind it. The `LB` board carries the same coverage columns but ranks on the tackle line, because that is the larger part of the job.
+
+Watch which board a defender lands on, because it follows the job rather than the label: `DL` is interior linemen and base ends and ranks on sacks, while an **edge rusher is ranked on the `LB` board**, alongside the off-ball linebackers he shares a coverage ledger with.

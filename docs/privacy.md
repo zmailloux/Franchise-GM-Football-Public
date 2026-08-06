@@ -20,7 +20,7 @@ sources:
 
 *Franchise GM: Football* collects nothing about you. There is no account, no login, no telemetry, no analytics, no ads, and no third-party trackers. The game runs entirely on your device and never phones home. This Field Guide website is the same: static pages that report nothing about who reads them.
 
-That is the whole policy. The rest of this page just spells out what "nothing" means, and is honest about the single, optional moment the app can touch the network — one you start yourself.
+That is the whole policy. The rest of this page just spells out what "nothing" means, and is honest about the three moments the network comes anywhere near the game — only one of which is the app itself making a request, and that one you start yourself.
 
 ## What the game collects
 
@@ -30,7 +30,7 @@ Nothing leaves your device, because the game was built on-device only from day o
 |---|---|
 | An account or login | None. You just start a game |
 | Usage analytics / telemetry | None. Nothing about how you play is measured or sent |
-| Crash reporting | None that leaves your device |
+| Crash reporting | No crash-reporting library is bundled at all. Your phone's OS may still share anonymous crash logs with developers if *you* switched that on in your device settings — that is Apple's or Google's channel, not ours, and it carries nothing about your franchise |
 | Ads or ad trackers | None |
 | Cloud saves | None. Every save lives locally on your device |
 | A profile tied to you | None. There is no server that knows you exist |
@@ -43,7 +43,7 @@ Because saves live only on your device, they behave like any other on-device fil
 
 ## The one time the app uses the network
 
-There is exactly one moment the app can make a network request, and it only happens if you ask for it.
+There is exactly one moment the app itself can make a network request, and it only happens if you ask for it. Two other moments hand off to your phone instead of going online themselves; both are named below.
 
 When you start a new game, you can optionally **import a custom teams file** from a web address you type in yourself — typically a link to a file you host on GitHub. If you use that option, the app fetches that one file over a secure (HTTPS) connection from the address you provided, checks that it is valid, and loads it. That is a one-time setup download of a configuration file you chose and pointed the app at — not ongoing online play, and not something that happens on its own.
 
@@ -53,7 +53,10 @@ Even then, the request only goes *out* to fetch a file. Nothing about you is sen
 Skip the import step and start a normal new game, and the app stays fully offline for the entire life of your franchise. The network request exists only to serve *your* request to load *your* file.
 :::
 
-There is one other outbound thing worth naming, though it isn't the app going online: the **community link** on the save-select screen hands a web address to your phone's own browser and steps out of the way. The game doesn't open a browser inside itself, doesn't read anything back, and sends nothing along with it — it is the same as you typing the address in yourself.
+Two other outbound moments are worth naming, though neither is the app going online itself.
+
+- **The community link** on the save-select screen hands a web address to your phone's own browser and steps out of the way. The game doesn't open a browser inside itself, doesn't read anything back, and sends nothing along with it — it is the same as you typing the address in yourself.
+- **The rating prompt.** The first time you win a championship, the game asks *your phone's operating system* to show its standard "rate this app" sheet. That is a system sheet, asked for once per device and never again; the app doesn't run it, doesn't see your answer, and sends nothing with the request. Whatever you type goes to the App Store, not to us — and it is the store's own review system, entirely separate from your saves.
 
 No analytics, advertising, attribution or crash-reporting library is bundled in the app at all, so there is no component that *could* start reporting on you.
 

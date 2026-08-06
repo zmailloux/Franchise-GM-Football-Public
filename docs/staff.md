@@ -50,7 +50,7 @@ Coaching is not flavor text: each skill feeds a specific on-field channel, and t
 |---|---|
 | **Run game** | Blocking quality on designed runs |
 | **Pass defense** | The single biggest coaching channel — tightens completions allowed |
-| **Playcalling** | Situational aggression: fourth downs, two-point tries, shot plays |
+| **Playcalling** | Fourth-down aggression — how often he goes for it rather than kicking. That decision only |
 | **Play design** | Sharpens your scheme identity; also speeds how fast players learn the system |
 | **Motivation** | A week-to-week edge in how ready the team plays — the second-biggest channel |
 | **Discipline** | Fewer penalties |

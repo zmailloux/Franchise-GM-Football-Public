@@ -34,7 +34,7 @@ You must be cap-compliant, but not at every moment of the offseason — you can 
 **Rival clubs are pushed *up* toward a spending floor**, so nobody sits on idle room forever — and the better the team, the higher its floor. Title favorites are expected to spend nearly to the cap, the middle of the league a little less, and **rebuilding clubs are allowed to be genuinely cheap**. That carve-out is the point: bad teams get to be cheap, get younger, and come back.
 
 :::note Nobody force-feeds you contracts
-That floor binds the 31 AI clubs, never your own. The league also tracks cash spending over rolling multi-season windows, but for you that ledger is scenery — it shapes how hungry rivals are in an auction and carries no penalty of its own. Run as lean as you can stand.
+That floor binds the 31 AI clubs, never your own. The league also tracks cash spending over fixed three-season windows, but for you that ledger is scenery — it shapes how hungry rivals are in an auction and carries no penalty of its own. Run as lean as you can stand.
 :::
 
 :::screenshot The open market
@@ -127,4 +127,4 @@ That order ranks what the *best* player in each group can be paid, and the curve
 
 ## Holdouts and contract drama {live}
 
-The pressure layer is **on**: a player whose situation has curdled can escalate from private grumbling to a public demand that you rework his contract, and from there to a trade request — which is where the ladder ends on the Easy and Medium presets. Only Hard lets a player actually sit out, and a custom setup lets you set that ceiling yourself. The market matters here because an unhappy player's ask is one of the forces that prices him. The escalation ladder and what each answer does live on [Morale, Health & Your Roster](#roster-management--what-your-players-want); the negotiating mechanics are on [Contracts](#contracts--renegotiations-and-holdouts).
+The pressure layer is built, and it runs **from Medium up**. A new game starts on **Easy**, which runs no morale economy at all — no mood shown anywhere, no demands, no drama — so on a default save none of this happens until you turn it on. Once it is on, a player whose situation has curdled can escalate from private grumbling to a public demand that you rework his contract, and from there to a trade request, which is where the ladder ends on Medium. Only Hard lets a player actually sit out, and a Custom setup inherits Hard's ceiling. The market matters here because an unhappy player's ask is one of the forces that prices him. The escalation ladder and what each answer does live on [Morale, Health & Your Roster](#roster-management--what-your-players-want); the negotiating mechanics are on [Contracts](#contracts--renegotiations-and-holdouts).

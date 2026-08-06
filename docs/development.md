@@ -32,7 +32,7 @@ Two different indicators sit on the surface, and they're easy to confuse. The **
 |---|---|---|
 | Ascent | Positive deltas, biggest for the youngest players | Green trend arrows, an `OVR` ring that ticks up each offseason |
 | Peak / plateau | Deltas near zero for a stretch | Ratings hold; a prime you want to build around |
-| Decline | Deltas turn negative, steepening with age | Red arrows, physical ratings (`speed`, `burst`) fading first |
+| Decline | Deltas turn negative, steepening with age | Red arrows, physical ratings (`speed`, `acceleration`) fading first |
 
 :::screenshot Growth arrows on the roster
 image: roster.jpg
@@ -85,7 +85,7 @@ The dominant force in development is **age** — where a player sits on his own 
 A young, cheap player trending up is worth more to your future than a slightly higher-`OVR` veteran trending down — and the market usually prices the current number, not the direction. Buy the curve, not the snapshot.
 :::
 
-Mood sits alongside all this and does **not** touch the growth curve. What it does touch is availability and money: unhappy stars really do escalate to trade requests, renegotiation demands and holdouts, and that machinery is live in a new game. The one part still switched off by default is mood nudging *on-field* effectiveness — that's an opt-in setting. See [Morale, Health & Your Roster](#roster-management) for how mood plays out and [Contracts](#contracts) for what a demand costs you.
+Mood sits alongside all this and does **not** touch the growth curve. What it does touch is availability and money: unhappy stars really do escalate to trade requests, renegotiation demands and holdouts. That machinery is gated on difficulty, though — **a new game starts on Easy, which runs no morale economy at all**; it comes alive from Medium up. Even then, mood nudging *on-field* effectiveness stays off unless you opt into it. See [Morale, Health & Your Roster](#roster-management) for how mood plays out and [Contracts](#contracts) for what a demand costs you.
 
 ## Decline and retirement
 

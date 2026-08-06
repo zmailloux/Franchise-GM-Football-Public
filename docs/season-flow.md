@@ -35,7 +35,7 @@ A league year runs the same ordered loop every season. You advance it phase by p
 
 | Stage | Phases in order | What it settles |
 |---|---|---|
-| Offseason | Contract aging → staff hiring → re-signings & cuts → free agency (3 waves) → draft → training camp {in-dev} → roster & cap compliance | Who's on the team, and who's paid |
+| Offseason | Contract aging → staff hiring → re-signings → cuts → free agency (3 waves) → a pre-draft trade window → the draft → the post-draft tail → training camp → cut to 53 & cap compliance | Who's on the team, and who's paid |
 | Regular season | 18 weeks, 17 games each | Standings and playoff seeds |
 | Playoffs | Wild Card → Divisional → Conference → the championship | Your finish, and the champion |
 | Season end | Awards → retirements → career roll → stay-or-move → roll to next offseason | The book closes; the next year opens |
@@ -46,16 +46,18 @@ The offseason is a fixed sequence of phases. You handle each one, get a report, 
 
 - **Contract aging.** Every player and staff deal loses a year; deals that run out drop into the free-agent or hireable pool. You get a "what changed" recap first.
 - **Staff hiring.** Hire and extend your head coach, coordinators, special-teams coach, scouts, and team doctor from a candidate pool. Rival teams chase the same names against their own budgets, so a coach you wait on may be gone. Who does what: [Coaches, Scouts & the Organization](#staff).
-- **Re-signings & cuts.** Apply the franchise tag, make extension and re-sign offers to your expiring players, and cut cap casualties. Teams may carry more than 53 through the offseason — the squeeze comes later. Cap math and offer mechanics: the [Contracts](#contracts) page.
+- **Re-signings, then cuts.** Two separate beats. First apply the franchise tag and make extension and re-sign offers to your expiring players; then cut your cap casualties. Teams may carry more than 53 through the offseason — the squeeze comes later. Cap math and offer mechanics: the [Contracts](#contracts) page.
 - **Free agency, three waves.** The market opens in three tiers — "The Frenzy" (the top names), then "The Market," then "Bargains." You bid against the AI clubs in each wave, and your results from one wave are revealed as you enter the next. Full model: [Free Agency](#free-agency).
+- **The pre-draft window.** The rival clubs trade picks and players among themselves before anyone is on the clock, so the board you sit down to isn't quite the one you left. Your own [trade](#trades) desk stays open throughout.
 - **The draft.** An on-the-clock draft with prospect face cards. What you know about each prospect depends on your [Scouting](#scouting); pick mechanics are on the [Draft](#draft) page.
-- **Training camp.** A development phase between the draft and week 1. It ships as a placeholder screen you continue past; the full mechanic comes later. {in-dev}
-- **Preseason games.** Three optional exhibition games sit here, off by default.
+- **The post-draft tail.** The undrafted pool clears, clubs short of bodies fill out their rosters, the league's spending floor is applied to the AI teams, and next year's pick ledger rolls forward. Mostly bookkeeping, but it is where a lot of the league's depth actually gets signed.
+- **Training camp.** A development beat between the draft and week 1. There is **no camp screen** — it runs through as part of the advance, and the user-facing beat you actually stop on is the cut-to-53 and compliance gate below.
+- **Preseason games.** Three exhibition games are built into the calendar but are **switched off**, and there is no setting to turn them on. Nothing sits between camp and week 1 today.
 
 :::warn Get legal before week 1
 Right before the season opens, your team must be **compliant**: an active roster of **53 or fewer** (and at least **44**), no more than **16** on the [practice squad](#roster-management), and total salary under the cap. Outside any of those lines and you can't kick off until you fix it — release players, restructure a contract to lower this year's hit, or make a [trade](#trades). The AI teams resolve it automatically; you get a blocking screen until you're legal. The same check fires before every regular-season game, so a midseason signing that busts the cap stops your next kickoff too.
 
-Two softer signals ride along: the roster screen shows a **required-starters count per position**, derived from your scheme's actual looks, and before kickoff the game **warns you** if injuries have left a position group too thin to field its slots — a warning, not a block, but ignore it and a backup's backup plays.
+Two softer signals ride along: the roster screen shows a **required-starters count per position**, derived from your scheme's actual looks, and before kickoff the game **warns you** if injuries have left a position group too thin to field its slots. Merely thin is a warning — ignore it and a backup's backup plays. A scheme-required position with **no healthy body at all** is a hard block, exactly like busting the cap.
 :::
 
 ## Playing the regular season
@@ -123,13 +125,13 @@ When the last regular-season week resolves, the standings lock and the league ad
 
 Then the year closes with a bookend loop:
 
-- **Awards.** MVP, Offensive and Defensive Player of the Year, Rookie of the Year, and All-Pro honors.
+- **Awards.** MVP, Offensive and Defensive Player of the Year, **Offensive and Defensive** Rookie of the Year, Best Kicker, Best Punter, Coach of the Year, and All-Pro first and second teams.
 - **Hall of Fame & retirements.** Veterans retire by age and decline; Hall inductions are voted in, and your retirees are called out first.
 - **Progression & regression.** Every player ages along his development curve — young players grow, veterans fade. See the [Development](#development) page.
 - **Your GM career.** The season is appended to your record, achievements are checked, and your reputation updates.
 - **Stay or move.** You're offered a handful of teams — about six, usually lower-ranked clubs — and you may **take over one** or **stay**. Choosing a new team simply moves you into that franchise; the league keeps rolling.
 
-From there the calendar ticks over, a fresh draft class is minted, and you roll into the next offseason — starting again with staff hiring.
+From there the calendar ticks over, a fresh draft class is minted, and you roll into the next offseason — starting again with contract aging.
 
 ## Deterministic, but alive
 
