@@ -16,6 +16,7 @@ sources:
   - docs/scheme-coaching-magnitudes.md
   - sim/balance/coaching.yaml
   - sim/balance/staff_hiring.yaml
+  - sim/balance/injury.yaml
   - sim/lib/src/models/staff_role.dart
   - docs/org-quality.md
   - DESIGN.md#B
@@ -27,18 +28,18 @@ Every team employs the same seven-role staff. Each staffer is a rated person wit
 
 | Role | What he owns |
 |---|---|
-| **Head Coach** | The team dials (RB approach, playcalling aggression, blitz frequency), game management, motivation and discipline — and his personal style adds a fit perk when it matches a coordinator's system |
-| **Offensive Coordinator** | The **offensive scheme** — the team runs his system for the length of his contract |
-| **Defensive Coordinator** | The **defensive scheme**, including the specific zone shell (Cover 2, Tampa 2, Cover 3, Quarters) — visible and editable in his staff profile |
+| **Head Coach** | The in-game calls — playcalling aggression, blitz frequency and the coverage shell (Cover 1, Cover 2, Tampa 2, Cover 3, Quarters) — plus game management, motivation and discipline. He also covers a vacant coordinator's system, and his personal style adds a fit perk when it matches a coordinator's |
+| **Offensive Coordinator** | The **offensive scheme** and the RB approach — the team runs his system for the length of his contract |
+| **Defensive Coordinator** | The **defensive scheme**: the front the team lines up in and whether it plays man or zone |
 | **Special Teams Coach** | The kicking game |
 | **Offensive Scout** | Your read on every offensive draft prospect |
 | **Defensive Scout** | Your read on every defensive draft prospect |
-| **Team Doctor** | Injury recovery and rehab |
+| **Team Doctor** | How often your players get hurt, how fast they come back, and how much damage a serious injury leaves behind |
 
-Coaches carry a merged overall of their own, rolled up from their coaching skills the same way a player's `OVR` rolls up from his attributes — so the market can rank a head-coach candidate the way it ranks a free-agent tackle.
+Each coach's own styles are printed on his staff profile — the same rows for a candidate in the market as for the man you employ — so you can read the system a hire brings before you sign him. Coaches also carry a merged overall of their own, rolled up from their coaching skills the same way a player's `OVR` rolls up from his attributes, so the market can rank a head-coach candidate the way it ranks a free-agent tackle.
 
 :::screenshot The staff screen
-Office ▸ Coaches — your seven staffers, their overalls, styles, and contract years remaining.
+image: staff.jpg
 :::
 
 ## What coaching actually moves on the field
@@ -55,6 +56,27 @@ Coaching is not flavor text: each skill feeds a specific on-field channel, and t
 | **Discipline** | Fewer penalties |
 | **Game management** | Fewer late-game blunders (botched clock, wasted timeouts) |
 | **Kicking** | Field-goal and punt quality via the special-teams coach |
+
+## What your team doctor is worth
+
+He is the one staffer who never touches a snap and still decides how much of your roster you get to
+play. Three ratings, all real:
+
+| Rating | What it does |
+|---|---|
+| **Injury Prevention** | How often your players go down in the first place |
+| **Rehab Speed** | How quickly the ones who do go down come back |
+| **Re-Injury Protection** | How much lasting fragility a serious injury leaves behind |
+
+The spread is wide on purpose. **The best medical staff in the league sees roughly half as many
+injuries as the worst**, and gets hurt players back meaningfully sooner. A doctor near the league
+average is neutral — he neither helps nor hurts — so the ones that matter are the genuinely great and
+the genuinely awful.
+
+Two things follow from that. A cheap doctor is a real cost, not a saving: you pay for him in snaps
+your best players don't take. And Re-Injury Protection compounds quietly — a bad medical staff turns
+one serious knee injury into a player who keeps breaking down for the rest of his career, because a
+severe injury permanently raises how fragile he is and good aftercare blunts that.
 
 Two things worth knowing as a GM. A head coach's **playcalling trait is a real probability model** — an Aggressive coach genuinely goes for fourth downs far more often than a Cautious one, not just in flavor. And coaching **compounds**: a good staff also nudges your young players' [development](#development) year over year, which is how a well-coached franchise slowly out-grows an equally talented, badly coached one. The effect per season is modest and capped; the dynasty is built by keeping it running.
 
@@ -96,7 +118,7 @@ rises or falls on your decisions alone — no hidden hand, in either direction.
 :::
 
 :::screenshot The league news feed
-Regime changes, firings and organizational storylines surfacing in the news.
+image: league-news.jpg
 :::
 
 ## Reading your staff as a system

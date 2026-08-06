@@ -27,7 +27,7 @@ Your **offensive coordinator owns the offensive scheme, your defensive coordinat
 There are six offensive schemes and six defensive schemes, broken down below.
 
 :::screenshot The scheme screen
-Office ▸ Coaches ▸ Scheme — your offensive and defensive identity, the coordinators who own each, and the team dials.
+image: scheme.jpg
 :::
 
 :::note Scheme vs. weekly gameplan
@@ -69,14 +69,14 @@ The front decides the shape of your front seven and where the bodies come from:
 | Front | Base box | Nickel (default, most snaps) | Rush comes from |
 |---|---|---|---|
 | **4-3** | DE1 · DT2 · EDGE1 · LB3 · CB2 · S2 | DT2 · **EDGE2** · LB2 · **CB3** · S2 — the base end and a linebacker come off for a second rusher and the slot corner | 4-man line, both `EDGE`s lead |
-| **3-4** | DE2 · DT1 · EDGE2 · LB2 · CB2 · S2 | DE2 · EDGE2 · LB2 · CB3 · S1 — a safety comes off for the slot corner | 3-man line, the two `EDGE`s lead |
+| **3-4** | DE2 · DT1 · EDGE2 · LB2 · CB2 · S2 | DT1 · DE2 · EDGE2 · LB2 · **CB3** · S1 — the front seven stays whole; a safety comes off for the slot corner | 3-man line, the two `EDGE`s lead |
 | **Hybrid** | alternates the 4-3 and 3-4 boxes | whichever box is on the field; nickel default either way | whichever box is on the field |
 
-Every scheme also has a **dime** package (six defensive backs, one linebacker) for obvious passing downs, and a **goal-line** package for short yardage — filled from whichever cornerbacks and safeties fit best, not a fixed split.
+Every scheme also has a **dime** package (six defensive backs, one linebacker) for obvious passing downs, and a **goal-line** package (a big body on for a safety) for short yardage. In nickel and dime the extra coverage slots go to whoever your roster fields best next — a corner-deep team fills them with corners, a safety-deep team plays big nickel — while the base secondary and the goal-line group are a fixed split.
 
 The front decides *who* your sacks come from — both fronts lean on the same `EDGE` pool, since a hand-down 4-3 end and a stand-up 3-4 rusher are the same body in a different stance. So the real difference between fronts is felt in the interior and off-ball linebacker counts, not in who rushes.
 
-Coverage sets your interception profile. **Man** trails the receiver and plays tighter underneath, giving up fewer picks. **Zone** reads the quarterback and jumps throws, producing more of them — and inside Zone your defensive coordinator plays a specific shell (Cover 2, Tampa 2, Cover 3, Quarters), each rewarding a different rare body: a rangy cover linebacker for Tampa 2, a pair of do-everything safeties for Quarters. You can see — and set — a coordinator's shell in his staff profile. Coverage is only as strong as your defensive backs' and linebackers' fit for it: man wants man-coverage corners, zone wants zone specialists and a field-reading linebacker.
+Coverage sets your interception profile. **Man** trails the receiver and plays tighter underneath, giving up fewer picks. **Zone** reads the quarterback and jumps throws, producing more of them. On top of that your **head coach** — not the coordinator — calls the shell: Cover 1 is the man call, and Cover 2, Tampa 2, Cover 3 and Quarters are the zone ones. Two of them reward a different rare body: Tampa 2 wants a rangy cover linebacker in the middle, Quarters wants a pair of do-everything safeties. A coach with no shell on file defaults to Cover 1 under a Man scheme and Cover 3 under a Zone one. You can see the call in his staff profile. Coverage is only as strong as your defensive backs' and linebackers' fit for it: man wants man-coverage corners, zone wants zone specialists and a field-reading linebacker.
 
 :::note One pool per job
 **`DE`** is only the base, run-setting end — he plays every down in a 3-4 but comes off for a second rusher in a 4-3's nickel package. **`EDGE`** is the single pass-rush pool across both fronts, and **`LB`** covers every off-ball linebacker job. See [Player Stats & Ratings](#ratings) and [Archetypes](#archetypes).
@@ -99,14 +99,14 @@ That has teeth. An extra tight end or a lead back is another blocker and **helps
 The defense answers you: three receivers pull a **nickel** defensive back on, four pull a **dime**, heavy personnel in short yardage brings out the **goal-line** group, and third-and-long bumps the package up a step by itself.
 
 :::note Which defender comes off
-The fronts answer a nickel differently. A **4-3** makes **two** swaps — the base-package `DE` comes off for a second `EDGE` rusher, and a linebacker comes off for the slot corner. A **3-4** is already a seven-man front, so it keeps its whole front seven and pulls a **safety** instead. That's why a 3-4 keeps two linebackers on the field on the great majority of its snaps while a 4-3 almost never does, and a Hybrid sits between them. Only on a genuine passing down (dime) does a 3-4 finally take a linebacker off too.
+The fronts answer a nickel differently. A **4-3** makes **two** swaps — the base-package `DE` comes off for a second `EDGE` rusher, and a linebacker comes off for the slot corner, so a 4-3 nickel is genuinely lighter in the box and its run defense pays for it. A **3-4** is already a seven-man front, so it keeps every one of those seven and pulls a **safety** instead, staying at four defensive backs. A Hybrid sits between them, alternating the two boxes roughly half and half. Only on a genuine passing down (dime) does a 3-4 finally take a linebacker off too.
 :::
 
 Because a scheme plays several looks, the bodies it needs to **carry** are the union across all of them, not the eleven in its base box — call it twelve to thirteen defenders to cover eleven slots. That flows straight into what the game tells you your roster is missing, what the AI bids on, and how your [draft](#draft) board is ranked.
 
 ## Scheme fit — how well your roster matches {live}
 
-**Scheme fit** is a per-player multiplier for how well a player's archetype suits the scheme he plays in. His [rating](#ratings) comes from his attributes; fit sits on top. A preferred archetype gets a real bump, a poor-fit archetype a real cut, and a coach whose own style matches the system adds a little more on top — more if he's a gifted play designer, less if he isn't. Only the coaches who own that side of the ball count: your offensive coordinator's opinion about defense is never read.
+**Scheme fit** is a per-player multiplier for how well a player's archetype suits the scheme he plays in. His [rating](#ratings) comes from his attributes; fit sits on top. A preferred archetype gets a real bump and a poor-fit archetype a real cut. On top of that, a head coach who runs the same system as his coordinator adds a little more — more if he's a gifted play designer, less if he isn't — and a head coach who runs a *different* one takes a little back off. An empty coordinator chair is simply neutral. Only the coaches who own that side of the ball count: your offensive coordinator's opinion about defense is never read.
 
 On offense, **fit tilts who gets the ball, not who starts or how good your team is.** Your depth chart is still ordered by pure `OVR`, so fit decides *which* receiver is the alpha — a `Deep Threat` in a Vertical scheme soaks up looks; the same player in Ground & Pound gets fewer. That's deliberate: fit shapes the box score and your *style*, staying near-neutral on raw team strength, so a good roster is good in any scheme. On defense the same usage tilt applies — plus the bounded [fit bonus](#schemes--the-defensive-fit-bonus) above.
 
@@ -114,26 +114,33 @@ If you disagree with an automatic call, you can **pin a player to a lineup slot*
 
 **Team `OVR` is scheme-aware**, though. It weights each position by the slots your scheme fields, top starter mattering most and depth falling off fast, so the same roster reads a **different number under a different scheme** — a Vertical team's four wideouts make receiver depth worth far more than a two-wide scheme would, and quarterback carries the heaviest weight of any position. A great staff that fits the scheme is worth real wins over a terrible one — see [Coaches, Scouts & the Organization](#staff).
 
-The team-level dials, all owned by the head coach:
+The team-level dials, and who owns each:
 
-| Dial | Values | What it changes |
-|---|---|---|
-| **RB approach** | Lead Back · Committee · Bellcow | How concentrated the carries are — a Bellcow takes most of them, a Committee splits them widely |
-| **Playcalling** | Cautious · Balanced · Aggressive | Fourth-down aggression is a genuine probability model, plus two-point tries and shot-play priors |
-| **Blitz frequency** | Low · Medium · High | Base pressure rate, traded against completions allowed when coverage is exposed |
+| Dial | Owner | Values | What it changes |
+|---|---|---|---|
+| **RB approach** | Offensive coordinator | Lead Back · Committee · Bellcow | How concentrated the carries are — a Bellcow takes most of them, a Committee splits them widely |
+| **Playcalling** | Head coach | Cautious · Balanced · Aggressive | Fourth-down aggression is a genuine probability model, plus two-point tries and shot-play priors |
+| **Blitz frequency** | Head coach | Low · Medium · High | Base pressure rate, traded against completions allowed when coverage is exposed |
+| **Coverage shell** | Head coach | Cover 1 · Cover 2 · Tampa 2 · Cover 3 · Quarters | Which zone (or man) look sits behind the front — see above |
+
+A coach carries a stored style for every one of these, including the side of the ball he doesn't own. Those off-role values are inert: a defensive coordinator's opinion about your run game is never read.
 
 ## Playing the fit game as GM {live}
 
-Two levers, pulling against each other. **Hire a coach whose scheme already fits your roster** — the fastest path; a receiver-heavy roster wants a Vertical or Run & Shoot coach, a mauling line and a power back want Ground & Pound. The **"Coaches Aligned"** check tells you whether your head coach, coordinator and system agree. Or **re-tool the roster to fit the coach**, which is slower and pricier since his scheme is locked for his contract — you rebuild around it through the [draft](#draft), [free agency](#free-agency) and [trades](#trades), and it takes a few seasons.
+Two levers, pulling against each other. **Hire a coach whose scheme already fits your roster** — the fastest path; a receiver-heavy roster wants a Vertical or Run & Shoot coach, a mauling line and a power back want Ground & Pound. The **"Coaches Aligned"** check tells you whether your head coach and his coordinators agree — and it isn't decoration: a misaligned pair is a small standing tax on every fit score on that side of the ball. Or **re-tool the roster to fit the coach**, which is slower and pricier since his scheme is locked for his contract — you rebuild around it through the [draft](#draft), [free agency](#free-agency) and [trades](#trades), and it takes a few seasons.
 
 :::screenshot Roster fit at a glance
 The roster screen's scheme-fit column: who your system loves, who it wastes.
 :::
 
-Either way, players have to *learn* the system. A man who has never seen your playbook gives up part of his fit edge and claws it back week by week; training camp gives everyone a one-time floor, and smart players under a good play-designer learn faster. Familiarity carries **partial credit for a similar system** — Ground & Pound and Read Option are cousins, as are Pro Set and Quick Game, and Run & Shoot and Vertical. On defense you're credited separately for knowing the coverage and the front. A familiarity chip in free agency shows how much of a head start a target would have; the AI prices it in too.
+Either way, players have to *learn* the system. A man who has never seen your playbook gives up part of his fit edge and claws it back week by week; training camp gives everyone a one-time floor, and smart players under a good play-designer learn faster. Familiarity carries **partial credit for a similar system** — Ground & Pound and Read Option are cousins, as are Pro Set and Quick Game, and Run & Shoot and Vertical. On defense you're credited separately for knowing the coverage and for knowing the front, and because a Hybrid plays a 4-3 box most of the time, the two front families cross-credit each other a little. A familiarity chip in free agency shows how much of a head start a target would have; the AI prices it in too.
 
 So a scheme change costs you a season of comfort on top of the roster refit — and costs less if the new system is a cousin of the old one.
 
-:::warn One realism booster is still switched off
-Individual receiver-versus-cornerback matchups — a shutdown corner erasing your No. 1 receiver — are **still averaged across the coverage unit** {built-off} rather than resolved one-on-one. It's built and awaiting a balance pass. And there's no *extra* penalty for running a five-wide scheme without five good receivers: thin groups hurt you through the personnel you actually field, but nothing punishes the mismatch on top of that.
+:::note Individual matchups are live now {live}
+Receiver-versus-cornerback matchups are resolved **one-on-one**, not averaged across the coverage unit. A shutdown corner really does erase the man he draws, quarterbacks really do steer away from him, a defense can shadow its best cover man onto the opponent's number one, and a dangerous receiver can be bracketed with help. That is the pass game; the run game's trench pairings are still graded as units.
+:::
+
+:::warn What a scheme still can't punish
+There's no *extra* penalty for running a five-wide scheme without five good receivers. Thin groups hurt you through the personnel you actually field — the fifth-best receiver plays, and grades like it — but nothing punishes the mismatch on top of that. Same on defense: an unfilled role slot forgoes its fit bonus and nothing more.
 :::

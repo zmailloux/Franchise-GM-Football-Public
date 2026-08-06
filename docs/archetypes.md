@@ -25,7 +25,7 @@ The key thing: an archetype is **not a setting**. You never assign it, and there
 Tap the little info marker beside a player's archetype and you get a card of its own: a one-line read on how that archetype wins, plus the schemes it thrives in and the ones it's a poor fit for.
 
 :::screenshot A player's archetype card
-The tap-through info card: the archetype's one-line read, the schemes that prefer it, and the schemes where it's a poor fit.
+image: archetype-card.jpg
 :::
 
 ## How a player earns his archetype
@@ -48,7 +48,7 @@ A burner with `95` `speed` and average routes is a `Deep Threat`. Slow him down 
 
 ## The catalog — offense
 
-The game ships **48 archetypes across 15 positions**: 30 on offense, 16 on defense, plus one each for kicker and punter. The tables below are the full set — every archetype, how it wins, and the [schemes](#schemes) that hunt for it or avoid it. ⭐ marks each position's **default**, the label a balanced player with no standout tilt lands on.
+The game ships **52 archetypes across 15 positions**: 30 on offense, 16 on defense, and three each for kicker and punter. The tables below are the full set — every archetype, how it wins, and the [schemes](#schemes) that hunt for it or avoid it. ⭐ marks each position's **default**, the label a balanced player with no standout tilt lands on.
 
 | Pos | Archetype | How he wins | Schemes that want him | Poor fit in |
 |---|---|---|---|---|
@@ -77,7 +77,7 @@ The game ships **48 archetypes across 15 positions**: 30 on offense, 16 on defen
 
 ## The catalog — defense
 
-There are **16 defensive archetypes**, and every one of them is some scheme's preferred body — no filler labels nobody ever gets classified as.
+There are **16 defensive archetypes**, and all but two are some scheme's preferred body. The exceptions are the `DE` `Power End` and the `LB` `Field General` — both real, common bodies that no scheme singles out, so they're neutral everywhere rather than filler nobody gets classified as.
 
 | Pos | Archetype | How he wins | Schemes that want him | Poor fit in |
 |---|---|---|---|---|
@@ -98,8 +98,6 @@ There are **16 defensive archetypes**, and every one of them is some scheme's pr
 | S | Hybrid | interchangeable disguise piece | Hybrid Man · Hybrid Zone | — |
 | S | Free Safety ⭐ | single-high center fielder | 4-3 Zone · Hybrid Zone | — |
 
-Kicker and punter carry one archetype each — the leg-strength split isn't in yet.
-
 :::note One pool per job
 The front seven runs on three clean jobs: **`DE`** is the base, 5-technique run-setting end,
 **`EDGE`** is the single pass-rush pool (hand-down or stand-up is a look, not a different body),
@@ -107,6 +105,19 @@ and **`LB`** covers every off-ball backer. See [Player Stats & Ratings](#ratings
 :::
 
 A few names repeat across positions on purpose — `Coverage` describes both an `EDGE` and an `LB`, `Zone Blocker` every line spot. The rules are separate per position, so the shared name just means "same idea, different spot."
+
+## The catalog — specialists
+
+Kickers and punters used to carry one label each, because there was only one number to split them on. Now that leg power and placement are real [ratings](#ratings), the classic trade-off has a name on both jobs. No scheme prefers or avoids a specialist archetype, so these labels describe the player without moving his fit — a `Precision` kicker is exactly as welcome in Ground & Pound as in Vertical.
+
+| Pos | Archetype | How he wins |
+|---|---|---|
+| K | Big Leg | range first — the 55-yarder is on the table |
+| K | Precision | automatic inside his range, short on the long ones |
+| K | Kicker ⭐ | no strong tilt either way |
+| P | Bomber | pure gross yardage, booms it |
+| P | Directional | hang time and the coffin corner over raw distance |
+| P | Punter ⭐ | no strong tilt either way |
 
 ## What archetypes actually do
 
@@ -122,18 +133,21 @@ Beyond scheme fit, certain archetypes bias **who gets the ball in specific situa
 
 | Situation | Archetype tilt |
 |---|---|
-| Goal-line & short-yardage carries | `Power Back` half again as likely; `Receiving Back` cut to well under half |
-| Late-game clock-killing carries | `Power Back` favored |
+| Goal-line & short-yardage carries | `Power Back` strongly favored; `Receiving Back` cut back hard |
+| Late-game clock-killing carries | `Power Back` favored, `Workhorse` a little |
 | Carries generally | `Workhorse` gets a standing bump |
-| Deep targets | `Deep Threat` strongly favored; `Possession` and `Slot` pulled off the deep ball |
+| Targets generally | `Receiving Back` favored; `Power Back` pulled back |
+| Deep targets | `Deep Threat` gets the strongest tilt in the game; `Possession` and `Slot` pulled off the deep ball |
 | Passing-down / third-down targets | `Receiving Back` and `Possession` favored |
 | Screens | `Slot` favored |
 | Routes at all | `Blocker` tight ends run far fewer of them |
 | Pass-rush credit on obvious passing downs | the dedicated rush archetypes (`3-Tech`, `Speed Rusher`, `Power Rusher`) take a bigger share of sacks and pressures |
 | Run-stop credit in short-yardage | `Nose Tackle`, `Run Anchor`, and `Thumper` take a bigger share |
-| Interceptions & pass break-ups | `Coverage` (EDGE or LB) gets the biggest single tilt of any archetype |
+| Interceptions & pass break-ups | `Coverage` (EDGE or LB) is favored — the only tilt on the defensive back end |
 
 So a committee of a `Power Back` and a `Receiving Back` naturally splits into a short-yardage hammer and a passing-down weapon, without you setting anything — the archetypes do the sorting. The same is true on defense: two edge rushers with the same `OVR` will not put up the same sack total if one is a `Speed Rusher` and the other is a `DE` `Run Anchor`.
+
+Two things this table is **not**. It never touches the play mix or your team totals — it only redistributes touches and credit inside a lineup you already field. And it is never a power boost: a `Power Back` handed a goal-line carry still converts it with his own [ratings](#ratings), not with a bonus.
 
 ### AI roster building
 
@@ -148,7 +162,7 @@ Because the label is read off the ratings, it moves when the ratings move. If a 
 Normal [development](#development), though, is built to **keep** an archetype rather than drift it: as a player grows, the ratings that define his current label grow together, so a `Speed Rusher` stays a speed rusher across his career instead of quietly morphing into a run-stopper. Left alone, a label almost never changes across a whole career. In practice archetypes flip when **you** edit a player — not as a side effect of aging.
 
 :::note Where this is heading {in-dev}
-The defensive scheme-fit bonus above shipped recently; offense-side cross-position interactions (a
-`Pocket Passer`'s effective play scaling with the `Pass Protector` talent in front of him, say)
-remain a future step, as does splitting the kicker and punter archetypes by leg profile.
+The defensive scheme-fit bonus above is live. Offense has no equivalent yet: cross-position
+interactions — a `Pocket Passer`'s effective play scaling with the `Pass Protector` talent in front of
+him, say — remain a future step, so on that side of the ball fit is still purely a usage tilt.
 :::

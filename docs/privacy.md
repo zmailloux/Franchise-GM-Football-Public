@@ -47,11 +47,15 @@ There is exactly one moment the app can make a network request, and it only happ
 
 When you start a new game, you can optionally **import a custom teams file** from a web address you type in yourself — typically a link to a file you host on GitHub. If you use that option, the app fetches that one file over a secure (HTTPS) connection from the address you provided, checks that it is valid, and loads it. That is a one-time setup download of a configuration file you chose and pointed the app at — not ongoing online play, and not something that happens on its own.
 
-Even then, the request only goes *out* to fetch a file. Nothing about you is sent, attached, or stored remotely: no identifier, no usage data, no phone-home. It is an ordinary file download to the address you named, and if you never use the import option the app never touches the network at all.
+Even then, the request only goes *out* to fetch a file. Nothing about you is sent, attached, or stored remotely: no identifier, no usage data, no phone-home. It is an ordinary file download to the address you named, and if you never use the import option the app itself never makes a network request at all.
 
 :::tip You are always in control of that request
 Skip the import step and start a normal new game, and the app stays fully offline for the entire life of your franchise. The network request exists only to serve *your* request to load *your* file.
 :::
+
+There is one other outbound thing worth naming, though it isn't the app going online: the **community link** on the save-select screen hands a web address to your phone's own browser and steps out of the way. The game doesn't open a browser inside itself, doesn't read anything back, and sends nothing along with it — it is the same as you typing the address in yourself.
+
+No analytics, advertising, attribution or crash-reporting library is bundled in the app at all, so there is no component that *could* start reporting on you.
 
 ## This Field Guide website
 

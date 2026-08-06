@@ -53,7 +53,7 @@ The offseason is a fixed sequence of phases. You handle each one, get a report, 
 - **Preseason games.** Three optional exhibition games sit here, off by default.
 
 :::warn Get legal before week 1
-Right before the season opens, your team must be **compliant**: an active roster of **53 or fewer**, no more than **16** on the [practice squad](#roster-management), and total salary under the cap. Over any of those lines and you can't kick off until you fix it — release players, restructure a contract to lower this year's hit, or make a [trade](#trades). The AI teams resolve it automatically; you get a blocking screen until you're legal. The same check fires before every regular-season game, so a midseason signing that busts the cap stops your next kickoff too.
+Right before the season opens, your team must be **compliant**: an active roster of **53 or fewer** (and at least **44**), no more than **16** on the [practice squad](#roster-management), and total salary under the cap. Outside any of those lines and you can't kick off until you fix it — release players, restructure a contract to lower this year's hit, or make a [trade](#trades). The AI teams resolve it automatically; you get a blocking screen until you're legal. The same check fires before every regular-season game, so a midseason signing that busts the cap stops your next kickoff too.
 
 Two softer signals ride along: the roster screen shows a **required-starters count per position**, derived from your scheme's actual looks, and before kickoff the game **warns you** if injuries have left a position group too thin to field its slots — a warning, not a block, but ignore it and a backup's backup plays.
 :::
@@ -64,7 +64,7 @@ The regular season is an 18-week calendar in which every team plays 17 games and
 
 Each game week has three beats.
 
-**1. Planning.** Before kickoff you set a gameplan against this specific opponent: run style (inside / balanced / outside), pass aggression (conservative / balanced / aggressive), tempo (slow / normal / hustle), blitz rate (low / medium / high) and coverage shell (press / balanced / soft). Each tilts the odds for that one game only. You get a scouted read of the opponent's units as WEAK / AVERAGE / STRONG plus a recommended plan you can apply or override, and every AI team plans against you the same way. It's a strategic tilt, not play-by-play control.
+**1. Planning.** Before kickoff you set a gameplan against this specific opponent: run style (inside / balanced / outside), pass aggression (safe / balanced / aggressive), tempo (slow / normal / hustle), blitz rate (low / medium / high) and coverage shell (press / balanced / soft). Each tilts the odds for that one game only. Above the levers sits an **opponent read**: each of their units drawn as a bar either side of the league average, green to the **WEAK** side with a hint on how to attack it, red to the **STRONG** side telling you to respect it. There's a recommended plan you can apply with one tap or override, and every AI team plans against you the same way. It's a strategic tilt, not play-by-play control.
 
 **2. The game.** Watch it or sim it (below).
 
@@ -72,8 +72,10 @@ Each game week has three beats.
 
 It all folds into a **Weekly Report**: your result and a league scoreboard, injuries (yours first, with who replaces them and how many weeks he'll miss), incoming [trade](#trades) offers as actionable cards, suspensions, league news, and your refreshed needs plus projected draft slot. Player storylines land here too — a big game can earn a young player a growth bump, or talk a brewing holdout back down.
 
-:::screenshot The Weekly Report
-One week's full report: your result, the injury list with replacements, incoming trade cards, and league news.
+Your phone's inbox carries the league's own traffic alongside it, including the three **mock drafts** the League Office publishes during the year — see [The Draft](#draft--mock-drafts-during-the-season).
+
+:::screenshot The week's results across the league
+image: week-results.jpg
 :::
 
 A player can go down before a game or during one; a mid-game injury shows as a red line in the play-by-play and his backup finishes the game — next man up, straight from your depth chart.
@@ -82,17 +84,17 @@ A player can go down before a game or during one; a mid-game injury shows as a r
 
 The eleven bodies on each side change snap to snap, and that's where your roster construction cashes out.
 
-Your offense picks a **personnel grouping** each snap from the mix its [scheme](#schemes) prefers: a Quick Game offense lives in one back, one tight end, three receivers; a Ground & Pound team leans on two tight ends and two-back sets; a Vertical team empties the backfield for four receivers. Short yardage pulls big bodies on; third-and-long pulls them off. The defense answers with a **substitution package**, and separately fields the **front** its scheme plays — which is why a 3-4 nickel and a 4-3 nickel are not the same eleven.
+Your offense picks a **personnel grouping** each snap from the mix its [scheme](#schemes) prefers: a Quick Game offense lives in one back, one tight end, three receivers; a Ground & Pound team leans on two tight ends and two-back sets; a Vertical team spreads out with four receivers and no tight end. Short yardage pulls big bodies on; third-and-long pulls them off. The defense answers with a **substitution package**, and separately fields the **front** its scheme plays — which is why a 3-4 nickel and a 4-3 nickel are not the same eleven.
 
 | Package | Defensive backs | When it comes on |
 |---|:---:|---|
 | Base | 4 | Standard downs against one or two receivers |
-| Nickel | 5 | Three receivers, or any third-and-long |
+| Nickel | 5 out of a 4-3 · 4 out of a 3-4 | Three receivers, or any third-and-long |
 | Dime | 6 | Four receivers, or long yardage out of a passing look |
 | Goal line | 3 | Short yardage against heavy personnel |
 
 :::note Why a 3-4 keeps both inside backers
-When a three-receiver set forces a fifth defensive back onto the field, a 4-3 front takes its outside backer off. A 3-4 doesn't — it pulls a **safety** instead and keeps its front seven whole, so both inside linebackers stay out there on most snaps. That's why a 3-4 team genuinely needs two starting-quality inside backers, and why a scheme asks you to carry 12–13 defenders to fill 11 slots.
+Against three receivers a 4-3 front makes two swaps: the base end becomes a second edge rusher, and the outside backer comes off for a slot corner — a true five-defensive-back nickel. A 3-4 answers differently. It keeps its front seven whole and pulls a **safety** for the slot corner instead, so it stays at four defensive backs and both inside linebackers are still out there; only on a genuine passing down (dime) does one of them finally come off. That's why a 3-4 team needs two starting-quality inside backers, and why a scheme asks you to carry 12–13 defenders to fill 11 slots.
 :::
 
 Extra bodies do real work: a second tight end or second back adds run blocking, while spreading the field for a fourth receiver costs you some. And the eleven on the snap are the eleven whose ratings decide the play — as starters tire they rotate out, and while a backup is out there the unit really is as good as that backup. See the [roster](#roster-management) page for depth charts and rotation.
@@ -104,10 +106,10 @@ You can **sim the week** — the slate fills in score by score — or **watch yo
 If you watch, you get the field with the ball spot and down-and-distance markers, the score and clock, and three live tabs: a scrolling play-by-play **log** (each play with the players involved and the result), a **team** box score comparing both clubs, and a **player** box score grouped by passing, rushing, receiving, defense, kicking and punting.
 
 :::screenshot Watching a game
-The live game screen: field position, score and clock, and the play-by-play log mid-drive.
+image: live-game.jpg
 :::
 
-You control the *transport*, not the *team*: rewind, pause, fast-forward, and a speed toggle cycling **1× / 2× / 4×**. You never move a player. The game was decided the moment it was simulated; watching it is watching that decision play out.
+You control the *pace*, not the *team*: pause and resume, slow the sim down or speed it up across **1× / 2× / 4× / 8×**, or hit **SIM TO END** and jump to the final. You never move a player. The game was decided the moment it was simulated; watching it is watching that decision play out.
 
 The version where you call every offensive and defensive play yourself is a planned future layer — you'd still never steer individual players, only choose the calls. On-field animated visualization is further out; see [the film room](#playlab).
 

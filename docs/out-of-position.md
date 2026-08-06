@@ -39,7 +39,7 @@ So a shuffle along the offensive line costs a few points; turning a tackle into 
 
 When you field a player off-position, the game re-scores his existing physical and skill attributes as if he played the new spot — using only the attributes that matter *there* — and then subtracts the familiarity penalty. That penalized number is what you see on his card **and** what the sim uses on the field. They never disagree, so his box score always matches his card.
 
-The penalty itself is softened by how versatile he is, and slashed if he happens to have a knack for that exact spot. But the result can never beat his natural rating minus the move's minimum drop.
+The penalty itself is softened by how versatile he is, and slashed if he happens to have a knack for that exact spot. Barring that knack, the result can never beat his natural rating minus the move's minimum drop.
 
 In practice: a very good running back moved to receiver plays like a middling receiver, not a second star. That's the whole point.
 
@@ -66,8 +66,8 @@ Moving a player: each legal spot with the penalized rating he'd actually play at
 | Corner ↔ Safety | Near | The most fluid pair in the game |
 | Guard ↔ Tackle, Guard ↔ Center | Near | Sliding one spot on the line |
 | Kicker ↔ Punter | Near | |
-| End ↔ Edge rusher | Near | Stance neighbors — they share a spot on the line |
 | Tackle ↔ Center | Medium | Skipping a spot on the line |
+| End ↔ Edge rusher | Medium | Stance neighbors — they share a spot on the line, and it's the cheapest front-seven move |
 | Linebacker ↔ Safety | Medium | The big-nickel move, both directions |
 | Tight end → Tackle or Guard | Medium | One-way, and a real hit |
 | Edge rusher ↔ Linebacker | Medium | Standing a rusher up off the ball, or sending a backer |

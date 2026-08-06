@@ -37,7 +37,11 @@ This isn't a once-a-year gate. Before **any** week your club is scheduled to pla
 
 ## The practice squad
 
-Your practice squad is up to **16** players who don't count against your 53 but are yours to develop and promote. In-season, when an injury opens a hole, tapping your own squad should usually beat shopping the street — squads are carved from the **best willing fringe** in the league, and the in-season free-agent pool is deliberately worse than that. Shopping that pool is covered in [Free Agency & the Salary Cap](#free-agency). Each squad also has room for up to **two** deliberate exceptions: young, high-ceiling players (24 or under) allowed to sit above the usual quality band. Those are your development stashes — and poach bait by design.
+Your practice squad is up to **16** players who don't count against your 53 but are yours to develop and promote. It isn't optional and there's no setting for it — all 32 clubs run one, and the league is balanced around that. In-season, when an injury opens a hole, tapping your own squad should usually beat shopping the street — squads are carved from the **best willing fringe** in the league, and the in-season free-agent pool is deliberately worse than that. Shopping that pool is covered in [Free Agency & the Salary Cap](#free-agency). Each squad also has room for up to **two** deliberate exceptions: young, high-ceiling players (24 or under) allowed to sit above the usual quality band. Those are your development stashes — and poach bait by design.
+
+:::screenshot The practice squad, with protections and elevations
+image: practice-squad.jpg
+:::
 
 **Who will join.** Not everyone accepts a practice-squad deal. It's a fixed one-year, league-minimum contract, and willingness falls off sharply as a player gets better — a fringe starter is roughly a coin flip, and anyone clearly better than that refuses outright. Young players, unproven bodies, and anyone sitting unsigned a while are far more willing. Every offer shows an accept read — `LIKELY JOINS`, `CONVINCIBLE`, or `HARD SELL` — before you commit, and a small salary sweetener can tip a wavering player.
 
@@ -66,8 +70,8 @@ IR pays off only if the freed slot is worth more than the flexibility of keeping
 
 ## Depth charts, personnel and rotation
 
-:::screenshot The depth chart
-One position group's depth order, the sub-package slots beside it, and the scheme's required-starter count.
+:::screenshot Your starting eleven, by personnel grouping
+image: depth-chart.jpg
 :::
 
 **Your roster is your depth chart.** Within each position group a player's vertical order *is* his role — top receiver is your `WR1`, next is `WR2`, and so on. You rank players against others at the same position. This is the single most important lever you have over who plays and who gets the ball, and the sim reads it directly.
@@ -100,6 +104,16 @@ Mood is not just flavor — it feeds his contract asks and, if it curdles, real 
 
 Once a gripe opens, its intensity climbs each week the cause goes unfixed and falls faster once you fix it. Winners and ambitious players simmer up quicker; loyal ones far slower. Public drama is deliberately scarce: your club runs at most **one active saga at a time** and starts at most **two per season** — everyone else who crosses the line stays privately disgruntled, still costing you at the negotiating table but never making news.
 
-If it reaches a renegotiation demand you have three answers: **pay him**, **promise to revisit it** (which halves the pressure but doesn't clear it), or **ignore it**. An unresolved trade request also puts him on the trade block and makes him a target as the deadline nears. A true sit-out only exists on **Hard** difficulty — you can raise or lower that ceiling under Custom. A player who does sit is unavailable and is fined a slice of his salary each week, credited back to your cap — and he gives in well before the season is out if nothing resolves. The dollars side of these demands is in [Free Agency & the Salary Cap](#free-agency); the rhythm of the season they ride is in [How a Season Works](#season-flow).
+If it reaches a renegotiation demand you have three answers: **pay him**, **promise to revisit it** (which halves the pressure but doesn't clear it), or **ignore it**. An unresolved trade request also puts him on the trade block and makes him a target as the deadline nears. The dollars side of these demands is in [Free Agency & the Salary Cap](#free-agency); the rhythm of the season they ride is in [How a Season Works](#season-flow).
 
-Two pieces stay off unless you ask for them: **mood affecting on-field play** is an opt-in setting, and **league-wide sagas** — the same drama on all 32 rosters instead of just yours — are built but not switched on. {built-off}
+**How far it can go is a difficulty question.** On **Easy and Medium** the ladder stops at the public trade request — the modern hold-in, where he shows up, plays, and is loudly unhappy. Only **Hard** lets a player actually sit out, and Custom lets you set that ceiling wherever you want. A player who does sit is unavailable, is fined a slice of his salary each week (credited back to your cap), and gives in well before the season is out if nothing resolves.
+
+The whole morale economy is also a switch. **PLAYER MOODS** under Settings ▸ Difficulty turns it off entirely — no mood shown anywhere, no effect on any decision — and it starts **off on Easy**. Holdouts and season goals hang beneath it as children: with moods off, neither one runs. Turning moods back on simply resumes; nothing was rewritten while it was off.
+
+## Season goals {live}
+
+On **Hard**, a handful of your players start each season with up to three goals of their own — a personal one ("rush for 1,150 yards", "lead my position group in snaps"), a team one ("reach the playoffs"), or a contract one. They're on the **GROWTH** tab of the player card, with live progress as the season runs, and they resolve when the year does. Hitting them lifts his mood; missing them drags it, weighted by what he cares about — a Winner feels a missed playoff berth, a Money player feels a missed contract goal.
+
+They're a pressure system, so **Easy and Medium leave them off**, and you can switch them either way at any time under Settings ▸ Difficulty — they sit under PLAYER MOODS, so they need moods on to do anything. One thing to know: goals are handed out **when a season begins**, so turning them on mid-season won't give anyone goals until the next one starts. Turning them off hides them everywhere and stops them touching mood at all.
+
+Two more pieces stay off unless you ask for them: **mood affecting on-field play** is an opt-in setting, and **league-wide sagas** — the same drama on all 32 rosters instead of just yours — are built but not switched on. {built-off}

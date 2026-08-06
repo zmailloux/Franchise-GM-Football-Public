@@ -26,7 +26,7 @@ sources:
 
 Every player's `OVR` is built from the bottom up, in three layers:
 
-1. **Raw attributes** — a couple of dozen basic skill scores, each `0`–`99`: how fast he runs, how hard he hits, how accurately he throws.
+1. **Raw attributes** — a few dozen basic skill scores, each `0`–`99`: how fast he runs, how hard he hits, how accurately he throws.
 2. **Role composites** — a small catalog of blended scores that each answer one football question: *how good is this player at rushing the passer? at getting open? at protecting the quarterback?*
 3. **Overall (`OVR`)** — a single `0`–`99` number that blends only the composites that matter for that player's position.
 
@@ -38,11 +38,13 @@ Line up a near-`99` passer and a `~60` passer and the completion rates land wher
 
 ## Raw attributes — the building blocks
 
-Raw attributes come in two flavors. **Universal** ones apply to everybody: raw athletic tools — `speed`, `agility`, `burst`, `strength`, `jumping` — plus the mental side — `intelligence`, `vision`, and `decisions`. Every position carries these.
+Raw attributes come in two flavors. **Universal** ones apply to everybody: raw athletic tools — `speed`, `acceleration`, `agility`, `strength`, `jumping` — plus the mental side — `awareness`, `vision`, and `decisions` — plus `toughness`, which is how fast he heals and how likely an injury is to nag rather than how often he gets hurt in the first place. Every position carries these.
 
-**Position-specific** attributes only exist where they make sense. A quarterback carries short-, medium- and deep-throw `accuracy` and throwing on the run; a receiver carries `catching` and `route-running`; a lineman carries `pass-blocking` and `run-blocking`; a defender carries `block-shedding`, `tackling`, `ball-strip`, and man- and zone-`coverage`; a kicker or punter carries `kick-accuracy`. A quarterback simply has no coverage score to speak of, and the model knows the difference between "not applicable" and "rated zero."
+**Position-specific** attributes only exist where they make sense. A quarterback carries short-, medium- and deep-throw `accuracy`, throwing on the run, and `pocket presence` — feeling the rush before it arrives, which is a different skill from escaping it once it does. A receiver carries `catching`, `route-running`, `catching in traffic` for the contested ball, and `release` for beating a jam at the line. A lineman carries `pass-blocking`, `run-blocking`, `impact blocking` — the block he makes in space, twelve yards downfield, that turns four yards into twenty — and `play recognition`. Every defender carries `block-shedding`, `tackling`, `hit power`, `pursuit` (angles and closing speed, as opposed to finishing) and `play recognition` (diagnosing the play at the snap); the ones who are asked to cover — edge rushers, linebackers and the secondary — add `press` (the jam, the mirror image of a receiver's release) plus man- and zone-`coverage`. Interior linemen and base ends carry no coverage score at all, because a nose tackle never covers anybody. A kicker carries `kick accuracy` **and `leg power`**; a punter adds `placement`. The model knows the difference between "not applicable" and "rated zero."
 
-Raw attributes also have realistic floors. Even the worst starter in the league isn't hopeless at the hard-to-fake skills — a real passer can throw, a real cornerback can cover — while linemen and specialists are allowed to post genuinely poor athletic numbers, because in football they do.
+Two of those are worth calling out because they are the ones most games leave out. **Press and release are a matched pair** — the same moment at the line of scrimmage, scored from both sides, so a receiver who can beat a jam and a corner who can deliver one are actually contesting each other. And **leg power is separate from kick accuracy**, which is what lets an accurate kicker with an ordinary leg exist at all.
+
+Raw attributes have realistic floors *and* realistic ceilings. Even the worst starter in the league isn't hopeless at the hard-to-fake skills — a real passer can throw, a real cornerback can cover — while linemen and specialists are allowed to post genuinely poor athletic numbers, because in football they do. In the other direction, a position can't post a number its job never produces: left tackles don't run 4.4s and safeties don't shed blocks like defensive tackles, so those numbers top out where the real ones do.
 
 ## Role composites — the middle layer
 
@@ -53,8 +55,10 @@ The full catalog, and the one football question each score answers:
 | Composite | The question it answers |
 |---|---|
 | Short / medium / deep accuracy | Can he make each throw? |
-| Pocket presence | Does he survive pressure? |
+| Pocket presence | Does he feel the rush before it arrives? |
+| Escaping the rush | Once it does arrive, can he step up and get out? |
 | Playmaking | Does he avoid the killer interception? |
+| Scramble running | With the ball in his hands, is the quarterback a runner? |
 | Getting open | Can he separate from coverage? |
 | Hands | Does he catch what hits them? |
 | Yards after catch | What happens after the grab? |
@@ -67,11 +71,20 @@ The full catalog, and the one football question each score answers:
 | Man coverage · Zone coverage | Can he cover, each way? |
 | Ball skills | Does he take the ball away? |
 | Tackling | Does he finish the play? |
+| Pursuit | Does he get there, at the right angle? |
+| Play recognition | Does he diagnose it at the snap? |
+| Press · Release | Who wins the jam at the line? |
+| Contested catch | Does he win the ball with a man on him? |
+| Impact blocking | Does he make the block in space? |
+| Kicking power · Kicking accuracy | How far, and how true? |
+| Punt placement | Can he pin them inside the 20? |
+| Returns | What does he do with a kick in his hands? |
+| Takeaway return | Once the defense has it, can he run with it? |
 
-Two wrinkles worth knowing. A running back's **base run** score is the one composite that doesn't feed anybody's `OVR` — it exists purely to decide what happens when he hits the hole, so a back's rating and his actual carry-by-carry running are not quite the same measurement. And when you line a player up somewhere he doesn't belong, the penalty lands on these composite scores rather than being bolted on afterwards — see [Playing Out of Position](#out-of-position).
+Two wrinkles worth knowing. Not every score in the catalog feeds an `OVR`: a running back's **base run** has no counterpart in the rating model at all — it exists purely to decide what happens when he hits the hole — and a handful of others (the jam, the release, pursuit, play recognition, blocking in space, punt placement) are live on the field but deliberately kept out of the number. More on why, below. And when you line a player up somewhere he doesn't belong, the penalty lands on these composite scores rather than being bolted on afterwards — see [Playing Out of Position](#out-of-position).
 
 :::screenshot A player card
-One player's card: raw attributes on the left, his role composites and `OVR` rolled up on the right.
+image: player-card.jpg
 :::
 
 ## The 15 positions and their groups
@@ -80,21 +93,25 @@ There are `15` positions, in nine groups. A position's rating leans only on the 
 
 | Group | Positions | What the rating leans on |
 |---|---|---|
-| Quarterback | QB | Accuracy by depth, pocket presence, playmaking |
-| Running back | RB | Base running, ball security, yards-after-catch, some blocking/receiving |
-| Pass catchers | WR, TE | Getting open, hands, yards-after-catch (TE adds blocking) |
+| Quarterback | QB | Accuracy by depth, playmaking, escaping the rush, ball security |
+| Running back | RB | Power running, yards-after-catch, hands and routes, pass protection, ball security, returns |
+| Pass catchers | WR, TE | Getting open, hands, yards-after-catch, ball security (WR adds returns; TE adds blocking and protection) |
 | Offensive line | OT, OG, C | Pass protection, run blocking |
-| Interior line | DT, DE | Pass rush, run stopping, tackling |
-| Edge rushers | EDGE | Pass rush, run stopping, tackling — plus coverage on a rush-or-drop body |
-| Linebackers | LB | Run stopping, tackling, coverage, ball skills |
-| Defensive backs | CB, S | Man coverage, zone coverage, ball skills, tackling |
-| Specialists | K, P | Kicking accuracy |
+| Defensive line | DT, DE | Pass rush, run stopping, tackling |
+| Edge rushers | EDGE | Pass rush, run stopping, tackling |
+| Linebackers | LB | Run stopping, pass rush, tackling, man and zone coverage |
+| Defensive backs | CB, S | Man coverage, zone coverage, ball skills, tackling (CB adds returns) |
+| Specialists | K, P | Leg power and kicking accuracy |
 
 :::note One pool per job on the defensive front
 `DE` is the base, run-setting end. **`EDGE`** is the single pass-rush pool — whether he lines up with a hand down or standing up depends on the front you run, not on the body. **`LB`** is every off-ball linebacker. So an edge rusher is never stuck behind a scheme label, and a coverage backer is never asked to be a rusher on paper.
 :::
 
-Kickers and punters are the thin spot in the model: they carry a **kicking-accuracy** skill and nothing else of their own, so there is no separate leg-strength number to tell a booming leg from a precise one. That is why every kicker is just a `Kicker` and every punter a `Punter` on the [Archetypes](#archetypes) page.
+:::warn A rush-or-drop edge is a scheme prize, not free rating
+An `EDGE` genuinely can carry coverage skill — that is what makes the `Coverage` archetype real, and it is what a 3-4 Zone or Hybrid Zone shops for. It deliberately **does not count toward his `OVR`**. His headline number is a rusher's number, so a drop-capable edge looks ordinary on the roster list and pays off through [scheme fit](#schemes--the-defensive-fit-bonus) instead. If you run a zone front, that is a market inefficiency you can go shopping in.
+:::
+
+Kickers and punters used to be the thin spot in the model — one accuracy number doing the work of two, so a booming leg and a precise one were the same player. They now carry **leg power** alongside **kick accuracy**, and a punter carries **placement** on top of that. Both a kicker's and a punter's rating is his leg plus his accuracy. **Placement never counts toward the number** — it is a role skill, so the coffin-corner specialist has to be spotted rather than read off his `OVR`.
 
 ## Overall rating (OVR)
 
@@ -128,12 +145,15 @@ How your own players' ratings change over time is covered in [Player Growth & Ag
 Some traits stay out of the number on purpose:
 - **Stamina** doesn't raise `OVR`, but it governs how a player wears down within a game — fresh legs in the fourth quarter are a real edge.
 - **Discipline** never touches `OVR`, but it drives how often a player draws penalties.
-- **Injury-proneness** is a durability axis, not a skill — it's about availability, not talent, so it's kept separate.
-- A blocker's first-step release is tracked too, but stays clear of the rating — it's matchup color, not job quality.
+- **Injury-proneness** is a durability axis, not a skill — it's about availability, not talent, so it's kept separate. **Toughness** is its other half: how fast he heals and how likely an old injury is to nag. Neither one is in the rating.
+- **A receiver's release** and **a defender's press** are the two sides of the jam at the line. Both are live every snap; neither is in either man's `OVR`.
+- **Pursuit**, **play recognition**, **blocking in space** and a quarterback's **pocket presence** are all read on the field and all sit outside the rating.
 :::
 
-The takeaway: two players with the same `OVR` can play very differently. One might tire late, jump offside, or miss games — none of which the overall would ever tell you.
+That last group is deliberate, and it is the single most useful thing on this page. The rule the game holds itself to is that a skill only raises a player's `OVR` — and therefore his price — if the rating model names it. So a genuinely great open-field blocker, a linebacker who diagnoses everything, or a corner who can actually deliver a jam is worth **more than his number says**, and costs what his number says. Those are the players you can steal.
+
+The other takeaway: two players with the same `OVR` can play very differently. One might tire late, jump offside, or miss games — none of which the overall would ever tell you.
 
 ## Team overall
 
-The same per-player ratings roll up into a team `OVR` (`0`–`100`), split into offense and defense. It takes the best rating at each lineup slot and weights each slot by how much it swings games — quarterback and the front seven carry the most. Crucially it is **scheme-aware**: the same roster posts a different team number under a different scheme, because a scheme decides which skills it leans on. The full story — scheme fit, how the weighting works, and roster construction — lives in [Schemes & Scheme Fit](#schemes).
+The same per-player ratings roll up into a team `OVR` (`0`–`100`), split into offense and defense. It fills each lineup slot your scheme fields with your best man there, and weights each slot by how much it swings games — quarterback carries far more than anything else, then the pass rush, then receiver and corner. Depth inside a group counts, but falls away fast: your `WR1` is worth roughly three times your `WR4`. Crucially it is **scheme-aware**: the same roster posts a different team number under a different scheme, because a scheme decides which skills it leans on. The full story — scheme fit, how the weighting works, and roster construction — lives in [Schemes & Scheme Fit](#schemes).

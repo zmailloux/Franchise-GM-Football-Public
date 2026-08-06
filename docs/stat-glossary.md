@@ -25,7 +25,7 @@ The one habit worth forming: a header code means different things at different p
 Ratings are a different measurement entirely: a rating is what a player *can* do, a stat is what he *did*. For the rating side of the house, see [Player Stats & Ratings](#ratings).
 
 :::screenshot The STATS tab on a player card
-Per-game rows, the season TOTAL line, and the ⓘ that opens the key for that position's columns.
+image: player-stats.jpg
 :::
 
 ## Snaps, games, and what the percentages divide by
@@ -47,6 +47,8 @@ On a season row, a career row, and on the league leaderboard, the denominator is
 Two consequences worth knowing. A player traded mid-season is measured against each club only for the weeks he was actually there — his old team's remaining games are not held against him, and neither are his new team's earlier ones — so a move neither inflates nor deflates the number. And when the game cannot reconstruct a true team snap total for some season — an old save, a season recorded before the totals were kept — the share reads as a dash rather than a guess, and a career share is only shown when *every* season feeding it has a real denominator.
 
 Only offensive and defensive snaps are counted. Kicking and punting happen on special teams and nowhere else, so a kicker or punter carries no snap columns at all — his usage is told by his own volume columns instead (`FGA`, `PUNT`), next to a `GP` count of the games he appeared in. Returners are different: the man fielding a kick is normally a running back or receiver, so his snap columns are real and describe his day job on offence, not his return work.
+
+A week he *missed* is not a blank row. His season table lists it with the reason in place of the stats — `BYE`, `OUT` for an injury, `IR`, or `SUSP` — so a thin stat line and an absent player never look the same. Where those reasons come from is on [Morale, Health & Your Roster](#roster-management).
 
 **Which games are counted** depends on the surface. A league leaderboard ranks the **regular season only** — playoff games are left out of it entirely. A player's own card is the opposite: his season table lists every game he played including the playoff weeks, and its `TOTAL` row adds them all up. His career table keeps the postseason on its own separate `POST` line, so a career regular-season total stays a regular-season total. When a leaderboard number and a player card disagree by a few games in January, this is why — see [How a Season Works](#season-flow) for the phase calendar itself.
 
@@ -116,7 +118,7 @@ Linemen are graded on the two jobs they actually do, and each job carries its ow
 
 ## Defense
 
-Every defensive position — interior linemen, edge rushers, linebackers, corners and safeties — shares one column set, so you can compare a safety and an edge rusher on the same row shape.
+Every defensive player carries the same tackle-and-turnover line, so you can compare a safety and an interior lineman on the same row shape.
 
 | Column | What it means |
 |---|---|
@@ -129,6 +131,24 @@ Every defensive position — interior linemen, edge rushers, linebackers, corner
 | `FF` | Fumbles he forced |
 | `FR` | Fumbles he recovered |
 | `PD` | Passes he broke up |
+
+## The coverage ledger
+
+Anyone the defense can put in coverage — corners, safeties, linebackers and edge rushers — carries a second block on top of the line above, charting what happened on throws into his coverage. Interior linemen and base ends do not: nobody asks a nose tackle to cover anybody, so those columns simply aren't on his card.
+
+| Column | What it means |
+|---|---|
+| `Y/TGT` | Yards given up per pass into his coverage — lower is better |
+| `TGT` | Passes thrown at the receiver he was closest in coverage to |
+| `CMP%` | Share of those throws that were caught — lower is better |
+| `YDS` | Yards given up on throws into his coverage, catch and run together |
+| `TD` | Touchdowns scored on throws into his coverage |
+
+:::warn Read the rate against the volume
+A shutdown corner is *avoided*: quarterbacks stop throwing at him, so his `TGT` collapses and every remaining throw is a desperate one. Judge him on the pair, never on the rate alone — and note the rate cells stay blank until he has faced enough throws to mean anything, so they are empty on every single-game row and fill in on the season total.
+
+One honest limit: in a zone call the yards belong partly to the unit, not solely to the man charted nearest the ball, and break-ups and interceptions are credited from a separate read — so a card can legitimately show more `PD` than `TGT`.
+:::
 
 ## Kickers
 
@@ -192,4 +212,9 @@ The leaderboards mix positions on one table, so a few headers are disambiguated 
 | `YPC` | Receiving yards per catch |
 | `TD` | On the all-offense board: touchdowns thrown, run and caught, combined |
 
-The all-offense board is deliberately narrow — five columns that mean something for every position — because widening it to every position's stats would render mostly dashes. Filter it to `QB`, `RB`, `WR`, `TE` or `OL` and you get that position's real column set instead.
+Every board is filtered from the side you're on: `ALL` · `QB` · `RB` · `WR` · `TE` · `OL` on offense, `ALL` · `DL` · `LB` · `DB` on defense, `ALL` · `K` · `P` · `RET` on special teams. The `ALL` board is deliberately narrow — a handful of columns that mean something for every position — because widening it to every position's stats would render mostly dashes. Pick a position filter and you get that group's real column set instead.
+
+Two of those boards rank on a **rate** rather than a total, because the counting stat would reward the wrong man:
+
+- The `OL` board sorts by fewest pressures allowed per pass-block snap. A raw sack-allowed count just punishes whoever plays the most, so only full-time linemen are ranked at all — a man needs at least 80% of the busiest lineman's pass-block snaps. Everyone else is listed underneath them.
+- The `DB` board sorts by yards allowed per target, with the rest of the [coverage ledger](#stat-glossary--the-coverage-ledger) behind it. The `LB` board carries the same coverage columns but ranks on the tackle line, because that is the larger part of the job.

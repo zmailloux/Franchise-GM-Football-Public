@@ -26,7 +26,7 @@ Every player on your roster is somewhere on a curve. Young players climb toward 
 
 You never see that track directly. Underneath, the game walks it forward every offseason, nudging each of his `0–99` skill ratings up or down, and only then recomputes his `OVR` from those ratings. Growth and decline are never applied to `OVR` directly — they happen at the [rating](#ratings) level and bubble up, which is why a fading veteran loses `speed` before he loses anything else.
 
-Two different indicators sit on the surface, and they're easy to confuse. The **±N badge** beside a player's `OVR` is the *observed* change since this season started — history. The small **growth arrow** is a *forecast*: next season's projected move, bucketed into mild, clear or steep so you never get an exact number. The arrow is truthful about direction and rough size; only the bucketing hides anything. By default you see arrows on **your own team only**, and Settings lets you widen that to the whole league or turn them off entirely.
+Two different indicators sit on the surface, and they're easy to confuse. The **±N badge** beside a player's `OVR` is the *observed* change since this season started — history. The small **growth arrow** is a *forecast*: next season's projected move, bucketed into mild, clear or steep so you never get an exact number. The arrow is truthful about direction and rough size; only the bucketing hides anything. On the standard difficulties you see arrows on **your own team only**; the easiest setting starts you with the whole league visible, and Settings lets you change it either way — whole league, own team, or off entirely.
 
 | Phase | What the curve looks like | What you'll notice |
 |---|---|---|
@@ -35,10 +35,10 @@ Two different indicators sit on the surface, and they're easy to confuse. The **
 | Decline | Deltas turn negative, steepening with age | Red arrows, physical ratings (`speed`, `burst`) fading first |
 
 :::screenshot Growth arrows on the roster
-The roster list with the ±N badges (what already happened) and growth arrows (the forecast) side by side.
+image: roster.jpg
 :::
 
-Positions age differently. On top of each player's own curve, every position carries a **decline-onset age**; once a player passes his, he sheds a little extra every year, and the penalty grows with each year past it — so a fading player fades faster the longer you hold him. The onsets are real football ages: running backs start down in their late twenties, quarterbacks hold well into their thirties, kickers and punters longest of all. A mid-20s back can already be almost entirely on the downslope while a passer the same age is still climbing. Plan re-signings around the curve, not just the current number.
+Positions age differently, in two ways at once. Every position carries a **decline-onset age**; once a player passes his, he sheds a little extra every year, and the penalty grows with each year past it — so a fading player fades faster the longer you hold him. The onsets are real football ages: running backs and corners start down in their late twenties, receivers and edge rushers around thirty, offensive linemen a year later, quarterbacks well into their thirties, kickers and punters longest of all. The **rate** is per-position too, not just the onset — a back on the downslope loses ground close to twice as fast per year as a quarterback does, and a specialist's onset arrives so late that it barely bites at all. A mid-20s back can already be almost entirely on the downslope while a passer the same age is still climbing. Plan re-signings around the curve, not just the current number.
 
 Durability follows the same clock. From about age `30` a player's injury-proneness ratchets permanently upward every few seasons — it never comes back down, and it isn't reflected in his `OVR` at all. That's the quiet reason a `33`-year-old star is a worse bet than his rating says.
 
@@ -70,12 +70,14 @@ Those pushes look tiny, and over one season they are. Over the life of a rookie 
 
 Age widens the swing on its own, independently of tier. Young players carry extra **boom/bust volatility**, settling down as they age. That's why a high-upside 21-year-old can either rocket past expectations or stall for a year, and why a 29-year-old rarely surprises you in either direction.
 
+**Position widens it too.** Quarterbacks and defensive ends swing hardest of anyone: their draft-day projection predicts their career worse than any other position's does, so the high-pick passer both busts and booms more often than his grade suggests. That's deliberate, and it is the single biggest reason to think twice before trading up for one. Every other position runs on the normal spread.
+
 ## What moves the needle
 
 The dominant force in development is **age** — where a player sits on his own curve. That's always live, and it's most of the story. Coaching adds a real, modest push on top; two further influences are designed in but currently switched off:
 
 - **Age and the personal curve** — live, and the primary driver of every rise and fall.
-- **Coaching** {live} — a well-coached franchise genuinely develops its players a little faster, and a badly coached one a little slower. The effect is deliberately modest and capped each season — a nudge on the curve, not a rewrite — but it compounds across years, which is part of why sustained [staffs](#staff) matter. An average staff is neutral.
+- **Coaching** {live} — a well-coached franchise genuinely develops its players a little faster, and a badly coached one a little slower. The effect is deliberately modest and capped each season — a nudge on the curve, not a rewrite — but it compounds across years, which is part of why sustained [staffs](#staff) matter. It's measured against the rest of the league, so an average staff is exactly neutral, and it's **routed by skill**: your passing-development grade coaches quarterbacks, receivers and tight ends, your run-game grade coaches backs and the offensive line, your pass-defense grade coaches the entire defense, and your kicking grade coaches the specialists. Free agents and draft prospects have no coach, so they develop neutrally until somebody signs them.
 - **Playing time and usage** {built-off} — the design has benchwarmers developing slower than players getting real snaps, but that throttle is parked and isn't affecting development today.
 - **Organization quality** {built-off} — the idea that a well-run franchise develops its young players faster is built and measured, but ships off. So a prospect develops the same on a model franchise and a dysfunctional one.
 
@@ -87,6 +89,6 @@ Mood sits alongside all this and does **not** touch the growth curve. What it do
 
 ## Decline and retirement
 
-The back half of the arc is the mirror of the front: negative deltas eat into ratings, the physical tools go first, and effective `OVR` drifts down. Eventually a player reaches the end. Retirements are resolved at the close of a season, driven by age, accumulated decline and a banged-up injury history rather than by any single cutoff. An old, worn player one bad season from the scrap heap may simply walk away in the offseason.
+The back half of the arc is the mirror of the front: negative deltas eat into ratings, the physical tools go first, and effective `OVR` drifts down. Eventually a player reaches the end. Retirements are resolved at the close of a season and it's a roll, not a cutoff — the odds climb with age past his position's typical retirement age, with how far his curve has fallen, with how low his rating has sunk, and with the count of serious injuries on his record. An old, worn player one bad season from the scrap heap may simply walk away in the offseason. Two edges to that: enough severe injuries can retire a player who is nowhere near old, and every position does have a hard age at which he is definitely done — late thirties for most of the field, past forty for a quarterback, later still for specialists.
 
 That makes the timing of your roster moves a real decision: extend a declining veteran a year too long and you're paying peak money for downslope production — or worse, for a player who retires out from under the contract. The [How a Season Works](#season-flow) page walks through where retirement and offseason aging land in the yearly sequence, and [Player Stats & Ratings](#ratings) explains how the underlying skills roll up into the `OVR` you see move.
