@@ -1,0 +1,467 @@
+{
+  "schemaVersion": 3,
+  "note": "Sample teams.json for manually testing EDIT TEAMS \u2192 LOAD TEAMS. Same teamId/abbr/conference/division as the shipped default (LOAD TEAMS only applies cosmetic fields anyway), with real city/name/stadium/colors filled in so a load is visibly different from the blank-name shipped default. Host this file somewhere over HTTPS (a GitHub gist/raw URL works) and paste that URL into LOAD TEAMS.",
+  "league": {
+    "startingSalaryCap": 300000000,
+    "conferences": [
+      "AFC",
+      "NFC"
+    ],
+    "divisions": [
+      "East",
+      "North",
+      "South",
+      "West"
+    ]
+  },
+  "teams": [
+    {
+      "teamId": 4,
+      "abbr": "BUF",
+      "city": "Buffalo",
+      "name": "Blizzard",
+      "stadium": "Lakeshore Field",
+      "conference": "AFC",
+      "division": "East",
+      "colors": {
+        "primary": "#0B3D91",
+        "secondary": "#C8102E"
+      },
+      "logo": "assets/logos/fictional/buf.png"
+    },
+    {
+      "teamId": 20,
+      "abbr": "MIA",
+      "city": "Miami",
+      "name": "Tarpons",
+      "stadium": "Coral Bay Stadium",
+      "conference": "AFC",
+      "division": "East",
+      "colors": {
+        "primary": "#059199",
+        "secondary": "#E85A0A"
+      },
+      "logo": "assets/logos/fictional/mia.png"
+    },
+    {
+      "teamId": 22,
+      "abbr": "NE",
+      "city": "New England",
+      "name": "Minutemen",
+      "stadium": "Granite Hill Stadium",
+      "conference": "AFC",
+      "division": "East",
+      "colors": {
+        "primary": "#0A2340",
+        "secondary": "#C8102E"
+      },
+      "logo": "assets/logos/fictional/ne.png"
+    },
+    {
+      "teamId": 25,
+      "abbr": "NYJ",
+      "city": "New York",
+      "name": "Skyline",
+      "stadium": "Harbor Lights Stadium",
+      "conference": "AFC",
+      "division": "East",
+      "colors": {
+        "primary": "#14563C",
+        "secondary": "#111111"
+      },
+      "logo": "assets/logos/fictional/nyj.png"
+    },
+    {
+      "teamId": 3,
+      "abbr": "BAL",
+      "city": "Baltimore",
+      "name": "Blackbirds",
+      "stadium": "Chesapeake Yards",
+      "conference": "AFC",
+      "division": "North",
+      "colors": {
+        "primary": "#2A1A6E",
+        "secondary": "#B8912B"
+      },
+      "logo": "assets/logos/fictional/bal.png"
+    },
+    {
+      "teamId": 7,
+      "abbr": "CIN",
+      "city": "Cincinnati",
+      "name": "Kings",
+      "stadium": "Riverbend Park",
+      "conference": "AFC",
+      "division": "North",
+      "colors": {
+        "primary": "#E85A17",
+        "secondary": "#111111"
+      },
+      "logo": "assets/logos/fictional/cin.png"
+    },
+    {
+      "teamId": 8,
+      "abbr": "CLE",
+      "city": "Cleveland",
+      "name": "Ironmen",
+      "stadium": "Ironworks Stadium",
+      "conference": "AFC",
+      "division": "North",
+      "colors": {
+        "primary": "#3A2410",
+        "secondary": "#E64A0A"
+      },
+      "logo": "assets/logos/fictional/cle.png"
+    },
+    {
+      "teamId": 27,
+      "abbr": "PIT",
+      "city": "Pittsburgh",
+      "name": "Forge",
+      "stadium": "Foundry Field",
+      "conference": "AFC",
+      "division": "North",
+      "colors": {
+        "primary": "#E8B417",
+        "secondary": "#111820"
+      },
+      "logo": "assets/logos/fictional/pit.png"
+    },
+    {
+      "teamId": 13,
+      "abbr": "HOU",
+      "city": "Houston",
+      "name": "Apollos",
+      "stadium": "Bayou Dome",
+      "conference": "AFC",
+      "division": "South",
+      "colors": {
+        "primary": "#0A2530",
+        "secondary": "#B21030"
+      },
+      "logo": "assets/logos/fictional/hou.png"
+    },
+    {
+      "teamId": 14,
+      "abbr": "IND",
+      "city": "Indianapolis",
+      "name": "Racers",
+      "stadium": "Speedway Crossing Stadium",
+      "conference": "AFC",
+      "division": "South",
+      "colors": {
+        "primary": "#012F63",
+        "secondary": "#A6ADB0"
+      },
+      "logo": "assets/logos/fictional/ind.png"
+    },
+    {
+      "teamId": 15,
+      "abbr": "JAX",
+      "city": "Jacksonville",
+      "name": "Gators",
+      "stadium": "Palmetto Grounds",
+      "conference": "AFC",
+      "division": "South",
+      "colors": {
+        "primary": "#0A7080",
+        "secondary": "#D6A62B"
+      },
+      "logo": "assets/logos/fictional/jax.png"
+    },
+    {
+      "teamId": 31,
+      "abbr": "TEN",
+      "city": "Tennessee",
+      "name": "Drifters",
+      "stadium": "Cumberland Bluff Stadium",
+      "conference": "AFC",
+      "division": "South",
+      "colors": {
+        "primary": "#0B2340",
+        "secondary": "#3F8CDB"
+      },
+      "logo": "assets/logos/fictional/ten.png"
+    },
+    {
+      "teamId": 10,
+      "abbr": "DEN",
+      "city": "Denver",
+      "name": "Summit",
+      "stadium": "Front Range Stadium",
+      "conference": "AFC",
+      "division": "West",
+      "colors": {
+        "primary": "#E85A17",
+        "secondary": "#0B2340"
+      },
+      "logo": "assets/logos/fictional/den.png"
+    },
+    {
+      "teamId": 16,
+      "abbr": "KC",
+      "city": "Kansas City",
+      "name": "Smoke",
+      "stadium": "Prairie Fire Stadium",
+      "conference": "AFC",
+      "division": "West",
+      "colors": {
+        "primary": "#D51A2E",
+        "secondary": "#E8B417"
+      },
+      "logo": "assets/logos/fictional/kc.png"
+    },
+    {
+      "teamId": 17,
+      "abbr": "LAC",
+      "city": "Los Angeles",
+      "name": "Waves",
+      "stadium": "Pacific Shoreline Stadium",
+      "conference": "AFC",
+      "division": "West",
+      "colors": {
+        "primary": "#0A84C8",
+        "secondary": "#E8C40E"
+      },
+      "logo": "assets/logos/fictional/lac.png"
+    },
+    {
+      "teamId": 19,
+      "abbr": "LV",
+      "city": "Las Vegas",
+      "name": "Jackpots",
+      "stadium": "Neon Canyon Arena",
+      "conference": "AFC",
+      "division": "West",
+      "colors": {
+        "primary": "#111111",
+        "secondary": "#A6ADB0"
+      },
+      "logo": "assets/logos/fictional/lv.png"
+    },
+    {
+      "teamId": 9,
+      "abbr": "DAL",
+      "city": "Dallas",
+      "name": "Wranglers",
+      "stadium": "Lone Star Pavilion",
+      "conference": "NFC",
+      "division": "East",
+      "colors": {
+        "primary": "#0A3A8C",
+        "secondary": "#8A9298"
+      },
+      "logo": "assets/logos/fictional/dal.png"
+    },
+    {
+      "teamId": 24,
+      "abbr": "NYG",
+      "city": "New York",
+      "name": "Empire",
+      "stadium": "Empire Meadows Stadium",
+      "conference": "NFC",
+      "division": "East",
+      "colors": {
+        "primary": "#0B245F",
+        "secondary": "#B21030"
+      },
+      "logo": "assets/logos/fictional/nyg.png"
+    },
+    {
+      "teamId": 26,
+      "abbr": "PHI",
+      "city": "Philadelphia",
+      "name": "Founders",
+      "stadium": "Liberty Yards",
+      "conference": "NFC",
+      "division": "East",
+      "colors": {
+        "primary": "#0A4A50",
+        "secondary": "#A6ADB0"
+      },
+      "logo": "assets/logos/fictional/phi.png"
+    },
+    {
+      "teamId": 32,
+      "abbr": "WAS",
+      "city": "Washington",
+      "name": "Monuments",
+      "stadium": "Capital Commons Field",
+      "conference": "NFC",
+      "division": "East",
+      "colors": {
+        "primary": "#5A1717",
+        "secondary": "#E8B417"
+      },
+      "logo": "assets/logos/fictional/was.png"
+    },
+    {
+      "teamId": 6,
+      "abbr": "CHI",
+      "city": "Chicago",
+      "name": "Watchmen",
+      "stadium": "Lakefront Coliseum",
+      "conference": "NFC",
+      "division": "North",
+      "colors": {
+        "primary": "#0B1B33",
+        "secondary": "#C25A1E"
+      },
+      "logo": "assets/logos/fictional/chi.png"
+    },
+    {
+      "teamId": 11,
+      "abbr": "DET",
+      "city": "Detroit",
+      "name": "Motors",
+      "stadium": "Motor Row Dome",
+      "conference": "NFC",
+      "division": "North",
+      "colors": {
+        "primary": "#0E7DBE",
+        "secondary": "#A9B0B5"
+      },
+      "logo": "assets/logos/fictional/det.png"
+    },
+    {
+      "teamId": 12,
+      "abbr": "GB",
+      "city": "Green Bay",
+      "name": "Lumberjacks",
+      "stadium": "Frozen Timber Field",
+      "conference": "NFC",
+      "division": "North",
+      "colors": {
+        "primary": "#1E3A2E",
+        "secondary": "#E8B300"
+      },
+      "logo": "assets/logos/fictional/gb.png"
+    },
+    {
+      "teamId": 21,
+      "abbr": "MIN",
+      "city": "Minnesota",
+      "name": "Voyageurs",
+      "stadium": "Northwoods Dome",
+      "conference": "NFC",
+      "division": "North",
+      "colors": {
+        "primary": "#4A2A82",
+        "secondary": "#E8C130"
+      },
+      "logo": "assets/logos/fictional/min.png"
+    },
+    {
+      "teamId": 2,
+      "abbr": "ATL",
+      "city": "Atlanta",
+      "name": "Aviators",
+      "stadium": "Peachtree Dome",
+      "conference": "NFC",
+      "division": "South",
+      "colors": {
+        "primary": "#B21030",
+        "secondary": "#1A1A1A"
+      },
+      "logo": "assets/logos/fictional/atl.png"
+    },
+    {
+      "teamId": 5,
+      "abbr": "CAR",
+      "city": "Carolina",
+      "name": "Cougars",
+      "stadium": "Bluegrass Ridge Stadium",
+      "conference": "NFC",
+      "division": "South",
+      "colors": {
+        "primary": "#0A93C8",
+        "secondary": "#111820"
+      },
+      "logo": "assets/logos/fictional/car.png"
+    },
+    {
+      "teamId": 23,
+      "abbr": "NO",
+      "city": "New Orleans",
+      "name": "Krewe",
+      "stadium": "Crescent City Dome",
+      "conference": "NFC",
+      "division": "South",
+      "colors": {
+        "primary": "#C8B27A",
+        "secondary": "#111820"
+      },
+      "logo": "assets/logos/fictional/no.png"
+    },
+    {
+      "teamId": 30,
+      "abbr": "TB",
+      "city": "Tampa Bay",
+      "name": "Thunder",
+      "stadium": "Gulf Breeze Stadium",
+      "conference": "NFC",
+      "division": "South",
+      "colors": {
+        "primary": "#D40A0A",
+        "secondary": "#33302C"
+      },
+      "logo": "assets/logos/fictional/tb.png"
+    },
+    {
+      "teamId": 1,
+      "abbr": "ARI",
+      "city": "Arizona",
+      "name": "Scorpions",
+      "stadium": "Sonoran Sun Dome",
+      "conference": "NFC",
+      "division": "West",
+      "colors": {
+        "primary": "#8C1D40",
+        "secondary": "#E8A317"
+      },
+      "logo": "assets/logos/fictional/ari.png"
+    },
+    {
+      "teamId": 18,
+      "abbr": "LAR",
+      "city": "Los Angeles",
+      "name": "Comets",
+      "stadium": "Sunset Coliseum",
+      "conference": "NFC",
+      "division": "West",
+      "colors": {
+        "primary": "#0A3A8C",
+        "secondary": "#E8A300"
+      },
+      "logo": "assets/logos/fictional/lar.png"
+    },
+    {
+      "teamId": 28,
+      "abbr": "SEA",
+      "city": "Seattle",
+      "name": "Evergreens",
+      "stadium": "Puget Sound Field",
+      "conference": "NFC",
+      "division": "West",
+      "colors": {
+        "primary": "#0A2340",
+        "secondary": "#5FB828"
+      },
+      "logo": "assets/logos/fictional/sea.png"
+    },
+    {
+      "teamId": 29,
+      "abbr": "SF",
+      "city": "San Francisco",
+      "name": "Prospectors",
+      "stadium": "Golden Hills Stadium",
+      "conference": "NFC",
+      "division": "West",
+      "colors": {
+        "primary": "#A60A0A",
+        "secondary": "#B39A5D"
+      },
+      "logo": "assets/logos/fictional/sf.png"
+    }
+  ]
+}
