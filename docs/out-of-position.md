@@ -1,7 +1,7 @@
 ---
 id: out-of-position
 title: Playing Out of Position
-nav: 6
+nav: 7
 section: Players
 status: live
 icon: 🔀

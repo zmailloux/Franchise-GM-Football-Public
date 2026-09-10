@@ -1,7 +1,7 @@
 ---
 id: archetypes
 title: Archetypes
-nav: 3
+nav: 4
 section: Players
 status: live
 icon: 🧬

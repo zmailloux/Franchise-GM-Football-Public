@@ -1,7 +1,7 @@
 ---
 id: trades
 title: Trades
-nav: 10
+nav: 11
 section: Money
 status: live
 icon: 🔄
@@ -22,7 +22,7 @@ Every one of the 31 rival GMs runs the same math you do. Each player and each dr
 
 That baseline value is talent, age and contract only — a shared anchor, identical for every team, so the market stays honest.
 
-On top of it, each GM applies their own **read**. A team desperate at cornerback will pay over market for one; a team already three deep there sees the same player as surplus and discounts him. That personal read is what turns a fair-value trade into a deal a specific team actually wants — and it's why the offer screen shows you two numbers: the league market bar, and *their* take on it.
+On top of it, each GM applies their own **read**. A team desperate at cornerback will pay over market for one; a team already three deep there sees the same player as surplus and discounts him. That personal read is what turns a fair-value trade into a deal a specific team actually wants — and it's why the offer screen prices the deal in **their** frame, not yours. Two panels, both labelled with the partner: **RATES YOURS** is what they think your side is worth, **RATES THEIRS** what they think their own side is worth, and **YOU NET** underneath is the swing to you. Their opinion is the one that decides, so that is the opinion the screen shows. Alongside it sits a **MARKET** chip carrying the other frame — what the two sides are worth at the neutral market rate, with nobody's needs in it. When a deal trips the fairness band that chip becomes **ADD n**, which is exactly how much more their side needs. The two can disagree and both be right: a contender's *opinion* of a veteran it needs can be far above what the open market says he is worth.
 
 :::screenshot A deal on the table
 image: trade-center.jpg
@@ -78,7 +78,7 @@ Three things shape a pick's price:
 
 - **When it lands.** A next-year pick is discounted against the same pick this year — future capital is worth less than capital you can spend now.
 - **What the rookie will cost.** A pick isn't a free player — it comes with the slotted rookie contract the drafted player will sign, and a top pick's deal is a real cap commitment (see [rookie contracts](#draft--rookie-contracts)). The price nets that in, which nudges premium picks down a little and late picks up a little, because their players are nearly free.
-- **How good it will be.** Until a season finishes and the draft order locks, a pick's slot is only *projected*. Before kickoff the projection is pure team strength; as games are played it blends in record and remaining strength of schedule — but roster quality keeps the larger share of the weight all the way through, so a fluke 3-0 start can't dress up a bad roster's first-rounder as a late pick. The Trade Center shows the estimate as a tier: `Top 5`, `Top 10`, `Mid 1st`, `Late 1st`, and `Early`/`Mid`/`Late` plus the round number after that.
+- **How good it will be.** Until a season finishes and the draft order locks, a pick's slot is only *projected*. Before kickoff the projection is pure team strength; as games are played it blends in record, remaining strength of schedule, and how deep the club looks like going in the playoffs — but roster quality keeps the larger share of the weight all the way through, so a fluke 3-0 start can't dress up a bad roster's first-rounder as a late pick. The Trade Center shows the estimate as a tier: `Top 5`, `Top 10`, `Mid 1st`, `Late 1st`, and `Early`/`Mid`/`Late` plus the round number after that.
 
 Because the projected slot travels with the pick, the AI values it exactly the way you see it — there is no hidden discount waiting to surprise you. How you actually *use* picks once you own them lives on the [Draft](#draft) page.
 
@@ -88,11 +88,13 @@ The **Trade Block** is the league's want-ad board. The AI lists its own expendab
 
 Listing your own player there is not a passive act. A quality name on the block draws real interest: rival GMs who could start him come looking, usually within a week or two, and their packages are built against a motivated-seller price. If you want offers, list him — then judge what arrives.
 
+Small deals are real deals. Clubs do move ordinary depth for a **day-three pick**. Backup-for-a-sixth deals are a real part of the league's business — roughly one a season across all 32 clubs — so a roster crunch at one position and a hole at another can be settled with a body and a late pick instead of a headline.
+
 A player who negotiated a **no-trade clause** into his deal can only be dealt to a **contender-tier** team — the title favorites and the next tier of genuine contenders. Try to ship him to a rebuilder and he vetoes, with a reason. The clause restricts trades only; you can still re-sign, extend or cut him. Contender tiers are recalculated every week, so a team climbing into contention opens up mid-season.
 
 ## The window and the deadline
 
-Trades are not always available. The **trade window** is open throughout the offseason and training camp, stays open through **Week 9** of the regular season, then closes for the rest of the season and the playoffs. When it is closed the trade buttons grey out and a `TRADE WINDOW CLOSED` chip appears on your next-game card.
+Trades are not always available. The **trade window** is open throughout the offseason and training camp, stays open through **Week 9** of the regular season, then closes for the rest of the season and the playoffs. When it is closed the trade buttons grey out and a `NO TRADES` chip appears on your next-game card (`TRADES OPEN` while it is open).
 
 Open is not the same as busy:
 
@@ -111,12 +113,12 @@ At the deadline contenders become buyers, rebuilders become sellers, and rental 
 
 GMs will not take obviously lopsided deals. The engine enforces a fairness band on every executed trade: two AI clubs only shake hands when both sides land close to level in true value. You will see a steady stream of deals get done around the league without lifting a finger, and none of them will be a heist.
 
-When *you* propose a trade, the standard is even stricter — the AI accepts only if, by its own read, what it receives is worth at least what it gives up. Its need-and-surplus tilt still applies (it may take a raw-value-uneven deal because it genuinely needs the position), but there is no built-in generosity to exploit. A few more guardrails you'll run into:
+When *you* propose a trade, the standard is even stricter — the AI accepts only if, by its own read, what it receives is worth at least what it gives up. Its need-and-surplus tilt still applies (it may take a raw-value-uneven deal because it genuinely needs the position), but there is now a hard limit on how far that tilt can carry you: **a deal has to stay inside the fairness band on true market value too, not just on the buyer's own read.** A contender really will overpay for the veteran it needs, and you should go and find that trade — but it will not talk itself into a robbery on your behalf, and an offer that trips this comes back saying the market value is short rather than that the fit is wrong. Overpaying is still entirely your prerogative. A few more guardrails you'll run into:
 
 - **No gutting one position.** A team will not send away *two* starting-caliber bodies at the same spot in one package, and a club that isn't rebuilding also has to still field a real starter afterward. Rebuilders are allowed to fire-sale into a hole; nobody ships a whole position group.
 - **Picks close the gap both ways.** When a deal is close but tilted, either side adds picks until it balances — the cheapest ones that actually close the gap, never padding that changes nothing. A club will not hand back its own first-rounder as a balancer, and it won't ask for *yours* either: a surprise first-round ask reads as fleecing, not fairness. At most one first-rounder and two picks total may ride on either side of a deal. If it can't be balanced inside the band, it simply dies.
-- **The counter.** When you land close but short, the AI often counters rather than refusing — it adds or asks for the assets it thinks square the deal, and the additions are marked so you can see what changed. Accepting takes the counter as written.
-- **Realism limits — on the AI.** A rival keeps at most three players on its side of a package and won't flip a player or pick it acquired this same season, so nothing ping-pongs around the league. Those are limits on *its* behavior; the Trade Center does not impose them on you.
+- **The counter.** When you land close but short, the AI often counters rather than refusing — it adds or asks for the assets it thinks square the deal, and the additions are marked so you can see what changed. Accepting takes the counter as written. It reaches for the **smallest thing that closes the gap**, and a small gap is a late pick's job: a few points short should not cost you a real player, and it no longer does.
+- **Realism limits — on the AI.** A rival keeps at most three players on its side of a package and won't flip a player or pick it acquired this same season, so nothing ping-pongs around the league. Those are limits on *its* behavior; the TRADE DESK does not impose them on you.
 
 :::tip Practical tips
 - **Sell high, buy needs.** Shop a deep position to a team thin there and you'll get real value; add where you're already strong and the AI treats your target as surplus.

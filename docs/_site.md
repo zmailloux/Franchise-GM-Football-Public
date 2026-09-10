@@ -1,11 +1,11 @@
 ---
 kicker: Field Guide
-headline: Franchise GM: Football
+headline: CapForge: Football GM
 sub: >
   Thirty-two front offices. One of them is yours. Sign the deals, run the draft, hire the
   staff, and live with every decision for twenty seasons.
 meta_desc: >
-  Franchise GM: Football — a single-player football GM game for iPhone. Read how the season,
+  CapForge: Football GM — a single-player football GM game for iPhone. Read how the season,
   the ratings, the money, the draft and the film room work before you take the job.
 tiles:
   - 🏈 | Every snap simulated | Fifty-three players, seventeen weeks, one playoff bracket. The season is played out, not rolled on a table.

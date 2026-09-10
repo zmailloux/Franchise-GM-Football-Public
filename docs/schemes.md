@@ -1,7 +1,7 @@
 ---
 id: schemes
 title: Schemes & Scheme Fit
-nav: 4
+nav: 5
 section: Players
 status: live
 icon: 🧠
@@ -20,7 +20,7 @@ sources:
 
 ## What a scheme is {live}
 
-Every team runs a **scheme** — an offensive style and a defensive style, plus a few dials for how it plays. It's not cosmetic: it decides which positions your team leans on, which players get the ball, how your `OVR` is calculated, and how your games unfold. You'll find it under **Office ▸ Coaches ▸ Scheme**.
+Every team runs a **scheme** — an offensive style and a defensive style, plus a few dials for how it plays. It's not cosmetic: it decides which positions your team leans on, which players get the ball, how your `OVR` is calculated, and how your games unfold. You'll find it under **FRANCHISE ▸ OFFICE ▸ COACHES ▸ SCHEME**.
 
 Your **offensive coordinator owns the offensive scheme, your defensive coordinator owns the defensive scheme** — the team runs each coordinator's system for the length of his contract, and your head coach's own style is a perk when it happens to match. There's no scheme picker in normal play: you change what your team runs by changing [coordinators](#staff), and the roster refits only gradually over the following years.
 
@@ -130,7 +130,7 @@ A coach carries a stored style for every one of these, including the side of the
 Two levers, pulling against each other. **Hire a coach whose scheme already fits your roster** — the fastest path; a receiver-heavy roster wants a Vertical or Run & Shoot coach, a mauling line and a power back want Ground & Pound. The **"Coaches Aligned"** check tells you whether your head coach and his coordinators agree — and it isn't decoration: a misaligned pair is a small standing tax on every fit score on that side of the ball. Or **re-tool the roster to fit the coach**, which is slower and pricier since his scheme is locked for his contract — you rebuild around it through the [draft](#draft), [free agency](#free-agency) and [trades](#trades), and it takes a few seasons.
 
 :::screenshot Roster fit at a glance
-The roster screen's scheme-fit mark — a color on each player's archetype token: who your system loves, who it wastes.
+image: roster.jpg
 :::
 
 Either way, players have to *learn* the system. A man who has never seen your playbook gives up part of his fit edge and claws it back week by week; training camp gives everyone a one-time floor, and smart players under a good play-designer learn faster. Familiarity carries **partial credit for a similar system** — Ground & Pound and Read Option are cousins, as are Pro Set and Quick Game, and Run & Shoot and Vertical. On defense you're credited separately for knowing the coverage and for knowing the front, and because a Hybrid plays a 4-3 box most of the time, the two front families cross-credit each other a little. A familiarity chip in free agency shows how much of a head start a target would have; the AI prices it in too.

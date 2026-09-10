@@ -6,7 +6,7 @@
 # Both guide sites compile to ONE self-contained HTML file with every asset
 # base64-inlined, so captures cannot ship at their native 1320x2868. They are
 # downscaled to 660px wide and JPEG-encoded (~40KB each, ~55KB inlined), which
-# keeps a fully illustrated guide near 1.5MB and still reads on a laptop.
+# keeps a fully illustrated guide near 2MB (18 shots, 2026-08-20) and still reads on a laptop.
 #
 # Add a row to SHOTS, run this, then point a page's screenshot callout at the
 # name with `image: <name>.jpg`.
@@ -32,7 +32,9 @@ SHOTS=(
   "free-agents:16-free-agents"
   "trade-center:18-trade-builder"
   "draft-board:38-draft-scouting"
+  "prospect-card:47-draft-prospect"
   "mock-draft:33-mock-draft"
+  "gameplan:27-gameplan"
   "staff:14-coaching-staff"
   "league-news:25-league-news"
   "live-game:28-live-game-sim"

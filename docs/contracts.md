@@ -1,7 +1,7 @@
 ---
 id: contracts
 title: Contracts
-nav: 8
+nav: 9
 section: Money
 status: live
 icon: 📝
@@ -14,13 +14,16 @@ related:
 sources:
   - docs/contracts.md
   - DESIGN.md#E
+  - DESIGN.md#M
   - sim/balance/cap_rules.yaml
   - sim/lib/src/cap/cap_engine.dart
+  - sim/lib/src/mood/extension_stance.dart
+  - docs/holdouts-and-expectations.md
 ---
 
 ## Anatomy of a deal
 
-Every contract is built from four things: a **length** in years, a **base salary** for each year, a **signing bonus**, and a set of **guarantees**. What counts against your cap in a season — the number on the CAP HIT tab — is that year's base salary plus that year's slice of the signing bonus.
+Every contract is built from four things: a **length** in years, a **base salary** for each year, a **signing bonus**, and a set of **guarantees**. What counts against your cap in a season — the number on the **PAYROLL** tab — is that year's base salary plus that year's slice of the signing bonus.
 
 :::note How the bonus is counted
 The signing bonus is paid to the player up front, but *charged* to your cap in even slices across the deal — never spread across more than **five years**. That's the whole trick behind fitting an expensive player under the cap, and the whole reason cutting him later hurts.
@@ -56,7 +59,7 @@ Rival GMs use the same slider with intent: a cap-strapped or rebuilding team **b
 
 Not every dollar is promised. Guarantees cover **whole early years** of base salary rather than a slice of every year — roughly the front half of the deal, while a genuine blue-chipper asks for most of it guaranteed. The signing bonus is always fully guaranteed on top of that.
 
-His ask is an anchor, not a fixed price. You dial the guaranteed number yourself, and coming up short is sticky: shaving a guaranteed year hurts your chances far more than adding one helps you. A true star goes further than sticky — if the share of the deal you are actually promising is too thin, he doesn't weigh it at all, he refuses it.
+His ask is an anchor, not a fixed price. You dial the guaranteed number yourself, and coming up short is sticky: shaving a guaranteed year hurts your chances far more than adding one helps you. A true star goes further than sticky — on `STANDARD` and `FULL`, if the share of the deal you are actually promising is too thin, he doesn't weigh it at all, he refuses it. On `SIMPLE` there is no such wall, but security is still a **price**: see the note below.
 
 Guaranteed base is money you owe whether he's on your roster or not, and once a guaranteed year has been played the promise lapses — which is what makes "cut the veteran after his guarantees run out" a deliberate plan rather than a free move.
 
@@ -65,7 +68,7 @@ Blue-chip players also negotiate for **no-trade clauses** on re-signs and extens
 :::warn Contract difficulty is locked when you create the save
 Everything else you can change later; this you cannot, because deals already signed can't retroactively have been negotiated under other rules. Settings calls the three tiers `SIMPLE`, `STANDARD` and `FULL`.
 
-On `SIMPLE` a contract is just salary and signing bonus — no guaranteed-years lever, no ceiling on the years a player will accept, no no-trade clauses, no weighting slider, and players say yes a little more readily. Dead money on a cut still applies as normal. `STANDARD` restores guarantees and the bonus expectation at softened weights; `FULL` is the table on this page, and is what all 31 rival GMs play under whichever tier you picked.
+On `SIMPLE` a contract is just salary and signing bonus — no guaranteed-years lever, no ceiling on the years a player will accept, no no-trade clauses, and players say yes a little more readily. The front/balanced/back weighting slider stays: it only re-times when the same money lands. Dead money on a cut still applies as normal, and **security is still priced**: with guaranteed years off the table the signing bonus is the only promise you can make, so cutting it thin costs you real ground in the negotiation. It is easier, not free. `STANDARD` restores guarantees and the bonus expectation at softened weights; `FULL` is the table on this page, and is what all 31 rival GMs play under whichever tier you picked.
 
 One door exists between them and it only opens downward: you may **switch to `SIMPLE` mid-save**, because guarantees can be stripped out of signed deals. They can't be invented, so there is no way back up.
 :::
@@ -75,14 +78,16 @@ One door exists between them and it only opens downward: you may **switch to `SI
 When you release a player, you don't escape everything you owe. Two things accelerate onto your cap as **dead money**: every remaining slice of his signing bonus, and every remaining guaranteed year of base salary. Non-guaranteed base in future years simply disappears — you owe none of it.
 
 :::example What cutting a player actually costs
-A **4-year, $40M** deal with an **$18M** signing bonus, prorated at **$4.5M** a year, leaving **$5.5M** a year of base. Cap hit each season is **$10M**. The first two base years are guaranteed.
+A **4-year, $40M** deal with an **$18M** signing bonus, prorated at **$4.5M** a year, leaving **$5.5M** a year of base. The first two base years are guaranteed. (Round numbers, held flat to keep the arithmetic readable — on your real contract tab every column shrinks a little each season, as below.)
 
 **Before Year 1:** all **$18M** of bonus accelerates, and both guaranteed base years (**$11M**) are still owed. Dead money = **$29M** — nearly the whole deal for a player who never took a snap.
 
 **Before Year 3:** the guarantees have lapsed, so no base is owed. Only the two remaining bonus slices accelerate. Dead money = **$9M** — cheap enough to walk away.
 :::
 
-A **June-1 designation** softens the worst cuts by splitting the bill across two seasons: this year eats the current bonus slice plus the guarantees, and the rest of the acceleration defers to next season's books. It never reduces what you owe — it buys you a year of room now and hands the bill to the next one. You get **two per offseason**, and the release dialog counts down how many you have left. They are an offseason tool: release a player once the season is under way and the whole bill lands this year. The toggle also only offers itself when there is something to defer, so a final-year or bonus-free deal can't waste one.
+Because deals get cheaper on the books as they age (see [Free Agency](#free-agency)), **every column on the contract tab shrinks together** — salary and the bonus slice both. What does *not* shrink is the bill for cutting him: dead money is charged at the value of the season you cut him in, not at the discounted value of the future years it came out of. Walking away always costs today's money. The practical effect is the one you want: a deal you are stuck with quietly gets lighter every year, and the price of escaping it falls at the same pace — an aging contract never becomes a trap you cannot get out of.
+
+A **split release** softens the worst cuts by splitting the dead-cap charge across two seasons: this season takes the current bonus slice plus the guarantees, and the rest of the acceleration lands on next season's cap. It never reduces what you owe — it buys you room this season and hands the bill to next season. You get **two per offseason**, and the release dialog counts down how many you have left. Split releases are an offseason tool: release a player once the season is under way and the whole bill lands this season. The toggle also only offers itself when there is something to defer, so a final-year or bonus-free deal can't waste one.
 
 **Trading him away is the third kind of dead money, and it is the cheapest.** A trade-out accelerates the remaining bonus onto your cap exactly like a cut does, but the base salary and the guarantees travel with the player to his new team instead of staying with you. That is the real reason a bad contract is easier to trade than to release — if you can find a taker. Details on the [Trades](#trades) page.
 
@@ -127,9 +132,11 @@ Both are sanity-checked against the *individual*, so a journeyman backup quarter
 
 Drafted players sign standard rookie contracts, and you **can't extend one until after his third season** — no locking a stud in at year-one prices. An expiring deal is always re-signable. Rookies are also mood-proof at the table: a sour mood inflates a veteran's ask, but not theirs. See the [Draft](#draft) page for where they come from, and [Player Growth & Aging](#development) for how their ratings move afterward.
 
+**A sufficiently unhappy veteran can also decline to talk extension at all.** If he's a real contributor in the final year or two of his deal and has been sour for a while, he may simply want to see what free agency offers before he'll sign anything — a fringe roster body never does this — he isn't demanding a trade or a new deal, he's just not interested in one yet. Your re-sign offer in the offseason window gets the same answer: he walks to the open market. The **franchise tag** still works on him regardless — it doesn't ask his permission.
+
 ## Renegotiations and holdouts {live}
 
-Mid-contract drama runs **from Medium up**. A new game starts on **Easy**, which switches the whole morale economy off — no mood anywhere, no demands, no sagas — so none of this section applies to a default save until you raise the difficulty or turn **PLAYER MOODS** on yourself under Settings ▸ Difficulty.
+Mid-contract drama runs **from Medium up**. A new game starts on **Easy**, which switches the whole morale economy off — no mood anywhere, no demands, no sagas — so none of this section applies to a default save until you raise the difficulty or turn **PLAYER MOODS** on yourself under Settings ▸ DIFFICULTY.
 
 With it on, a player who has badly outperformed a deal with a year or two left — or one buried in the pecking order, or ringless on a doormat — can escalate from private grumbling to a public demand. Most of it resolves quietly: he asks you to rework the deal and you **accept**, **promise** to revisit it, or **ignore** him and eat the mood hit.
 
@@ -139,4 +146,8 @@ A **trade request** is the next step up, and on **Medium** it is where every sag
 Public sagas are rationed. Only a couple can start on your roster in a season, with one running at a time — a pressure valve and a storyline, not a talent drain. Loyal, well-paid, winning players are mostly immune, and paying up or winning is always an available cure.
 :::
 
-How mood is built week to week — usage, wins, pay, coaching — lives on [Morale, Health & Your Roster](#roster-management).
+:::note When drama can start
+New trade requests and holdouts only open in the first half of the season — nothing fresh starts down the stretch or in the playoffs, though anything already underway keeps running and can still be resolved. Whatever soured in the back half of the year gets its say all at once, at the end-of-season exit interview.
+:::
+
+How mood is built week to week — role, wins, pay, coaching — lives on [Morale, Health & Your Roster](#roster-management).
