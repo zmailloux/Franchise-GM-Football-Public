@@ -1,7 +1,7 @@
 ---
 id: development
 title: Player Growth & Aging
-nav: 5
+nav: 6
 section: Players
 status: live
 icon: 📈
@@ -17,6 +17,9 @@ sources:
   - docs/overview/dormant-features.md
   - sim/lib/src/dev/player_dev.dart
   - sim/lib/src/dev/player_dev_tuning.dart
+  - sim/lib/src/dev/coaching_dev.dart
+  - sim/lib/src/dev/mentor_dev.dart
+  - sim/lib/src/dev/mentor_tuning.dart
   - app/lib/data/growth_display.dart
 ---
 
@@ -58,7 +61,7 @@ Every player has a **true potential** — essentially the highest `OVR` his trac
 The displayed potential is a *blurred* reading of the real one, and the blur is deliberate. A player labeled a future star can top out below the label, and a modest projection can be hiding a real gem. Treat scouted potential as an opinion with error bars, not a promise.
 :::
 
-How that fog is produced, how good scouts tighten it, and how the draft interview and combine sharpen a read are all covered on the [Scouting](#scouting) page. Here it's enough to know: the ceiling number on a player card is an estimate, and estimates miss.
+How that fog is produced, how good scouts tighten it, and how college tape and the combine sharpen a read are all covered on the [Scouting](#scouting) page. Here it's enough to know: the ceiling number on a player card is an estimate, and estimates miss.
 
 ## Dev traits: boom, bust, and the fast track {live}
 
@@ -78,6 +81,8 @@ The dominant force in development is **age** — where a player sits on his own 
 
 - **Age and the personal curve** — live, and the primary driver of every rise and fall.
 - **Coaching** {live} — a well-coached franchise genuinely develops its players a little faster, and a badly coached one a little slower. The effect is deliberately modest and capped each season — a nudge on the curve, not a rewrite — but it compounds across years, which is part of why sustained [staffs](#staff) matter. It's measured against the rest of the league, so an average staff is exactly neutral, and it's **routed by skill**: your passing-development grade coaches quarterbacks, receivers and tight ends, your run-game grade coaches backs and the offensive line, your pass-defense grade coaches the entire defense, and your kicking grade coaches the specialists. Free agents and draft prospects have no coach, so they develop neutrally until somebody signs them.
+- **The position coach** {live} — and for a young player, *most* of that coaching read is one man rather than the building. The assistant who owns his group carries roughly three fifths of it up to age 24, and his share ramps down to nothing by 31, at which point the club's overall grade carries the whole thing again. It's why a strong staff with a weak position coach really does develop a rookie slowly, and why the player card names the man under the Coaching stars.
+- **Team mentors** {live} — his own position room teaches him. An accomplished veteran, or simply a good player at his position, pulls a young player toward the potential he already had **sooner**; a bare room makes him wait. It never raises the ceiling and it can never turn growth into decline. One mentor counts in each lane (a teammate can carry both, and makeup decides ties), only the active roster teaches — not injured reserve, not the practice squad — and it runs on **your** clubs. The rate fades on the same clock as the position coach: full at 24, gone by 31.
 - **Playing time and usage** {built-off} — the design has benchwarmers developing slower than players getting real snaps, but that throttle is parked and isn't affecting development today.
 - **Organization quality** {built-off} — the idea that a well-run franchise develops its young players faster is built and measured, but ships off. So a prospect develops the same on a model franchise and a dysfunctional one.
 

@@ -1,7 +1,7 @@
 ---
 id: draft
 title: The Draft
-nav: 11
+nav: 12
 section: Building the roster
 status: live
 icon: 🎓
@@ -74,25 +74,25 @@ Great classes and weak classes even out over the long haul. Each year's roll is 
 image: mock-draft.jpg
 :::
 
-You don't have to wait for April to see where the board is heading. Three times a year the **League Office publishes a mock draft** of next season's class — after week 7, after week 14, and once the season ends. Each is a frozen three-round, 96-pick projection: the slot order from the standings as they stand, the picks routed through whatever trades have already moved them, and every club taking the player its needs and the public read point it at.
+You don't have to wait for April to see where the board is heading. Three times a year the **League Office publishes a mock draft** of next season's class — after week 7, after week 14, and once the season ends. Each is a frozen three-round, 96-pick projection: the slot order as it looks at the time — and once the season is over, the real locked order rather than an estimate — the picks routed through whatever trades have already moved them, and every club taking the player its needs and the public read point it at.
 
-Each edition arrives as a **message on your phone** and opens straight onto the board; they also live under LEAGUE ▸ DRAFT as `MOCK #1`, `#2` and `#3`, and any row drills into that prospect's page. The earliest mock is the loosest guess and each one tightens, so the value is in the drift: a name climbing across all three is a name you'll be bidding against, and the third one is close to the real thing without ever being a script.
+Each edition arrives as a **message on your phone** and opens straight onto the board; they also live under STATS ▸ OVERVIEW ▸ DRAFT ORDER as `MOCK #1`, `#2` and `#3`, and any row drills into that prospect's page. The earliest mock is the loosest guess and each one tightens, so the value is in the drift: a name climbing across all three is a name you'll be bidding against, and the third one is close to the real thing without ever being a script.
 
 ## Draft day
 
 :::screenshot On the clock
-Your pick: the AVAILABLE board with scout stars, the recommended prospect, and the live TRADE tab.
+image: draft-board.jpg
 :::
 
-When the draft runs, you watch the board tick down as every other team makes its selections. The AI clubs pick for real — weighing their own roster needs against their own scouting reads — so weak-scouting teams genuinely misjudge players, reach, and let steals slide. When your slot comes up, the clock stops and hands you the board: an **AVAILABLE** list of everyone still on it, a **PICKED** log of who has gone where, an **UPCOMING** view of the pick order and team needs, and a live **TRADE** tab.
+When the draft runs, you watch the board tick down as every other team makes its selections. The AI clubs pick for real — weighing their own roster needs against their own scouting reads — so weak-scouting teams genuinely misjudge players, reach, and let steals slide. When your slot comes up, the clock stops and hands you the board: a **BOARD** of everyone still on it, a **TAKEN** log of who has gone where, a **NEXT UP** view of the pick order and team needs, and a live **DEALS** tab.
 
-The PICKED log is worth reading as you go. Every completed pick carries the drafting team's own **scout stars** (how much *they* liked him) next to a separate **media grade** on the pick itself. The grade starts from a solid **B** — most picks are fine picks — then moves for **value versus slot** (a steal late grades high, a reach early grades low) and for **need** (filling a glaring hole earns credit), with a little pundit noise on top. So a club can love a player and still get panned for where it took him. That pundit noise is one fixed take per prospect, not a fresh roll — the same player taken at the same slot always grades the same, so a grade you disagree with won't soften if you look again.
+The TAKEN log is worth reading as you go. Every completed pick carries **your** scout stars on that player — how much *your* department liked him — next to a separate consensus **media grade** on the pick itself. The grade starts from a solid **B** — most picks are fine picks — then moves for **value versus slot** (a steal late grades high, a reach early grades low) and for **need** (filling a glaring hole earns credit), with a little pundit noise on top. So a player your scouts loved can still be panned for where he went — and a weak department gives you a shakier read on both. That pundit noise is one fixed take per prospect, not a fresh roll — the same player taken at the same slot always grades the same, so a grade you disagree with won't soften if you look again.
 
 On the clock you can trade instead of pick. Rivals float **trade-back offers** — you send your slot, they send a package of later or future picks and pick immediately. You'll see plenty of interest in the early rounds and it tapers off as the draft wears on, until nobody bothers in the seventh.
 
-Packages are small and priced at near-equal capital, tilted slightly toward the team moving down. In the first three rounds at least one offer on the table will also include a **real veteran** at one of your listed needs, so moving down can be a way to fill a hole today rather than only stockpiling picks. You can **shop the pick** to pull a fresh set of offers, and you can **counter** any offer: demand extra picks, drop ones you don't want, or throw in a pick of your own, then watch the rival re-run its verdict live. The value math behind all of it is the same currency used everywhere else — see [Trades](#trades) for how pick value is calculated.
+Packages are small and priced at near-equal capital, tilted slightly toward the team moving down — and a package is always **more than one asset** worth at least what your slot is worth. Nobody will offer you a straight swap down for a worse pick, because that is not a trade, it is a donation. In the first three rounds at least one offer on the table will also include a **real veteran** at one of your listed needs, so moving down can be a way to fill a hole today rather than only stockpiling picks. You can **shop the pick** to pull a fresh set of offers, and you can **counter** any offer: demand extra picks, drop ones you don't want, or throw in a pick of your own, then watch the rival re-run its verdict live. The value math behind all of it is the same currency used everywhere else — see [Trades](#trades) for how pick value is calculated.
 
-You are never forced to draft blind on need alone: the board also highlights a single **recommended** prospect while you're on the clock, blending your team's need with your scouts' read on the player. It's advice, not an order — and because it reads through *your* scouts, a weak scouting department gives you weaker advice.
+You are never forced to draft blind on need alone: the board also highlights a single **recommended** prospect while you're on the clock, blending your team's need with your scouts' read on the player. It's advice, not an order — and because it reads through *your* scouts, a weak scouting department gives you weaker advice. It also tells you **why**: a line on the recommended row, and a fuller **SCOUT'S TAKE** on any prospect's card, in plain football terms — he fills your biggest hole, he fits the scheme, or you already carry three of him for a front that starts one. That's the same read the auto-pick acts on, so the badge and the button never disagree.
 
 ## Rookie contracts
 
@@ -104,6 +104,6 @@ For his first four seasons a rookie is also exempt from asking you to reopen his
 
 Here is the honest part: **potential is a guess, not a guarantee.** The ceiling the game tracks internally is never shown to you before the pick — not as a number, not anywhere. What you see instead are your scouts' fogged reads, expressed as stars, and those reads can be wrong in both directions. A genuinely great prospect can slip because nobody spotted him; an over-hyped one can go early to the whole league and then never grow into the player everyone expected. Busts and steals are baked into the class itself, not bad luck laid on top.
 
-That uncertainty is the point of the pre-draft grind, and it belongs to a different room of the guide: how scouting quality sharpens (or blurs) your reads, how the two star ratings differ, and how interviews expose a prospect's character all live on the [Scouting](#scouting) page. Where a rookie slots once he's yours is [Morale, Health & Your Roster](#roster-management).
+That uncertainty is the point of the pre-draft grind, and it belongs to a different room of the guide: how scouting quality sharpens (or blurs) your reads, how the two star ratings differ, and what his college tape, his combine numbers and his character grades are really worth all live on the [Scouting](#scouting) page. Where a rookie slots once he's yours is [Morale, Health & Your Roster](#roster-management).
 
 Draft well and you're not buying a finished player. You're buying a bet.

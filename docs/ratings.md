@@ -1,7 +1,7 @@
 ---
 id: ratings
 title: Player Stats & Ratings
-nav: 2
+nav: 3
 section: Players
 status: live
 icon: 📊

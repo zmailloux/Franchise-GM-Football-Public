@@ -1,7 +1,7 @@
 ---
 id: stat-glossary
 title: Stat Glossary
-nav: 7
+nav: 8
 section: Players
 status: live
 icon: 🧾
@@ -22,9 +22,11 @@ Two places in the game carry a key of their own: a **player's card** and the lea
 
 The one habit worth forming: a header code means different things at different positions. `YDS` is passing yards on a quarterback's card, rushing yards on a running back's, receiving yards on a receiver's, and gross punt yards on a punter's. `TD`, `AVG`, `LNG` and `INT` are the same story. Read every column in the company of the position that produced it — which is why the tables below are grouped by position family rather than alphabetically.
 
+A player's numbers live on the **PRODUCTION** tab of his card, which carries three views of the same career: **Season** (game by game, this year), **Career** (a row per season), and **Resume** (honors, career totals, draft info and his Hall of Fame climb). The other three tabs answer other questions — SKILLS is his ratings, GROWTH his development and mood, CONTRACT his money.
+
 Ratings are a different measurement entirely: a rating is what a player *can* do, a stat is what he *did*. For the rating side of the house, see [Player Stats & Ratings](#ratings).
 
-:::screenshot The STATS tab on a player card
+:::screenshot The PRODUCTION tab on a player card
 image: player-stats.jpg
 :::
 
@@ -60,11 +62,19 @@ A week he *missed* is not a blank row. His season table lists it with the reason
 | `RAT` | Passer rating from completions, yards, touchdowns and interceptions |
 | `CMP` | Completed passes |
 | `ATT` | Pass attempts |
-| `YDS` | Passing yards |
-| `TD` | Touchdown passes |
+| `CMP%` | Completions per pass attempt |
+| `PASS YDS` | Passing yards |
+| `PASS TD` | Touchdown passes |
 | `INT` | Interceptions he threw |
-| `RUYD` | His own rushing yards |
-| `RUTD` | His own rushing touchdowns |
+| `YDS/G` | Passing yards per game he played |
+| `CAR` | His own rushing attempts |
+| `RUSH YDS` | His own rushing yards |
+| `AVG` | His own yards per carry |
+| `RUSH TD` | His own rushing touchdowns |
+| `FUM` · `LST` | Fumbles · those the defense recovered |
+
+A quarterback's card carries two yardage columns and two touchdown columns — one passing, one
+rushing — so both say which they are. Where a table shows only one, it is just `YDS`.
 
 ## Running backs
 
@@ -76,7 +86,7 @@ A week he *missed* is not a blank row. His season table lists it with the reason
 | `AVG` | Rushing yards per carry |
 | `TD` | Rushing touchdowns |
 | `REC` | Catches |
-| `RECYD` | Receiving yards |
+| `REC YDS` | Receiving yards |
 | `RECTD` | Receiving touchdowns |
 | `CAR%` | His share of the team's rushing attempts |
 | `TCH%` | His share of the team's carries plus catches |
@@ -123,7 +133,8 @@ Every defensive player carries the same tackle-and-turnover line, so a safety an
 | Column | What it means |
 |---|---|
 | `FNTPTS` | Fantasy points from his defensive line |
-| `TKL` | Solo tackles |
+| `TOT` | Total tackles: solo plus assisted |
+| `SOLO` | Solo tackles |
 | `AST` | Assisted tackles |
 | `TFL` | Tackles made behind the line of scrimmage |
 | `SACK` | Sacks |
@@ -138,16 +149,39 @@ Anyone the defense can put in coverage — corners, safeties, linebackers and ed
 
 | Column | What it means |
 |---|---|
-| `Y/TGT` | Yards given up per pass into his coverage — lower is better |
+| `COV GRADE` | How well he covered, on **every** coverage snap — including the ones no throw came on. 50 is average for his position, higher is better |
+| `SNAPS` | Coverage snaps: dropbacks he spent covering someone, thrown at or not — including snaps helping a teammate over the top |
 | `TGT` | Passes thrown at the receiver he was closest in coverage to |
-| `CMP%` | Share of those throws that were caught — lower is better |
-| `YDS` | Yards given up on throws into his coverage, catch and run together |
+| `CMP` · `CMP%` | Completions allowed, and the share of those throws that were caught — lower is better |
+| `YDS` · `Y/TGT` | Yards given up on throws into his coverage, in total and per throw |
 | `TD` | Touchdowns scored on throws into his coverage |
 
+:::tip What `COV GRADE` actually measures
+Mostly not the box score. The largest part of it — about three fifths — is worked out every dropback: how open the man he was covering got, against how open that same receiver would have got covered by an average defender at his position. Doing that on every snap is the point, because it is the only way to credit a corner for a throw that never came, which is exactly what the counting stats miss.
+
+The rest is what actually happened when they did throw: yards allowed per target, and his interceptions and break-ups. So a season of good coverage that also gave up nothing grades higher than good coverage alone.
+
+It is graded on a curve against his own position, so 50 is an average corner among corners.
+
+**It reads his defense as much as him.** Measured across a whole league, the grade tells you which
+*defense* a man plays in far more sharply than it tells you which of his teammates covered best — a
+rush that gets home, help over the top and the scheme all move every man in that secondary the same
+way. Compare men on the same defense first, and read a gap between two clubs as partly a gap between
+the clubs.
+:::
+
 :::warn Read the rate against the volume
-A shutdown corner is *avoided*: quarterbacks stop throwing at him, so his `TGT` collapses and every remaining throw is a desperate one. Judge him on the pair, never on the rate alone — and note the rate cells stay blank until he has faced enough throws to mean anything, so they are empty on every single-game row and fill in on the season total.
+A shutdown corner is *avoided*: quarterbacks stop throwing at him, so his `TGT` collapses and every remaining throw is a desperate one — which makes `CMP%` and `Y/TGT` read off a handful of throws. Read both against `TGT` before you judge either.
+
+Do not read it the other way round either. In this game a good corner is usually thrown at *more*, not less, because he draws the opponent's best receiver. A target-share column would rank who drew the hard job rather than who did it well, which is why the board no longer carries one — `COV GRADE` leads instead, because it is the only column that counts the snaps nobody threw on.
+
+The rates that judge him — `CMP%` and `Y/TGT` — stay blank until he has played enough coverage snaps to mean anything, so they are empty on single-game rows and fill in on the season total. His counts show immediately.
 
 One honest limit: in a zone call the yards belong partly to the unit, not solely to the man charted nearest the ball, and break-ups and interceptions are credited from a separate read — so a card can legitimately show more `PD` than `TGT`.
+:::
+
+:::warn Safeties carry no `COV GRADE`
+That blank is deliberate, not a missing number. This game gives a safety a **say** in deep coverage — he helps over the top and makes throws harder — rather than a specific man to answer for, and almost every throw is charged to the corner or linebacker matched to the receiver. There is not enough of a safety's own record to stand a single grade on, so none is shown. His coverage snaps, and the rates beside them, are real and still count.
 :::
 
 ## Kickers
@@ -203,20 +237,20 @@ The leaderboards mix positions on one table, so a few headers are disambiguated 
 
 | Column | What it means |
 |---|---|
-| `FNTPT` | Fantasy points from his offensive or defensive line, rounded |
+| `FNTPTS` | Fantasy points from his offensive or defensive line, rounded |
 | `CMP/ATT` | Completed passes out of pass attempts |
 | `PAYD` · `PaTD` | Passing yards · touchdown passes |
-| `RUYD` · `RuTD` | Rushing yards · rushing touchdowns |
-| `RECYD` · `RecTD` | Receiving yards · receiving touchdowns |
+| `RUSH YDS` · `RUSH TD` | Rushing yards · rushing touchdowns |
+| `REC YDS` · `REC TD` | Receiving yards · receiving touchdowns |
 | `ATT` | Rushing attempts (on a rushing board, not pass attempts) |
 | `YPC` | Receiving yards per catch |
 | `TD` | On the all-offense board: touchdowns thrown, run and caught, combined |
 
 Every board is filtered from the side you're on: `ALL` · `QB` · `RB` · `WR` · `TE` · `OL` on offense, `ALL` · `DL` · `LB` · `DB` on defense, `ALL` · `K` · `P` · `RET` on special teams. The `ALL` board is deliberately narrow — a handful of columns that mean something for every position — because widening it to every position's stats would render mostly dashes. Pick a position filter and you get that group's real column set instead.
 
-Two of those boards rank on a **rate** rather than a total, because the counting stat would reward the wrong man:
+Some boards deliberately do not rank on the obvious counting stat, because it would reward the wrong man:
 
 - The `OL` board sorts by fewest pressures allowed per pass-block snap. A raw sack-allowed count just punishes whoever plays the most, so only full-time linemen are ranked at all — a man needs at least 80% of the busiest lineman's pass-block snaps. Everyone else is listed underneath them.
-- The `DB` board sorts by yards allowed per target, with the rest of the [coverage ledger](#stat-glossary--the-coverage-ledger) behind it. The `LB` board carries the same coverage columns but ranks on the tackle line, because that is the larger part of the job.
+- The `DB` and `LB` boards rank on **defensive fantasy points**, not on any single coverage column. That is on purpose. Ranking corners on `Y/TGT` sorts the best cover men *down*, because the elite corner draws the opponent's best receiver and is thrown at more, not less. Fantasy points now include coverage credit, so a corner who blankets his man climbs without needing an interception to show for it. Tap any coverage column header to re-sort by it.
 
 Watch which board a defender lands on, because it follows the job rather than the label: `DL` is interior linemen and base ends and ranks on sacks, while an **edge rusher is ranked on the `LB` board**, alongside the off-ball linebackers he shares a coverage ledger with.

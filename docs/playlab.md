@@ -1,52 +1,71 @@
 ---
 id: playlab
-title: The Film Room (Playlab)
-nav: 15
+title: The Film Room
+nav: 16
 section: On the field
-status: in-dev
+status: live
 icon: 🎬
 tagline: >
-  The Phase-2 dream — watching all 22 players move on the field, where the film draws the result but never changes it
+  Watch any finished play as 22 moving players — an early alpha you can turn on today, where the film draws the result but never changes it
 related:
   - schemes
   - season-flow
 sources:
-  - playlab/README.md
+  - docs/playviz-status.md
   - docs/overview/engine-and-choreographer.md
   - DESIGN.md#L
-  - docs/playlab-filmplan-v2.md
-  - playlab/TASKS.md
+  - app/lib/data/playviz_prefs.dart
+  - app/lib/screens/settings_screen.dart
+  - app/lib/screens/ingame_screen.dart
 ---
 
-## The one page that isn't finished yet {in-dev}
+## Turning it on {live}
 
-Everything else in this guide describes a game you can play today. This page is
-different: it's the on-field future we're building, and it isn't in the shipping
-game yet. Read it as a promise, not a feature list.
+The Film Room is a top-down field where all 22 players actually move — the
+receiver running his route, the corner trailing him, the pocket collapsing, the
+back finding the hole. It is **in the game today, as an early alpha**, and it is
+**on unless you turn it off**.
 
-Right now, when you watch a game, you experience it as a live feed of events — a
-stat viewer ticking through completions, sacks, and touchdowns while you control
-the sim speed. That experience is real and it's live; it's covered under
-[the season and game flow](#season-flow). The Film Room adds a whole new layer on
-top of it: a top-down field where all 22 players actually move — the receiver
-running his route, the corner trailing him, the pocket collapsing, the back
-finding the hole. It exists today as a working lab you can't reach from the
-shipping game.
+Settings ▸ **PLAYVIZ ALPHA** holds one switch, `PLAY VISUALIZATION (ALPHA)`,
+and that is where you turn it off. Know what the ALPHA in its name is doing
+there: this has been in development for months and is still far from complete,
+every play is built from that play's own result rather than a canned clip, and
+**some actions are still drawn wrong**. An animation that looks wrong does not
+mean the play's stats are wrong — the numbers were settled before anything was
+drawn. Two doors into it open inside a game:
 
-The single most important thing to understand about the Film Room is *how* it
-relates to the game you already play. It does not re-decide anything. The result
-comes first, from the same engine that runs every other game in the league. Then
-the film is drawn to match it.
+- **The FILM tab**, which joins DRIVES, MATCHUP and PLAYERS while you watch.
+  It lists the plays grouped by drive, and only the ones already revealed —
+  it cannot spoil a game you are still watching.
+- **Tapping any play row** in the DRIVES ticker, which opens that same snap.
+
+Either way the transport pauses first and stays paused, and you get PREV/NEXT to
+walk the game a snap at a time.
+
+## What a film looks like today {live}
+
+Players are drawn as circles rather than bodies — the art is still being built —
+and the view opens tight enough to read them. Each circle carries a number, and
+a chip cycles what that number means: his **jersey number**, his **position**,
+or his **OVR**. A rating you have not scouted still prints `??`, exactly as it
+does everywhere else in the game; the film is not a way around the fog. The ball
+is a football rather than a dot: tucked at the carrier's side, turned along its
+own flight path in the air, and tumbling when it is loose.
+
+Because the art is unfinished, treat the alpha as *what happened, sketched* —
+the movement is real, the bodies are placeholders.
 
 ## The result comes first, then the film draws it
 
-Think of it as two jobs done in order, never mixed:
+The single most important thing to understand about the Film Room is *how* it
+relates to the game you already play. It does not re-decide anything. Think of
+it as two jobs done in order, never mixed:
 
 1. **The engine decides.** The same play resolver that simulates all 272 games a
    season — the one that turns [ratings](#ratings) into contests — produces the
    outcome: run or pass, who caught it, how many yards, whether it was a sack or a
-   pick, the whole box score. This is the source of truth, and it's exactly what
-   already happens today when you watch the stat feed.
+   pick, the whole box score. This is the source of truth, and it is exactly what
+   already happens when you watch the stat feed with the film switched off.
 2. **The film choreographs.** Given that finished outcome, the visualization layer
    arranges 22 players moving on the field so that what you watch *lands on* the
    result the engine already decided. An 18-yard completion gets a believable
@@ -57,7 +76,8 @@ This ordering is deliberate and load-bearing. Because the picture is drawn
 *after* the decision, nothing you see on the field can ever change a number.
 Improving the animation, adding better routes, making the defense look sharper —
 none of it can move a stat line or tip the league's balance. The film is
-downstream of the truth, always.
+downstream of the truth, always. That is also why the alpha is safe to leave on:
+the worst a wrong-looking animation can cost you is the picture.
 
 :::note The film never lies about the result
 The Film Room is fully deterministic. A watched play is drawn from the finished
@@ -76,14 +96,11 @@ begin with. An 18-yard gain might be drawn as a dig route one time and a crossin
 route another, both landing on 18. For a GM game, that's the right trade: your
 league stays perfectly balanced, and you still get something real to watch.
 
-That freedom is used deliberately. For every play the lab drafts several
-candidate takes, scores each one for believability — penalising a defender
-chasing the wrong way, a ball carrier who stalls, bodies sliding through each
-other, players standing dead — and shows you the best of them. Anything that
+That freedom is used deliberately. Every candidate take is scored for
+believability — penalising a defender chasing the wrong way, a ball carrier who
+stalls, bodies sliding through each other, players standing dead. Anything that
 fails a hard check (a player asked to reach a spot faster than his legs allow, a
-step out of bounds, a beat out of order) is thrown away rather than shown. In the
-lab there's a "new take" button that re-dramatizes the same result a different
-way; the box score never budges.
+step out of bounds, a beat out of order) is thrown away rather than shown.
 
 ## What the film shows
 
@@ -111,14 +128,35 @@ more explosive player visibly plays like one. Timing is held to real football, t
 the ball comes out and the pocket breaks on the clock the real league runs on, and
 every test film is graded against those windows.
 
-The one gap on that list is special-teams *flavor*: fair catches, muffs, blocked
-kicks and onside recoveries aren't outcomes the engine records yet, so they can't
-be drawn. {in-dev}
-
 Two rules keep the picture honest. Anything the engine actually credited — the
 catch point at the credited air yards, the spot where the tackle happened — is
 locked and can never be nudged to make the animation easier. And nobody is asked
 to cover ground he physically can't: no teleporting to the ball, no catch-and-freeze.
+
+The one gap on that list is special-teams *flavor*: fair catches, muffs, blocked
+kicks and onside recoveries aren't outcomes the engine records yet, so they can't
+be drawn. {in-dev}
+
+## Where it actually stands {live}
+
+Honest state of things, because "alpha" is doing real work in that sentence.
+
+**What is finished.** The engine-decides-then-film-draws pipeline runs end to end
+on your phone, and every run and pass family draws natively — dropback passes at
+every depth, play-action, screens, run-pass options, the full run concept
+vocabulary, sacks, scrambles, interceptions, fumbles and their returns, and the
+kicking game. No play falls back to standing still. Man and zone coverage are both
+built, including pattern-matching rules and pre-snap motion. Movement constants are
+measured off real tracking film, and a standing self-check grades every film in a
+frozen library against the physics and the football before a change is allowed
+through. A separate guard checks continuously that none of it can move a balance
+number.
+
+**What is not.** The bodies are circles — the player art is still being produced,
+and until it lands the film reads as a diagram rather than a broadcast. Individual
+concepts are still being tuned play by play against film review, and some actions
+are drawn wrong today. That is the whole reason the switch exists — and the whole
+reason the name still says ALPHA.
 
 ## The longer vision — calling your own plays {in-dev}
 
@@ -139,40 +177,10 @@ building a personal playbook, and having the sim genuinely respect what you drew
 That's the largest single piece of work in the whole project, and it's sequenced
 last, on purpose, after everything underneath it is proven.
 
-## Where development actually stands
-
-Here's the honest state of things. The core idea has moved from concept to a
-working lab, but it is not in the shipping game and there's real work left.
-
-**What already works.** The engine-decides-then-film-draws pipeline runs end to
-end: simulate a real game, watch any play in the play-by-play list as 22 moving
-players, with the movement guaranteed to land on the box score. Every snap films —
-dropback passes, play-action, screens, run-pass options, the full run concept
-vocabulary, turnover returns, and the kicking game. Man and
-zone coverage are both built, including pattern-matching rules and pre-snap
-motion. A standing guard checks continuously that none of it can move a balance
-number.
-
-There is also a large library of frozen test plays whose job is to catch a fix in
-one place quietly breaking another. Being honest about it: that library is
-currently *behind* the code. It was frozen against the old drawing machinery, a
-chunk of it now reports known failures, and it isn't blocking changes while the
-rebuild below is in flight — so treat it as a net with holes in it rather than a
-guarantee. Restoring it to a real gate is part of the rebuild.
-
-**What remains.** The path forward was just settled: rather than keep patching the
-lab's aging drawing machinery, the visualization engine is being **rebuilt from the
-ground up** — keeping the validated motion model (players accelerate, cut and chase
-like real athletes) while replacing the tangle underneath with a clean pipeline
-designed to run on your phone. Individual concepts still get tuned play by play
-against film review, and the finished engine still has to be wired into the game
-you play before this becomes a feature rather than a promise. None of that changes
-what this page says — it's all downstream work on the drawing, never on the
-decision.
-
 :::tip The short version
-The engine already decides everything, exactly as it does in every game you play
-today. The Film Room's only job is to *show* you those decisions as 22 players
-moving on a field — faithfully, deterministically, and without ever touching the
-result. When it ships, watching a game gets a body; the brain is already here.
+The engine already decides everything, exactly as it does in every game you play.
+The Film Room's only job is to *show* you those decisions as 22 players moving on
+a field — faithfully, deterministically, and without ever touching the result. It
+is on your phone now, in alpha, behind a switch. What is still coming is the
+polish, not the honesty.
 :::

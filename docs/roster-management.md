@@ -1,7 +1,7 @@
 ---
 id: roster-management
 title: Morale, Health & Your Roster
-nav: 13
+nav: 14
 section: Building the roster
 status: live
 icon: 🏥
@@ -19,6 +19,8 @@ sources:
   - sim/lib/src/league/practice_squad.dart
   - sim/lib/src/models/settings.dart
   - sim/lib/src/mood/desire_tuning.dart
+  - sim/lib/src/mood/mood_readout.dart
+  - sim/lib/src/mood/extension_stance.dart
 ---
 
 ## Your roster, in three buckets
@@ -28,7 +30,7 @@ Your franchise carries players in three places: the **active roster** (the 53 wh
 | Bucket | Size | Counts vs 53? | Cap hit | Who belongs here |
 |---|---|---|---|---|
 | Active roster | up to **53** (floor **44**) | yes | full salary | everyone who plays |
-| Practice squad | up to **16** | no | flat **$250k** (under 3 yrs exp) / **$400k** (3+ yrs) | young fringe talent, developmental bodies |
+| Practice squad | up to **16** | no | **none** — a flat **$250k** / **$400k** stipend that never hits your cap | young fringe talent, developmental bodies |
 | Injured reserve | no cap on count | no | full salary still counts | anyone out **2+ weeks** with an injury |
 
 :::warn Compliance is checked before every game
@@ -37,24 +39,26 @@ This isn't a once-a-year gate. Before **any** week your club is scheduled to pla
 
 ## The practice squad
 
-Your practice squad is up to **16** players who don't count against your 53 but are yours to develop and promote. It isn't optional and there's no setting for it — all 32 clubs run one, and the league is balanced around that. In-season, when an injury opens a hole, tapping your own squad should usually beat shopping the street — squads are carved from the **best willing fringe** in the league, and the in-season free-agent pool is deliberately worse than that. Shopping that pool is covered in [Free Agency & the Salary Cap](#free-agency). Each squad also has room for up to **two** deliberate exceptions: young, high-ceiling players (24 or under) allowed to sit above the usual quality band. Those are your development stashes — and poach bait by design.
+Your practice squad is up to **16** players who count against neither your 53 nor your salary cap, but are yours to develop and promote. It isn't optional and there's no setting for it — all 32 clubs run one, and the league is balanced around that. In-season, when an injury opens a hole, tapping your own squad should usually beat shopping the street — squads are carved from the **best willing fringe** in the league, and the in-season free-agent pool is deliberately worse than that. Shopping that pool is covered in [Free Agency & the Salary Cap](#free-agency). Each squad also has room for up to **two** deliberate exceptions: young, high-ceiling players (24 or under) allowed to sit above the usual quality band. Those are your development stashes — and poach bait by design.
 
 :::screenshot The practice squad, with protections and elevations
 image: practice-squad.jpg
 :::
 
-**Who will join.** Not everyone accepts a practice-squad deal. It's a fixed one-year, league-minimum contract, and willingness falls off sharply as a player gets better — a fringe starter is roughly a coin flip, and anyone clearly better than that refuses outright. Young players, unproven bodies, and anyone sitting unsigned a while are far more willing. Every offer shows an accept read — `LIKELY JOINS`, `CONVINCIBLE`, or `HARD SELL` — before you commit, and a small salary sweetener can tip a wavering player.
+**Who will join.** Not everyone accepts a practice-squad deal. It's a fixed one-year stipend — well below the league minimum, and nothing you have to find cap room for — and willingness falls off sharply as a player gets better — a fringe starter is roughly a coin flip, and anyone clearly better than that refuses outright. Young players, unproven bodies, and anyone sitting unsigned a while are far more willing. Every offer shows an accept read — `LIKELY JOINS`, `CONVINCIBLE`, or `HARD SELL` — before you commit, and a small salary sweetener can tip a wavering player.
 
 **Calling players up.** There are two ways onto your active roster:
 
-- **Elevate** — a game-day call-up. You may elevate up to **2** squad players per game; they join that week's lineup and auto-revert to the squad afterward. Each player can be elevated at most **3 times per season** — after that, you must promote him to the 53 or he sits.
-- **Promote** — a permanent move to the active roster. Needs a free 53 slot and cap room.
+- **Elevate** — a game-day call-up, and it's **free**. You may elevate up to **2** squad players per game; they join that week's lineup and auto-revert to the squad afterward, still costing you nothing. Each player can be elevated at most **3 times per season** — that limit, not a cap charge, is what stops you calling the same body up all year. After it's spent, you must promote him to the 53 or he sits.
+- **Promote** — a permanent move to the active roster. Needs a free 53 slot **and** cap room, because this is the moment he starts costing you.
 
-:::note The unified guarantee rule
-The moment a practice-squad player first touches any 53-man roster — you elevate him, you promote him, or a rival poaches him — his one-year deal becomes **fully guaranteed** and starts **counting against that team's cap for the rest of the season**. Cut him later and the guarantee turns into dead money. One clean rule replaces the real NFL's tangle of weekly stipends and prorated poach guarantees, and it keeps elevation honest: calling a body up isn't free, so you won't spam it.
+:::note When a squad player starts costing you
+The practice squad is **free**. Nobody on it counts against your cap, not even in a week you elevate him. The bill arrives only when a squad player is genuinely converted to a 53-man roster — **you promote him, or a rival poaches him**. At that moment his one-year deal becomes the **fully guaranteed league minimum** on that team's cap for the rest of the season, and cutting him later turns the guarantee into dead money.
+
+Real NFL practice-squad salaries do count against the cap. We deliberately diverge: a squad you have to budget for is a squad most GMs would never touch, and developing fringe talent should be something you're rewarded for, not taxed on.
 :::
 
-**Poaching and protection.** Your squad isn't safe. Any rival with a real hole can **poach** one of your squad players straight onto their 53 (the guarantee rule then lands on them). Rivals are picky: they check their own squad first, and only reach outside for someone who is both genuinely playable and a clear upgrade on what they already have. To defend your best stashes, every team — you included — **protects 4** of its 16 at a time; a protected player cannot be claimed. Your protected set carries forward untouched unless you change it, and a new franchise opens with each team's four most poachable bodies already shielded. So hoarding an unusually high-rated player, unprotected, should feel risky. You can poach too: rival squad players show up in your free-agent view, badged with their current team.
+**Poaching and protection.** Your squad isn't safe. Any rival with a real hole can **poach** one of your squad players straight onto their 53 (the guarantee and the cap hit then land on them; you simply lose the player, with nothing freed, because he never cost you anything). Rivals are picky: they check their own squad first, and only reach outside for someone who is both genuinely playable and a clear upgrade on what they already have. To defend your best stashes, every team — you included — **protects 4** of its 16 at a time; a protected player cannot be claimed. Your protected set carries forward untouched unless you change it, and a new franchise opens with each team's four most poachable bodies already shielded. So hoarding an unusually high-rated player, unprotected, should feel risky. You can poach too: rival squad players show up in your free-agent view, badged with their current team.
 
 At season's end all practice-squad deals expire to free agency, and squads rebuild after the draft.
 
@@ -63,6 +67,8 @@ At season's end all practice-squad deals expire to free agency, and squads rebui
 When a player gets hurt for **2 or more weeks**, you can place him on injured reserve. That **frees his 53 slot** so you can sign or promote a replacement — but his salary still counts against your cap. He's locked away for at least **4 weeks** (longer if the injury itself runs longer), then can be **activated** back onto the active roster when you have a free slot.
 
 The catch is a season budget: you get **8 activations per season**. Spend them greedily and you can strand a healthy player on IR with no way back until the offseason. At season's end everyone heals and every designation resets. The AI plays it simply: anything costing more than four weeks goes straight to IR, and shorter injuries get shelved only under real roster pressure.
+
+**You don't have to babysit it.** A player of yours who has served his time and healed comes back **by himself**, best man first, as long as you have a roster slot and an activation left. Nothing else is done on your behalf: nobody is cut to make room and nobody is put *on* IR without you. If a healed man is stuck — no slot, or no activations left — a multi-week run stops once to tell you which one and why, with **KEEP ON IR** to acknowledge it and stop being asked again that season.
 
 :::tip When to reach for IR
 IR pays off only if the freed slot is worth more than the flexibility of keeping the player active. If he'd be back in about the minimum four weeks and you're not desperate for the spot, holding him off IR keeps an activation in your pocket for a worse injury later.
@@ -75,6 +81,10 @@ image: depth-chart.jpg
 :::
 
 **Your roster is your depth chart.** Within each position group a player's vertical order *is* his role — top receiver is your `WR1`, next is `WR2`, and so on. You rank players against others at the same position. This is the single most important lever you have over who plays and who gets the ball, and the sim reads it directly.
+
+**How you set it.** Every position group on the SQUAD tab carries a small reorder button on the right. Tap it and that room — and only that room — opens in a panel you can drag into the order you want. The panel shows what the move does to your OFF / DEF / TEAM ratings while you drag it, so you can see the cost of sitting your best man before you commit. SAVE closes the panel; CANCEL throws the change away. Ordering one room leaves every other room alone, so a group you have never touched keeps sorting itself as your players develop.
+
+**Your team rating tells the truth about it.** The OFF / DEF / TEAM numbers in your club header are read off the players you actually start, not off your best players on paper. Bench a good starter and your rating drops to match; put him back and it comes straight back up. (If a player's rating is still hidden behind scouting, the panel shows a range instead of a single number — it will not quietly tell you what you have not earned the right to know.)
 
 **It drives the box score.** Who touches the ball is weighted by depth-chart slot, blended with scheme fit and rating — not by rating alone. It's a *weighting*, not a script: defenses, situation and the play-by-play still move the numbers. But naming a player your `WR1` genuinely shows up in his stat line. (Slotting a player somewhere he doesn't naturally play is its own trade-off — see [Out-of-Position Play](#out-of-position).)
 
@@ -92,28 +102,35 @@ Rotation isn't just bookkeeping. Whoever is actually on the field for a snap is 
 
 ## What your players want
 
-Every player carries a hidden mood, surfaced as a three-state chip: **Happy**, **Content**, or **Unhappy**. It's built from seven things — team success, his usage, his contract, his loyalty, roster churn around him, his coaching, and his prestige — each weighted by his personality. Every player has a primary trait plus a secondary one at half strength, drawn from four: **Winner** (a title matters far more than a paycheck), **Fame** (spotlight and usage), **Money**, and **Loyal**. A Winner on a losing team and a Money player on a below-market deal are unhappy for completely different reasons.
+Every player carries a hidden mood, surfaced as a three-state chip: **Happy**, **Content**, or **Unhappy**. It's not a weekly snapshot — it's a mood that carries, moving gradually toward wherever his situation currently points, week over week and season over season. A big moment lands right away: sign him to a fair new deal or win a ring and you'll see it on the very next check-in. A bad situation is slower — a benching, a lopsided deal, a losing season all take a few weeks to actually sour him, and a few weeks to heal once you fix it. What's pulling on him is a handful of things — whether he's playing the role he thinks he's earned, team success, his contract, his loyalty, roster churn around him, his coaching, and his prestige — each weighted by his personality. Every player has a primary trait plus a secondary one at half strength, drawn from four: **Winner** (a title matters far more than a paycheck), **Fame** (spotlight and playing time), **Money**, and **Loyal**. A Winner on a losing team and a Money player on a below-market deal are unhappy for completely different reasons — and a star feels a bad situation harder than a role player does.
+
+**Who actually gets unhappy.** Not your depth. A backup fighting for a roster spot is glad to have the job, and the further down the roster a player sits the less the small stuff moves him — so the bottom of your squad reads Content or Happy almost all the time, and the grievances that *do* land there are real ones, like a starter-quality player buried on the bench. Discontent is a problem of the players good enough to have expectations. Arrivals start well, too: a free agent you sign or a rookie you draft turns up happy about it. A free agent carries nothing at all out of the pool — whatever soured him at his last club is his last club's problem — and a player who arrives by **trade** gets a partial fresh start rather than a clean one: the move pulls him halfway back toward neutral, so a genuinely miserable man is still a little unhappy when he lands.
+
+Tap a player's mood face for a quick popover on what's driving it — a couple of the biggest reasons, in plain words. His **GROWTH** tab has the full picture: an outlook bar for team, role, and contract, and everything currently moving his mood one way or the other. From there, **LOCKER ROOM** lays it out in four blocks: **MORALE** (where he sits and what soured him), **WHERE HE STANDS**, **WATCH NEXT** (what tips it further either way), and **WAYS OUT** — the real actions, wired straight through: OPEN EXTENSION, MAKE AN OFFER, DEPTH CHART, TRADE DESK, or WAIT IT OUT.
 
 Mood is not just flavor — it feeds his contract asks and, if it curdles, real trouble. A discontented player escalates through four states: **content**, privately **disgruntled**, a public **trade request**, and at the sharp end a **holdout**. Three situations open the door:
 
 | Situation | What it takes |
 |---|---|
-| **Chasing a ring** | A star past his mid-twenties, no championship, on a team that hasn't contended in years |
+| **Chasing a ring** | A star late in his career, no championship, on a team that hasn't contended in years |
 | **The buried alpha** | A star skill player getting clearly less of the ball than his standing says he's owed |
+| **Wants a starting role** | A good player stuck on the bench for weeks with no real shot at playing |
 | **Reopening the deal** | Off his rookie deal, a year or two left, and badly outplaying what you're paying him — checked at the season opener |
 
-Once a gripe opens, its intensity climbs each week the cause goes unfixed and falls faster once you fix it. Winners and ambitious players simmer up quicker; loyal ones far slower. Public drama is deliberately scarce: your club runs at most **one active saga at a time** and starts at most **two per season** — everyone else who crosses the line stays privately disgruntled, still costing you at the negotiating table but never making news.
+Once a gripe opens, its intensity climbs each week the cause goes unfixed and falls faster once you fix it. Winners and ambitious players simmer up quicker; loyal ones far slower. A player only goes public after a real run of bad weeks — one rough patch never buys a headline, and a mood that settles back down quietly drops any public complaint back to a private one. Public drama is deliberately scarce: your club runs at most **one active saga at a time** and starts at most **two per season** — everyone else who crosses the line stays privately disgruntled, still costing you at the negotiating table but never making news.
 
-If it reaches a renegotiation demand you have three answers: **pay him**, **promise to revisit it** (which halves the pressure but doesn't clear it), or **ignore it**. An unresolved trade request also puts him on the trade block and makes him a target as the deadline nears. The dollars side of these demands is in [Free Agency & the Salary Cap](#free-agency); the rhythm of the season they ride is in [How a Season Works](#season-flow).
+If it reaches a renegotiation demand you have three answers: **pay him**, **promise to revisit it** (which halves the pressure but doesn't clear it), or **ignore it**. An unresolved trade request also puts him on the trade block and makes him a target as the deadline nears. **A player in his final couple of contract years can also just decline to talk extension at all** — he's not asking for anything, he simply wants to test free agency before he'll sign. Only a genuinely good player does this; a depth body never turns down the conversation. The franchise tag still works on him; only a negotiated extension is off the table. The dollars side of these demands is in [Free Agency & the Salary Cap](#free-agency); the rhythm of the season they ride is in [How a Season Works](#season-flow).
+
+**Trade requests and holdouts have a season.** They can start any week through about the first half of the season, then the window closes — no fresh public drama during the stretch run or the playoffs, though anything already in motion keeps playing out and can still be resolved. What happened over the back half comes out all at once at the **end-of-season exit interview**, when the players who soured have their say before the new year starts.
 
 **How far it can go is a difficulty question.** On **Medium** the ladder stops at the public trade request — the modern hold-in, where he shows up, plays, and is loudly unhappy. (On **Easy** none of it runs at all; see the switch below.) Only **Hard** lets a player actually sit out, and a Custom setup inherits Hard's ceiling — there is no separate dial for it. A player who does sit is unavailable, is fined a slice of his salary each week (credited back to your cap), and gives in well before the season is out if nothing resolves.
 
-The whole morale economy is also a switch. **PLAYER MOODS** under Settings ▸ Difficulty turns it off entirely — no mood shown anywhere, no effect on any decision — and it starts **off on Easy**. Holdouts and season goals hang beneath it as children: with moods off, neither one runs. Turning moods back on simply resumes; nothing was rewritten while it was off.
+The whole morale economy is also a switch. **PLAYER MOODS** under Settings ▸ DIFFICULTY turns it off entirely — no mood shown anywhere, no effect on any decision — and it starts **off on Easy**. Holdouts and season goals hang beneath it as children: with moods off, neither one runs. Turning moods back on simply resumes; nothing was rewritten while it was off.
 
 ## Season goals {live}
 
 On **Hard**, a handful of your players start each season with up to three goals of their own — a personal one ("rush for 1,150 yards", "lead my position group in snaps"), a team one ("reach the playoffs"), or a contract one. They're on the **GROWTH** tab of the player card, with live progress as the season runs, and they resolve when the year does. Hitting them lifts his mood; missing them drags it, weighted by what he cares about — a Winner feels a missed playoff berth, a Money player feels a missed contract goal.
 
-They're a pressure system, so **Easy and Medium leave them off**, and you can switch them either way at any time under Settings ▸ Difficulty — they sit under PLAYER MOODS, so they need moods on to do anything. One thing to know: goals are handed out **when a season begins**, so turning them on mid-season won't give anyone goals until the next one starts. Turning them off hides them everywhere and stops them touching mood at all.
+They're a pressure system, so **Easy and Medium leave them off**, and you can switch them either way at any time under Settings ▸ DIFFICULTY — they sit under PLAYER MOODS, so they need moods on to do anything. One thing to know: goals are handed out **when a season begins**, so turning them on mid-season won't give anyone goals until the next one starts. Turning them off hides them everywhere and stops them touching mood at all.
 
 Two more pieces stay off unless you ask for them: **mood affecting on-field play** is an opt-in setting, and **league-wide sagas** — the same drama on all 32 rosters instead of just yours — are built but not switched on. {built-off}

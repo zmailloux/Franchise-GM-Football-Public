@@ -1,7 +1,7 @@
 ---
 id: free-agency
 title: Free Agency & the Salary Cap
-nav: 9
+nav: 10
 section: Money
 status: live
 icon: 💰
@@ -23,9 +23,13 @@ sources:
 
 Every team plays under the same hard number: a **flat $300M salary cap**, the same every season. It does not grow. Instead, multi-year deals you sign quietly get cheaper on the books as they age — the effect matches a rising cap in the real NFL, where a star's slice of the pie shrinks over the life of his contract, except the number you budget against never moves.
 
-:::warn Unused room does not carry over
-There is no rollover. Whatever cap space you finish a season with is **gone** when the next one starts — you cannot bank a rebuild's savings and spend them three years later. Every club lives inside one flat $300M every year, which makes what a team chooses to spend *this* year the whole story.
+:::note Unused room carries over — once, and only so much
+Finish a season with space left and it follows you into the next one, up to **$30M**. Carry the full amount and your ceiling for that year is **$330M** instead of $300M — real room, spendable on anyone.
 :::
+
+The carry is a one-year window, not a savings account, and two rules keep it from turning into a hoard. It **shrinks a little on the way across**, the same way an aging contract quietly gets cheaper on your books — so a dollar saved is worth slightly less than a dollar spent on time. And a bank you *don't* spend does not roll a second time: next spring's carry is measured against that season's $300M alone, so an untouched bank simply expires.
+
+That is why you cannot stockpile. Sitting out three straight offseasons does not hand you $150M in year four — it hands you the same $30M you could have had after one, and three wasted years of a roster aging under it. Banking is a tool for timing one real push, not a strategy for skipping the sport.
 
 What counts against the cap is every player's current-year cap hit — base salary plus the prorated slice of any signing bonus — plus any dead money you're still carrying. The full anatomy of a deal lives on the [Contracts](#contracts) page; this page is about the market that sets those numbers.
 
