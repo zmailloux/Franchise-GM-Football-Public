@@ -6,8 +6,8 @@ section: About
 status: live
 icon: 🔒
 tagline: >
-  What the game and this guide collect about you — nothing, unless you switch
-  one thing on
+  What the game collects, what it never collects, and the one switch that
+  turns it off
 related:
   - season-flow
 sources:
@@ -22,11 +22,15 @@ sources:
 
 ## The short version
 
-*CapForge: Football GM* collects nothing about you unless you turn one setting on. There is no account, no login, no ads, and no third-party trackers, and there never will be. The game runs entirely on your device.
+*CapForge: Football GM* has no account, no login, no ads, and no third-party trackers, and it never will. Your franchise lives on your device and nowhere else.
 
-The one exception is a switch in Settings called **Share Anonymous Gameplay Analytics**. It is **off** when you install the game, and it stays off until you turn it on yourself. Leave it alone and nothing about you leaves your phone, ever — not once, not in the background, not at all.
+One thing can leave the device, and this page is mostly about it. A setting called **Share Anonymous Gameplay Analytics** sends anonymous counters about how the game gets played — which screens are opened, how far franchises get, whether people trade and draft. It exists so the next thing built is the thing people actually use.
 
-If you do turn it on, the game sends anonymous counters about how the game is played — which screens get opened, how far franchises get, whether people trade and draft. Never your saves, never anything you typed, and nothing that says who you are. The rest of this page spells out precisely what that means, and stays honest about the other moments the network comes near the game.
+**Whether it starts on or off depends on your device's region.** If your phone is set to the United States it starts on; set to anywhere else, it starts **off** and sends nothing at all unless you switch it on yourself. That is a deliberate choice to stay on the safe side of European and other privacy rules rather than assume permission.
+
+**Either way the switch is yours**, in Settings ▸ DISPLAY ▸ **PRIVACY · THIS DEVICE**, and it always shows its real state. Off means off: nothing further is sent, and anything still waiting on your device is deleted rather than left to go out later.
+
+What it never contains, on or off: your saves, anything you typed, any player or coach name, and anything that says who you are. The rest of this page is the precise version — what is sent, what never is, who receives it, and what switching off actually does.
 
 ## What the game collects
 
@@ -35,7 +39,7 @@ The game was built on-device only from day one, and it plays fully offline — p
 | What you might expect | What actually happens |
 |---|---|
 | An account or login | None. You just start a game |
-| Usage analytics / telemetry | **Only if you switch it on.** Off by default; anonymous counters if you turn it on. Details below |
+| Usage analytics / telemetry | **Anonymous counters.** Starts on for United States devices, off everywhere else; switchable either way. No saves, no typed text, nothing identifying you. Details below |
 | Crash reporting | No crash-reporting library is bundled at all. Your phone's OS may still share anonymous crash logs with developers if *you* switched that on in your device settings — that is Apple's or Google's channel, not ours, and it carries nothing about your franchise |
 | Ads or ad trackers | None |
 | Cloud saves | None. Every save lives locally on your device |
@@ -47,9 +51,11 @@ Your franchise, your saves, your settings, your GM career record — all of it i
 Because saves live only on your device, they behave like any other on-device file. Removing the app removes its local saves along with it. There is no cloud backup to fall back on, and equally no cloud copy for anyone else to reach.
 :::
 
-## If you switch analytics on
+## What analytics actually sends
 
-The switch lives in **Settings → Display → Privacy · This Device**, and it is per-device: turning it on for one franchise turns it on for all of them, and starting a new save never re-asks or re-grants it.
+The switch lives in **Settings ▸ DISPLAY ▸ PRIVACY · THIS DEVICE**, and it is per-device: switching it covers every franchise on the device, and starting a new save never changes it behind your back.
+
+Once you have set it yourself, your choice is permanent until you change it again — including if you travel or change your phone's region. The region only ever decides where the switch *starts*, never where it lands after you have touched it. And it reads your phone's region **setting**, not your location: the game never asks where you are, has no location permission, and makes no network request to find out.
 
 ### What gets sent
 
@@ -78,7 +84,7 @@ One thing to be straight about, because it is easy to leave out: the analytics p
 
 ### The random ID, and why the App Store says "Device ID"
 
-Counters need some way to tell "one person opened twelve screens" apart from "twelve people opened one screen each" — otherwise every number is meaningless. So when you switch analytics on, the game's analytics software generates a **random string** and sends it along.
+Counters need some way to tell "one person opened twelve screens" apart from "twelve people opened one screen each" — otherwise every number is meaningless. So while analytics is on, the game's analytics software generates a **random string** and sends it along. While analytics is off, no such string is created or stored at all.
 
 What it is, exactly:
 
@@ -99,7 +105,7 @@ Nothing is shared with data brokers, matched against other companies' apps or we
 
 ### Turning it off
 
-Flip the same switch. Three things happen immediately:
+Flip that switch. Three things happen immediately:
 
 1. Nothing further is recorded, ever, including the fact that you switched off.
 2. The game's own store of pending counters is deleted from your device.
@@ -107,7 +113,7 @@ Flip the same switch. Three things happen immediately:
 
 Two honest caveats. Counters already delivered cannot be pulled back — they are anonymous and were never linked to you, so there is no "you" to find them under. And a small number that the provider's software had already accepted but not yet uploaded may still go out, because that queue belongs to their software and offers no way to empty it. This is exactly why the game decides *before* handing anything over rather than trying to recall it afterwards: with the switch off, nothing is ever passed across in the first place.
 
-If that residue matters to you, the honest advice is simply to leave the switch off. The game is identical either way.
+If that residue matters to you, the honest advice is to switch it off early — the sooner you do, the less there is. And if your device starts it off, nothing was ever sent in the first place. The game plays exactly the same either way; nothing about it is gated on analytics, and it runs identically with no connection at all.
 
 ## The one time the app uses the network
 
