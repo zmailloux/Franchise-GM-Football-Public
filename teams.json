@@ -24,8 +24,9 @@
       "conference": "AFC",
       "division": "East",
       "colors": {
-        "primary": "#0B3D91",
-        "secondary": "#C8102E"
+        "primary": "#00338D",
+        "secondary": "#C60C30",
+        "tertiary": "#00274D"
       },
       "logo": "assets/logos/fictional/buf.png"
     },
@@ -38,8 +39,9 @@
       "conference": "AFC",
       "division": "East",
       "colors": {
-        "primary": "#059199",
-        "secondary": "#E85A0A"
+        "primary": "#008E97",
+        "secondary": "#FC4C02",
+        "tertiary": "#005778"
       },
       "logo": "assets/logos/fictional/mia.png"
     },
@@ -52,8 +54,9 @@
       "conference": "AFC",
       "division": "East",
       "colors": {
-        "primary": "#0A2340",
-        "secondary": "#C8102E"
+        "primary": "#002244",
+        "secondary": "#C60C30",
+        "tertiary": "#B0B7BC"
       },
       "logo": "assets/logos/fictional/ne.png"
     },
@@ -66,8 +69,9 @@
       "conference": "AFC",
       "division": "East",
       "colors": {
-        "primary": "#14563C",
-        "secondary": "#111111"
+        "primary": "#125740",
+        "secondary": "#000000",
+        "tertiary": "#FFFFFF"
       },
       "logo": "assets/logos/fictional/nyj.png"
     },
@@ -80,8 +84,9 @@
       "conference": "AFC",
       "division": "North",
       "colors": {
-        "primary": "#2A1A6E",
-        "secondary": "#B8912B"
+        "primary": "#241773",
+        "secondary": "#9E7C0C",
+        "tertiary": "#000000"
       },
       "logo": "assets/logos/fictional/bal.png"
     },
@@ -94,8 +99,9 @@
       "conference": "AFC",
       "division": "North",
       "colors": {
-        "primary": "#E85A17",
-        "secondary": "#111111"
+        "primary": "#FB4F14",
+        "secondary": "#000000",
+        "tertiary": "#FFFFFF"
       },
       "logo": "assets/logos/fictional/cin.png"
     },
@@ -108,8 +114,9 @@
       "conference": "AFC",
       "division": "North",
       "colors": {
-        "primary": "#3A2410",
-        "secondary": "#E64A0A"
+        "primary": "#311D00",
+        "secondary": "#FF3C00",
+        "tertiary": "#FFFFFF"
       },
       "logo": "assets/logos/fictional/cle.png"
     },
@@ -122,8 +129,9 @@
       "conference": "AFC",
       "division": "North",
       "colors": {
-        "primary": "#E8B417",
-        "secondary": "#111820"
+        "primary": "#FFB612",
+        "secondary": "#000000",
+        "tertiary": "#A5ACAF"
       },
       "logo": "assets/logos/fictional/pit.png"
     },
@@ -136,8 +144,9 @@
       "conference": "AFC",
       "division": "South",
       "colors": {
-        "primary": "#0A2530",
-        "secondary": "#B21030"
+        "primary": "#03202F",
+        "secondary": "#A71930",
+        "tertiary": "#FFFFFF"
       },
       "logo": "assets/logos/fictional/hou.png"
     },
@@ -150,8 +159,9 @@
       "conference": "AFC",
       "division": "South",
       "colors": {
-        "primary": "#012F63",
-        "secondary": "#A6ADB0"
+        "primary": "#002C5F",
+        "secondary": "#A2AAAD",
+        "tertiary": "#FFFFFF"
       },
       "logo": "assets/logos/fictional/ind.png"
     },
@@ -164,8 +174,9 @@
       "conference": "AFC",
       "division": "South",
       "colors": {
-        "primary": "#0A7080",
-        "secondary": "#D6A62B"
+        "primary": "#006778",
+        "secondary": "#9F792C",
+        "tertiary": "#000000"
       },
       "logo": "assets/logos/fictional/jax.png"
     },
@@ -178,8 +189,9 @@
       "conference": "AFC",
       "division": "South",
       "colors": {
-        "primary": "#0B2340",
-        "secondary": "#3F8CDB"
+        "primary": "#0C2340",
+        "secondary": "#4B92DB",
+        "tertiary": "#C60C30"
       },
       "logo": "assets/logos/fictional/ten.png"
     },
@@ -192,8 +204,9 @@
       "conference": "AFC",
       "division": "West",
       "colors": {
-        "primary": "#E85A17",
-        "secondary": "#0B2340"
+        "primary": "#FB4F14",
+        "secondary": "#002244",
+        "tertiary": "#FFFFFF"
       },
       "logo": "assets/logos/fictional/den.png"
     },
@@ -206,8 +219,9 @@
       "conference": "AFC",
       "division": "West",
       "colors": {
-        "primary": "#D51A2E",
-        "secondary": "#E8B417"
+        "primary": "#E31837",
+        "secondary": "#FFB81C",
+        "tertiary": "#FFFFFF"
       },
       "logo": "assets/logos/fictional/kc.png"
     },
@@ -220,8 +234,9 @@
       "conference": "AFC",
       "division": "West",
       "colors": {
-        "primary": "#0A84C8",
-        "secondary": "#E8C40E"
+        "primary": "#0080C6",
+        "secondary": "#FFC20E",
+        "tertiary": "#002244"
       },
       "logo": "assets/logos/fictional/lac.png"
     },
@@ -234,8 +249,9 @@
       "conference": "AFC",
       "division": "West",
       "colors": {
-        "primary": "#111111",
-        "secondary": "#A6ADB0"
+        "primary": "#000000",
+        "secondary": "#A5ACAF",
+        "tertiary": "#000000"
       },
       "logo": "assets/logos/fictional/lv.png"
     },
@@ -248,8 +264,9 @@
       "conference": "NFC",
       "division": "East",
       "colors": {
-        "primary": "#0A3A8C",
-        "secondary": "#8A9298"
+        "primary": "#003594",
+        "secondary": "#869397",
+        "tertiary": "#00338D"
       },
       "logo": "assets/logos/fictional/dal.png"
     },
@@ -262,8 +279,9 @@
       "conference": "NFC",
       "division": "East",
       "colors": {
-        "primary": "#0B245F",
-        "secondary": "#B21030"
+        "primary": "#0B2265",
+        "secondary": "#A71930",
+        "tertiary": "#A5ACAF"
       },
       "logo": "assets/logos/fictional/nyg.png"
     },
@@ -276,8 +294,9 @@
       "conference": "NFC",
       "division": "East",
       "colors": {
-        "primary": "#0A4A50",
-        "secondary": "#A6ADB0"
+        "primary": "#004C54",
+        "secondary": "#A5ACAF",
+        "tertiary": "#000000"
       },
       "logo": "assets/logos/fictional/phi.png"
     },
@@ -290,8 +309,9 @@
       "conference": "NFC",
       "division": "East",
       "colors": {
-        "primary": "#5A1717",
-        "secondary": "#E8B417"
+        "primary": "#5A1414",
+        "secondary": "#FFB612",
+        "tertiary": "#FFFFFF"
       },
       "logo": "assets/logos/fictional/was.png"
     },
@@ -304,8 +324,9 @@
       "conference": "NFC",
       "division": "North",
       "colors": {
-        "primary": "#0B1B33",
-        "secondary": "#C25A1E"
+        "primary": "#0B162A",
+        "secondary": "#E64100",
+        "tertiary": "#FFFFFF"
       },
       "logo": "assets/logos/fictional/chi.png"
     },
@@ -318,8 +339,9 @@
       "conference": "NFC",
       "division": "North",
       "colors": {
-        "primary": "#0E7DBE",
-        "secondary": "#A9B0B5"
+        "primary": "#0076B6",
+        "secondary": "#B0B7BC",
+        "tertiary": "#FFFFFF"
       },
       "logo": "assets/logos/fictional/det.png"
     },
@@ -332,8 +354,9 @@
       "conference": "NFC",
       "division": "North",
       "colors": {
-        "primary": "#1E3A2E",
-        "secondary": "#E8B300"
+        "primary": "#203731",
+        "secondary": "#FFB612",
+        "tertiary": "#FFFFFF"
       },
       "logo": "assets/logos/fictional/gb.png"
     },
@@ -346,8 +369,9 @@
       "conference": "NFC",
       "division": "North",
       "colors": {
-        "primary": "#4A2A82",
-        "secondary": "#E8C130"
+        "primary": "#4F2683",
+        "secondary": "#FFC62F",
+        "tertiary": "#FFFFFF"
       },
       "logo": "assets/logos/fictional/min.png"
     },
@@ -360,8 +384,9 @@
       "conference": "NFC",
       "division": "South",
       "colors": {
-        "primary": "#B21030",
-        "secondary": "#1A1A1A"
+        "primary": "#A71930",
+        "secondary": "#000000",
+        "tertiary": "#A5ACAF"
       },
       "logo": "assets/logos/fictional/atl.png"
     },
@@ -374,8 +399,9 @@
       "conference": "NFC",
       "division": "South",
       "colors": {
-        "primary": "#0A93C8",
-        "secondary": "#111820"
+        "primary": "#0085CA",
+        "secondary": "#000000",
+        "tertiary": "#BFC0BF"
       },
       "logo": "assets/logos/fictional/car.png"
     },
@@ -388,8 +414,9 @@
       "conference": "NFC",
       "division": "South",
       "colors": {
-        "primary": "#C8B27A",
-        "secondary": "#111820"
+        "primary": "#D3BC8D",
+        "secondary": "#000000",
+        "tertiary": "#FFFFFF"
       },
       "logo": "assets/logos/fictional/no.png"
     },
@@ -402,8 +429,9 @@
       "conference": "NFC",
       "division": "South",
       "colors": {
-        "primary": "#D40A0A",
-        "secondary": "#33302C"
+        "primary": "#D50A0A",
+        "secondary": "#34302B",
+        "tertiary": "#FF7900"
       },
       "logo": "assets/logos/fictional/tb.png"
     },
@@ -416,8 +444,9 @@
       "conference": "NFC",
       "division": "West",
       "colors": {
-        "primary": "#8C1D40",
-        "secondary": "#E8A317"
+        "primary": "#97233F",
+        "secondary": "#FFB612",
+        "tertiary": "#000000"
       },
       "logo": "assets/logos/fictional/ari.png"
     },
@@ -430,8 +459,9 @@
       "conference": "NFC",
       "division": "West",
       "colors": {
-        "primary": "#0A3A8C",
-        "secondary": "#E8A300"
+        "primary": "#003594",
+        "secondary": "#FFD100",
+        "tertiary": "#FFFFFF"
       },
       "logo": "assets/logos/fictional/lar.png"
     },
@@ -444,8 +474,9 @@
       "conference": "NFC",
       "division": "West",
       "colors": {
-        "primary": "#0A2340",
-        "secondary": "#5FB828"
+        "primary": "#002244",
+        "secondary": "#69BE28",
+        "tertiary": "#A5ACAF"
       },
       "logo": "assets/logos/fictional/sea.png"
     },
@@ -458,8 +489,9 @@
       "conference": "NFC",
       "division": "West",
       "colors": {
-        "primary": "#A60A0A",
-        "secondary": "#B39A5D"
+        "primary": "#AA0000",
+        "secondary": "#B3995D",
+        "tertiary": "#FFFFFF"
       },
       "logo": "assets/logos/fictional/sf.png"
     }
